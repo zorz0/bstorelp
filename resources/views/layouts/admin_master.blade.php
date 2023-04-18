@@ -16,6 +16,7 @@
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
     {{-- <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" /> --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
     <link href="{{ asset('/assets') }}/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet"
