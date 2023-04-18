@@ -1,0 +1,112 @@
+.general-btn {
+    background: #bbcf3f;
+    opacity: 1;
+    transition: 0.3s;
+    border-radius: 8%;
+}
+.general-btn:hover {
+    opacity: 0.8;
+}
+.category-btn {
+    border-radius: 15% !important;
+}
+
+.ct-blog .fauxcrop {
+    height: 100%;
+    overflow: hidden;
+}
+
+.ct-blog .fauxcrop img {
+    width: 100%;
+}
+
+.contentVa0 {
+    direction: rtl;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+
+.contentVa {
+    margin-right: 5rem;
+}
+
+.contentVa0 img {
+    width: 70px;
+}
+
+.chooseEat {
+    background-image: radial-gradient(
+        120% 120px at 50% 0px,
+        #dc3545 75%,
+        transparent 75%
+    );
+}
+
+.chooseClass0 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.chooseClass {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.chooseClass img {
+    width: 500px;
+}
+
+.chooseClass h2 {
+    width: 330px;
+    direction: rtl;
+    text-align: start;
+}
+
+.chooseEatSuger {
+    background-image: radial-gradient(
+        120% 120px at 50% 0px,
+        #2f2f2f 75%,
+        transparent 75%
+    );
+    direction: rtl;
+}
+
+.baitKhairatDate {
+    background-image: url("../images/stoneCover.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 672px;
+    direction: rtl;
+    display: flex;
+    align-items: center;
+    color: white;
+    margin-bottom: 200px;
+}
+
+@media only screen and (max-width: 1208px) {
+    .baitKhairatDate {
+        font-size: medium;
+        direction: ltr;
+    }
+}
+.baitKhairatDate h1 {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+.baitKhairatDate span button {
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #bbcf3f;
+    border-radius: 10px;
+}
+.baitKhairatDate span button:hover {
+    background-color: #b1c627;
+}
