@@ -27,9 +27,7 @@ class ProductSizeController extends Controller
         "quantity"=>$request['quantity'],
         "price"=>$request['price'],
         "discount"=>$request['discount'],
-
-
-
+        
     ]);
 
 

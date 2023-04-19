@@ -16,7 +16,7 @@
             </div>
             @endforeach
             {{$blogs->links()}}
-        {{-- <div class="card">
+       <div class="card">
             <h2>العنوان</h2>
             <!-- <h5>Title description, Sep 2, 2017</h5> -->
             <div class="fakeimg">
@@ -57,7 +57,7 @@
                 هنا سنكتب تفاصيل الخبر . هنا سنكتب تفاصيل الخبر . هنا سنكتب تفاصيل الخبر . هنا سنكتب تفاصيل الخبر .
                 هنا سنكتب تفاصيل الخبر . هنا سنكتب تفاصيل الخبر . هنا سنكتب تفاصيل الخبر . هنا سنكتب تفاصيل الخبر .
                 <span class="font-weight-bolder"><a href="">متابعة القراءة</a></span></p>
-        </div> --}}
+        </div> 
     </div>
     <div class="rightcolumn">
         <h2>أحدث الأخبار</h2>
@@ -69,7 +69,7 @@
         </div>
         @endforeach
         {{$latestBlogs->links()}}
-        {{-- <div class="card">
+      <div class="card">
             <h2 class="text-center">عنوان الخبر</h2>
             <div class="fakeimg2">
                 <a href="#"><img class="myimg" alt="product" src="{{asset('/assets/bks')}}/images/product.jpg"></a>
@@ -98,7 +98,7 @@
             <div class="fakeimg2">
                 <a href="#"><img class="myimg" alt="product" src="{{asset('/assets/bks')}}/images/product.jpg"></a>
             </div>
-        </div> --}}
+        </div> 
     </div>
 </section>
 @endsection

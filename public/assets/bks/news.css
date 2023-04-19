@@ -110,3 +110,9 @@
 .baitKhairatDate span button:hover {
     background-color: #b1c627;
 }
+#menu-nav{
+    margin-top: 5%;
+}
+.u-button-style{
+    padding-top: 50px !important;;
+}
