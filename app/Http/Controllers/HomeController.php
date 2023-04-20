@@ -52,6 +52,8 @@ class HomeController extends Controller
     {
         $blog = $id;
         // dd($blog);
-        return view('front.newsDetails', ['blog' => $blog]);
+        $latestBlogs = Blog::orderBy('id', 'desc')->paginate(3);
+
+        return view('front.newsDetails', ['blog' => $blog,'latestBlogs' => $latestBlogs]);
     }
 }
