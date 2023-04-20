@@ -36,6 +36,7 @@ Route::get('/about', function () {
     return view('front.clean');
 });
 
+
 ///web
 Route::get ('/store',[WebController::class,'products'])->name('store');
 Route::get ('/store/{id}',[WebController::class,'products'])->name('store');
@@ -62,6 +63,7 @@ Route::get ('/card/destroy/{id}',[Cardcontroller::class,'destroy'])->name('card.
 Route::post ('/order/createorder',[OrderController::class,'createorder'])->name('createorder');
 Route::post ('/order/store',[OrderController::class,'store'])->name('order.store');
 
+Route::get('/news', [HomeController::class,'blogs'])->name('news');
 
 ////end save order
 Auth::routes();
@@ -70,7 +72,6 @@ Auth::routes();
  Route::get('/', [HomeController::class,'index'])->name('home');
  Route::get('/{category}', [HomeController::class,'showProducts'])->name('products');
  Route::get('/store/{id}', [HomeController::class,'show'])->name('show');
- Route::get('/news', [HomeController::class,'blogs'])->name('news');
  Route::get('/news/{id}', [HomeController::class,'blogDetails'])->name('news.details');
 
 
