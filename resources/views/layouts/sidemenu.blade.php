@@ -43,12 +43,7 @@
                 <span class="title">الرئيسية</span>
             </a>
         </li>
-        <li class="nav-item  ">
-            <a href="{{url('/dashboard/settings')}}" class="nav-link ">
-                <i class="icon-settings"></i>
-                <span class="title">الاعدادات</span>
-            </a>
-        </li>
+      
         <li class="nav-item  ">
             <a href="{{route('users.index')}}" class="nav-link ">
                 <i class="icon-users"></i>
@@ -169,6 +164,12 @@
                     </a>
                 </li>
             </ul>
+        </li>
+        <li class="nav-item  ">
+            <a href="{{url('/dashboard/settings')}}" class="nav-link ">
+                <i class="icon-settings"></i>
+                <span class="title">الاعدادات</span>
+            </a>
         </li>
     </ul>
     <!-- END SIDEBAR MENU -->
