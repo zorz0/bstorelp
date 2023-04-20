@@ -33,8 +33,11 @@
 }
 
 .contentVa0 img {
-    width: 50px;
+    width: 40px;
     margin-top: 20px;
+}
+#app > main > section:nth-child(5) > div:nth-child(2) > img{
+    width: 30px;
 }
 
 .chooseEat {

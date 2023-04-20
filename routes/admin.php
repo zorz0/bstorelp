@@ -11,6 +11,7 @@ use App\Http\Controllers\Dashboard\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -87,6 +88,8 @@ Route::post('productSize/store',[ProductSizeController::class,'store'])->name('p
 
 // orders Routes
 Route::get('/orders', [OrderController::class, 'index'])->name('orders.index');
+Route::get('/orders/details', [OrderdetailsController::class, 'getorder'])->name('orders.details');
+
 Route::get('/orders/create', [OrderController::class, 'create'])->name('orders.create');
 Route::post('/orders/store', [OrderController::class, 'storeDashboardOrder'])->name('orders.store');
 
