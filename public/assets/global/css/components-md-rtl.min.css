@@ -5673,7 +5673,6 @@ li [class*=" fa-"].icon-large,li [class*=" glyphicon-"].icon-large,li [class*=" 
 }
 
 .static-info.align-reverse .name,.static-info.align-reverse .value {
-    text-align: right;
 }
 
 .help-block {

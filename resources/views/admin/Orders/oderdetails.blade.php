@@ -11,8 +11,8 @@
         <div class="row">
             <div class="col-md-6 col-sm-12">
                 <div class="portlet yellow-crusta box">
-                    <div class="portlet-title">
-                        <div class="caption">
+                    <div class="portlet-title" style="display: flex;">
+                        <div class="caption" >
                             <i class="fa fa-cogs"></i>Order Details </div>
                      
                     </div>
@@ -50,8 +50,8 @@
             </div>
             <div class="col-md-6 col-sm-12">
                 <div class="portlet blue-hoki box">
-                    <div class="portlet-title">
-                        <div class="caption">
+                    <div class="portlet-title" style="display: flex;">
+                        <div class="caption" >
                             <i class="fa fa-cogs"></i>Customer Information </div>
                       
                     </div>
@@ -79,7 +79,7 @@
         <div class="row">
             <div class="col-md-6 col-sm-12">
                 <div class="portlet green-meadow box">
-                    <div class="portlet-title">
+                    <div class="portlet-title" style="display: flex;">
                         <div class="caption">
                             <i class="fa fa-cogs"></i>Billing Address </div>
                      
@@ -94,7 +94,7 @@
             </div>
             <div class="col-md-6 col-sm-12">
                 <div class="portlet red-sunglo box">
-                    <div class="portlet-title">
+                    <div class="portlet-title" style="display: flex;">
                         <div class="caption">
                             <i class="fa fa-cogs"></i>Shipping Address </div>
                       
@@ -113,20 +113,24 @@
             <div class="col-md-6">
                 <div class="well">
                     <div class="row static-info align-reverse">
-                        <div class="col-md-8 name"> Sub Total: </div>
                         <div class="col-md-3 value"> {{$order->total_price+$order->shipping_price}} </div>
+
+                        <div class="col-md-8 name"> Sub Total: </div>
                     </div>
                     <div class="row static-info align-reverse">
-                        <div class="col-md-8 name"> Shipping: </div>
                         <div class="col-md-3 value"> {{$order->shipping_price}} </div>
+
+                        <div class="col-md-8 name"> Shipping: </div>
                     </div>
                     <div class="row static-info align-reverse">
-                        <div class="col-md-8 name"> Grand Total: </div>
                         <div class="col-md-3 value"> {{$order->total_price}} </div>
+
+                        <div class="col-md-8 name"> Grand Total: </div>
                     </div>
                     <div class="row static-info align-reverse">
-                        <div class="col-md-8 name"> Total Paid: </div>
                         <div class="col-md-3 value"> {{0}} </div>
+
+                        <div class="col-md-8 name "> Total Paid: </div>
                     </div>
               
                 </div>
