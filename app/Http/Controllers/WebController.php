@@ -39,7 +39,6 @@ class WebController extends Controller
     $dataImages=ProductImage::where('product_id',$data->id)->get();
 
     $productPriceSize=ProductSize::where('id',$data->id)->get();
-     dd($productPriceSize);
 
 
    }

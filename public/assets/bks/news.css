@@ -33,7 +33,8 @@
 }
 
 .contentVa0 img {
-    width: 70px;
+    width: 50px;
+    margin-top: 20px;
 }
 
 .chooseEat {
@@ -82,13 +83,55 @@
     background-image: url("../images/stoneCover.jpg");
     background-size: cover;
     width: 100%;
-    height: 672px;
+    height: 100vh;
     direction: rtl;
     display: flex;
     align-items: center;
     color: white;
     margin-bottom: 200px;
-}
+}/* Container holding the image and the text */
+.container2 {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+  
+  /* Bottom left text */
+  .bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+  }
+  
+  /* Top left text */
+  .top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+  }
+  
+  /* Top right text */
+  .top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+  }
+  
+  /* Bottom right text */
+  .bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+  }
+  
+  /* Centered text */
+  .centered {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-left: 150px;
+  }
 
 @media only screen and (max-width: 1208px) {
     .baitKhairatDate {
@@ -113,6 +156,38 @@
 #menu-nav{
     margin-top: 5%;
 }
+h1:not(.u-title) {
+    margin-top: 5px;
+    font-size: 30px;
+    
+}
 .u-button-style{
     padding-top: 50px !important;;
+}
+@media (max-width: 575px)
+
+{h1:not(.u-title) {
+    font-size: 12px;
+    margin-left: 15px;
+    
+}
+.centered{
+    margin-top: 5px;
+    margin-left: 35px;
+
+    width: 100%;
+}
+#btn{
+    display: none;
+}
+}
+@media (min-width: 576px) and (max-width: 991px) {
+    h1:not(.u-title) {
+        font-size: 18px;
+        
+    }
+    #btn{
+        display: none;
+    }
+
 }

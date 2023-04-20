@@ -233,9 +233,13 @@
 
 
     <section class="mt-5">
-        <div class="baitKhairatDate">
-            <h1 class="container">بيت خيرات سوف<br>قصة بدأت من عام ١٨٨١م <span><a href={{ url('/about') }}><button class="general-btn border-0 text-white h3 p-3 m-4">اعرف
-                        عنها</button></a></span></h1>
-        </div>
+        <div class="container">
+            <img src="/assets/images/stoneCover.jpg" alt="Snow" style="width:100%;">
+           
+            <div class="centered"><h1 class="container2">بيت خيرات سوف<br>قصة بدأت من عام ١٨٨١م <span>
+                <a id="btn" href={{ url('/about') }}><button class="general-btn border-0 text-white h3 p-3 m-4">اعرف
+                عنها</button></a></span></h1></div>
+          </div>
+       
     </section>
 @endsection

@@ -66,11 +66,7 @@
             </div>
             <div class="col-lg-3">
                 <div class="blog-single-sidebar bordered blog-container">
-                    <div class="blog-single-sidebar-search">
-                        <div class="input-icon right">
-                            <i class="icon-magnifier"></i>
-                            <input type="text" class="form-control" placeholder="Search Blog"> </div>
-                    </div>
+                  
                     <div class="blog-single-sidebar-recent">
                         <h3 class="blog-sidebar-title uppercase">Recent Posts</h3>
                         <ul>
