@@ -6,6 +6,8 @@ use App\Http\Controllers\Dashboard\ProductController;
 use App\Http\Controllers\Dashboard\CategoryController;
 use App\Http\Controllers\Dashboard\ProductSizeController;
 use App\Http\Controllers\Dashboard\OrderController;
+use App\Http\Controllers\Dashboard\OrderdetailsController;
+
 use App\Http\Controllers\Dashboard\BlogController;
 use App\Http\Controllers\Dashboard\UserController;
 use Illuminate\Support\Facades\Auth;
@@ -88,7 +90,7 @@ Route::post('productSize/store',[ProductSizeController::class,'store'])->name('p
 
 // orders Routes
 Route::get('/orders', [OrderController::class, 'index'])->name('orders.index');
-Route::get('/orders/details', [OrderdetailsController::class, 'getorder'])->name('orders.details');
+Route::get('/orders/details/{id}', [OrderdetailsController::class, 'getorder'])->name('orders.details');
 
 Route::get('/orders/create', [OrderController::class, 'create'])->name('orders.create');
 Route::post('/orders/store', [OrderController::class, 'storeDashboardOrder'])->name('orders.store');
