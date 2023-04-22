@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Dashboard;
 use App\Http\Controllers\Controller;
 use App\Models\Card;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class Cardcontroller extends Controller
 {
@@ -38,6 +39,7 @@ class Cardcontroller extends Controller
             "totalprice"=>$totalPrice
 
         ]);
+        Alert::success('تم اضافة الطلب بنجاح', 'شكرا لأختياركم منتجاتنا ');
 
         return redirect(route('store'));
     }
