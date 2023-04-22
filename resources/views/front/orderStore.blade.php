@@ -1,89 +1,62 @@
-<!DOCTYPE html>
-<html>
-<style>
-    input[type=text],
-    select {
-        width: 100%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        display: inline-block;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-    }
+@extends('layouts.master')
+@section('content')
 
-    input[type=submit] {
-        width: 100%;
-        background-color: #4CAF50;
-        color: white;
-        padding: 14px 20px;
-        margin: 8px 0;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-    }
+<section class="u-clearfix u-section-1" >
 
-    input[type=submit]:hover {
-        background-color: #45a049;
-    }
 
-    div {
-        border-radius: 5px;
-        background-color: #f2f2f2;
-        padding: 20px;
-    }
-</style>
 
-<body>
     @include('sweetalert::alert')
 
+    
 
-    <h3>Using CSS to style an HTML Form</h3>
+    <div class="center-2">
+        <h3>Thank you for shopping with us {{ Auth::user()->name }}!</h3>
+        <br>
 
-    <div>
-        <form action="{{ route('order.store') }}" method="post">
+        <form action="{{ route('order.store') }}" method="post" style="text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;">
             @csrf
             <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
             <input type="hidden" name="name" value="{{ Auth::user()->name }}">
+          <div class="inputbox">
+            <input type="text" name="phone"  required="required">
+            <span>Phone</span>
+          </div>
+          <div class="inputbox">
+            <input type="text" name="address"  required="required">
+            <span>Address</span>
+          </div>
+          <div class="inputbox">
+            <input type="text" name="postal_code"  required="required">
+            <span>Postal code</span>
+          </div>
+          <input type="hidden" name="shipping_price" value="3">
+          <hr>
+          <div class="row" style=" direction: rtl;">
+             <div class="col text-center-2">
+          <label for="lname"> سعر الطلب :</label>
+          <span>{{ $totalprice }} دينار </span>
+          <hr>
 
-            <label for="fname">your Name : </label>
+          <label for="lname"> سعر الشحن :</label>
+          <span> 3 دينار</span>
+          <hr>
+          <label for="lname"> الاجمالي:</label>
+          <span> {{ $totalprice + 3 }} دينار </span>
 
-            <span>{{ Auth::user()->name }}</span>
-
-<br>
-<br>
-<hr>
-
-
-            <label for="lname">Phone</label>
-            <input type="text" id="lname" name="phone" placeholder="Your Phone">
-
-            <label for="lname">Address</label>
-            <input type="text" id="lname" name="address" placeholder="Your Address..">
-
-            <label for="lname">postal code</label>
-            <input type="text" id="lname" name="postal_code" placeholder="Your postal code ">
-
-            <input type="hidden" name="shipping_price" value="3">
-
-            <hr>
-            <label for="lname"> سعر الطلب :</label>
-            <span>{{ $totalprice }} دينار </span>
-            <hr>
-
-            <label for="lname"> سعر الشحن :</label>
-            <span> 3 دينار</span>
-            <hr>
-            <label for="lname"> الاجمالي:</label>
-            <span> {{ $totalprice + 3 }} دينار </span>
-
-            <input type="hidden" name="total_price" value="{{ $totalprice }}" hidden>
-
-            <input type="submit" value="Submit">
-
-        </form>
+          <input type="hidden" name="total_price" value="{{ $totalprice }}" hidden>
+          <div class="inputbox">
+            <input type="submit" value="تأكيد الطلب">
+          </div>
+        </div>
     </div>
+          
+        </form>
+      </div>
+    
+</section>
+@endsection
 
-</body>
-
-</html>

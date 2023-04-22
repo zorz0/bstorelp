@@ -46,6 +46,7 @@
     <meta name="theme-color" content="#478ac9">
     <meta property="og:type" content="website">
     <link rel="canonical" href="/">
+   
 </head>
 
 <body class="u-body u-stick-footer u-xl-mode">

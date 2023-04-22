@@ -49,12 +49,14 @@ $data=Order::create([
   
 
 ]);
+$Order_id = $data->id;
 
 
-$carts=auth()->user()->cards;
-   foreach($carts as $cart){
-    $cart->delete();
-   }
+$cards = auth()->user()->cards()->where('order_id', null)->get();
+foreach ($cards as $card) {
+    $card->order_id = $Order_id;
+    $card->save();
+}
 
    Alert::success('تم تسجيل الطلب بنجاح', 'طلبكم قيد التنفيذ');
 

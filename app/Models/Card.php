@@ -38,4 +38,13 @@ class Card extends Model
      return $this->belongsTo(User::class,$foriegnkey='user_id');
     }
 
+        // ...
+    
+        public function productSizes()
+        {
+            return $this->hasMany(ProductSize::class, 'card_id');
+        }
+    
+        // ...
+    
 }

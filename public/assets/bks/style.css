@@ -545,3 +545,73 @@
     display: inline-block;
     margin-left: -3px;
 }
+/*confirm order page*/
+
+      
+.center-2 {
+    font-family: "Sansita Swashed", cursive!important;
+      background: linear-gradient(45deg, greenyellow, dodgerblue)!important;
+  text-align: center;
+    position: relative!important;
+    background: #fff!important;
+    border-radius: 10px!important;
+    margin-bottom: -10px;
+    padding-bottom: 5%;
+  }
+  .center-2 h3 {
+    font-size: 1em!important;
+    padding: 10px!important;
+    color: #000!important;
+    letter-spacing: 5px!important%
+    margin-bottom: 60px!important;
+    font-weight: bold!important;
+    padding-left: 10px!important;
+  }
+  .center-2 .inputbox {
+    position: relative!important;
+    width: 300px!important;
+    height: 50px!important;
+    margin-bottom: 50px!important;
+  }
+  .center-2 .inputbox input {
+    position: absolute!important;
+    top: 0!important;
+    left: 0!important;
+    width: 100%!important;
+    border: 2px solid #000!important;
+    outline: none!important;
+    background: none!important;
+    padding: 10px!important;
+    border-radius: 10px!important;
+    font-size: 1.2em!important;
+  }
+  .center-2 .inputbox:last-child {
+    margin-bottom: 0!important;
+  }
+  .center-2 .inputbox span {
+    position: absolute!important;
+    top: 14px!important;
+    left: 20px!important;
+    font-size: 1em!important;
+    transition: 0.6s!important;
+    font-family: sans-serif!important;
+  }
+  .center-2 .inputbox input:focus ~ span,
+  .center-2 .inputbox input:valid ~ span {
+    transform: translateX(-13px) translateY(-35px)!important;
+    font-size: 1em!important;
+  }
+  .center-2 .inputbox [type="submit"] {
+    width: 50%!important;
+    color: #fff!important;
+    border: #fff!important;
+  }
+  .center-2 .inputbox [type="submit"] {
+    background: linear-gradient(45deg, greenyellow, dodgerblue)!important;
+    margin-left: 25%
+  }
+  .py-4{
+    padding-top: 0!important;
+  }
+  
+      

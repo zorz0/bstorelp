@@ -10,7 +10,7 @@ class Cardcontroller extends Controller
     public function totalCards(){
 
 
-        $data=auth()->user()->cards;
+        $data = auth()->user()->cards()->where('order_id', null)->get();
 
         $total=0;
 
