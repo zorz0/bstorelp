@@ -24,10 +24,15 @@ class OrderdetailsController extends Controller
     
     $cardsWithProduct = $cards->map(function ($card) {
         $product_id = $card->product_id;
+        $product_size = $card->productSize_id;
+
         $product_sizes = ProductSize::where('product_id', $product_id)->get();
         $product_name = Product::where('id', $product_id)->value('name'); // fetch the product name
+        $product_size = ProductSize::where('id', $product_size)->value('size'); // fetch the product name
+
         $card['product_sizes'] = $product_sizes;
         $card['product_name'] = $product_name; // add the product name to the card
+        $card['product_size']=$product_size;
         return $card;
     });
     

@@ -156,6 +156,11 @@
                                             <th class="text-center"> Original Price </th>
                                             
                                             <th class="text-center"> Discount Amount </th>
+                                            <th class="text-center"> Quantity </th>
+                                            <th class="text-center"> size </th>
+
+                                            <th class="text-center"> Add To chart At </th>
+
                                             <th class="text-center"> Total </th>
                                         </tr>
                                     </thead>
@@ -172,7 +177,15 @@
                                                 <td class="text-center"> {{ $item['product_sizes'][0]->price }} 
                                                 </td>
                                                 <td class="text-center">{{$item['product_sizes'][0]->discount}}</td>
+                                                <td class="text-center">{{ $item->quantity}}</td>
+                                                <td class="text-center">{{$item['product_size']}}</td>
+
+                                                <td class="text-center">{{ $item->created_at}}</td>
+
+                                                
                                                 <td class="text-center">{{ $item['product_sizes'][0]->price - $item['product_sizes'][0]->discount }}</td>
+
+
 
                                             </tr>
                                         @endforeach
