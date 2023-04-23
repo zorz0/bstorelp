@@ -46,7 +46,7 @@
     <meta name="theme-color" content="#478ac9">
     <meta property="og:type" content="website">
     <link rel="canonical" href="/">
-   
+
 </head>
 
 <body class="u-body u-stick-footer u-xl-mode">
@@ -214,7 +214,7 @@
                                             <span style="font-size: 1.125rem;"></span>
                                         </a>
                                         <span style="font-size: 1.125rem;">تواصل معنا <br>
-                                        </span>07XXXXXXX <br>info@beitkhayratsouf.com
+                                        </span>0779959058 <br>info@beitkhayratsouf.com <br>جرش - سوف - البرج - قرب نبع المغاسل
                                     </p>
                                 </div>
                             </div>
@@ -227,7 +227,7 @@
                                             <span style="font-size: 1rem;"></span>
                                         </a>
                                         <span style="font-size: 1rem;">مواقع التواصل الإجتماعي <br>
-                                        </span>الفيسبوك <br>إنستجرام <br>تيك توك <br>اليوتيوب
+                                        </span> <a href="https://www.facebook.com/baitkhayratsoof1881?mibextid=ZbWKwL"> الفيسبوك</a><br><a href="https://instagram.com/beitkhairatsouf1881?igshid=YmMyMTA2M2Y=" > إنستجرام </a> <br>تيك توك <br>اليوتيوب
                                     </p>
                                 </div>
                             </div>
@@ -253,7 +253,7 @@
                                         </a>
                                         <br>
                                         <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-custom-color-2 u-text-hover-custom-color-2 u-text-white u-btn-3"
-                                            href="{{ url('/contact') }}">تواصل معنا 
+                                            href="{{ url('/contact') }}">تواصل معنا
                                         </a>
                                     </p>
                                 </div>
@@ -262,6 +262,7 @@
                     </div>
                 </div>
                 <p class="u-align-center u-custom-font u-text u-text-body-alt-color u-text-4"> Powered By Banana </p>
+                <img src="/public/assets/images/banana.png" style="text-align: center;" >
             </div>
         </footer>
     @endsection
