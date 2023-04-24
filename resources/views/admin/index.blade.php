@@ -116,96 +116,17 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="odd gradeX">
-                                    <td>
-                                        #1111
-                                    </td>
-                                    <td> 11231 د.أ </td>
-                                    <td>
-                                        منتهي
-                                    </td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>
-                                        #1111
-                                    </td>
-                                    <td> 11231 د.أ  </td>
-                                    <td>
-                                        مرفوض
-                                    </td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>
-                                        #1111
-                                    </td>
-                                    <td> 11231 د.أ  </td>
-                                    <td>
-                                        ملغى
-                                    </td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>
-                                        #1111
-                                    </td>
-                                    <td> 11231 د.أ  </td>
-                                    <td>
-                                        قيد التنفيذ
-                                    </td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>
-                                        #1111
-                                    </td>
-                                    <td> 11231 د.أ  </td>
-                                    <td>
-                                        جديد
-                                    </td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>
-                                        #1111
-                                    </td>
-                                    <td> 11231 د.أ  </td>
-                                    <td>
-                                        جديد
-                                    </td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>
-                                        #1111
-                                    </td>
-                                    <td> 11231 د.أ  </td>
-                                    <td>
-                                        جديد
-                                    </td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>
-                                        #1111
-                                    </td>
-                                    <td> 11231 د.أ  </td>
-                                    <td>
-                                        جديد
-                                    </td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>
-                                        #1111
-                                    </td>
-                                    <td> 11231 د.أ  </td>
-                                    <td>
-                                        جديد
-                                    </td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>
-                                        #1111
-                                    </td>
-                                    <td> 11231 د.أ  </td>
-                                    <td>
-                                        جديد
-                                    </td>
-                                </tr>
+                                    @foreach ( $orders as $order )
+                                    <tr class="odd gradeX">
+
+                                    <td>{{$order->id}}</td>
+                                    <td>{{$order->total_price}}</td>
+                                    <td>{{$order->status}}</td>
+
+                                    </tr>
+                                    @endforeach
+                                    
+                                
                             </tbody>
                         </table>
                     </div>
@@ -235,83 +156,24 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="odd gradeX">
+                                
+                                    
+                                        @foreach ($products as $item )
+                                
+                                <tr>      
                                     <td>
-                                        <img class="item-pic rounded" src="{{asset('/assets')}}/pages/media/users/avatar4.jpg">
+                                        <img src="{{ asset('storage/img/' . $item->image) }}" alt="img">
                                     </td>
-                                    <td> منتج 1 </td>
-                                    <td>
-                                        100
-                                    </td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>
-                                        <img class="item-pic rounded" src="{{asset('/assets')}}/pages/media/users/avatar4.jpg">
-                                    </td>
-                                    <td> منتج 1 </td>
-                                    <td>
-                                        100
-                                    </td>
-                                </tr>
+                                    
+                                    
+                                           <td> {{$item->name}}</td>
+                                           <td> {{$item->quantity}}</td>
 
-                                <tr class="odd gradeX">
-                                    <td>
-                                        <img class="item-pic rounded" src="{{asset('/assets')}}/pages/media/users/avatar4.jpg">
-                                    </td>
-                                    <td> منتج 1 </td>
-                                    <td>
-                                        100
-                                    </td>
-                                </tr>
+                                        </td>
+                                           @endforeach
 
-                                <tr class="odd gradeX">
-                                    <td>
-                                        <img class="item-pic rounded" src="{{asset('/assets')}}/pages/media/users/avatar4.jpg">
-                                    </td>
-                                    <td> منتج 1 </td>
-                                    <td>
-                                        100
-                                    </td>
-                                </tr>
+                                    
 
-                                <tr class="odd gradeX">
-                                    <td>
-                                        <img class="item-pic rounded" src="{{asset('/assets')}}/pages/media/users/avatar4.jpg">
-                                    </td>
-                                    <td> منتج 1 </td>
-                                    <td>
-                                        100
-                                    </td>
-                                </tr>
-
-                                <tr class="odd gradeX">
-                                    <td>
-                                        <img class="item-pic rounded" src="{{asset('/assets')}}/pages/media/users/avatar4.jpg">
-                                    </td>
-                                    <td> منتج 1 </td>
-                                    <td>
-                                        100
-                                    </td>
-                                </tr>
-
-                                <tr class="odd gradeX">
-                                    <td>
-                                        <img class="item-pic rounded" src="{{asset('/assets')}}/pages/media/users/avatar4.jpg">
-                                    </td>
-                                    <td> منتج 1 </td>
-                                    <td>
-                                        100
-                                    </td>
-                                </tr>
-
-                                <tr class="odd gradeX">
-                                    <td>
-                                        <img class="item-pic rounded" src="{{asset('/assets')}}/pages/media/users/avatar4.jpg">
-                                    </td>
-                                    <td> منتج 1 </td>
-                                    <td>
-                                        100
-                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -390,136 +252,21 @@
                         <table class="table table-striped table-bordered table-hover table-checkable order-column" id="sample_1">
                             <thead>
                                 <tr>
-                                    <th> صورة </th>
+                                    <th> الرقم </th>
                                     <th> اسم العميل </th>
                                     <th> البريد الالكتروني </th>
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach ($users as $user )
+                                    
+                                @endforeach
                                 <tr class="odd gradeX">
                                     <td>
-                                        <img class="item-pic rounded" src="{{asset('/assets')}}/pages/media/users/avatar4.jpg">
-                                    </td>
-                                    <td> shuxer </td>
+{{$user->id}}                                    </td>
+                                    <td> {{$user->name}} </td>
                                     <td>
-                                        <a href="mailto:shuxer@gmail.com"> shuxer@gmail.com </a>
-                                    </td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>
-                                        <img class="item-pic rounded" src="{{asset('/assets')}}/pages/media/users/avatar4.jpg">
-                                    </td>
-                                    <td> looper </td>
-                                    <td>
-                                        <a href="mailto:looper90@gmail.com"> looper90@gmail.com </a>
-                                    </td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>
-                                        <img class="item-pic rounded" src="{{asset('/assets')}}/pages/media/users/avatar4.jpg">
-                                    </td>
-                                    <td> userwow </td>
-                                    <td>
-                                        <a href="mailto:userwow@yahoo.com"> userwow@yahoo.com </a>
-                                    </td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>
-                                        <img class="item-pic rounded" src="{{asset('/assets')}}/pages/media/users/avatar4.jpg">
-                                    </td>
-                                    <td> user1wow </td>
-                                    <td>
-                                        <a href="mailto:userwow@gmail.com"> userwow@gmail.com </a>
-                                    </td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>
-                                        <img class="item-pic rounded" src="{{asset('/assets')}}/pages/media/users/avatar4.jpg">
-                                    </td>
-                                    <td> user1wow </td>
-                                    <td>
-                                        <a href="mailto:userwow@gmail.com"> userwow@gmail.com </a>
-                                    </td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>
-                                        <img class="item-pic rounded" src="{{asset('/assets')}}/pages/media/users/avatar4.jpg">
-                                    </td>
-                                    <td> user1wow </td>
-                                    <td>
-                                        <a href="mailto:userwow@gmail.com"> userwow@gmail.com </a>
-                                    </td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>
-                                        <img class="item-pic rounded" src="{{asset('/assets')}}/pages/media/users/avatar4.jpg">
-                                    </td>
-                                    <td> user1wow </td>
-                                    <td>
-                                        <a href="mailto:userwow@gmail.com"> userwow@gmail.com </a>
-                                    </td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>
-                                        <img class="item-pic rounded" src="{{asset('/assets')}}/pages/media/users/avatar4.jpg">
-                                    </td>
-                                    <td> user1wow </td>
-                                    <td>
-                                        <a href="mailto:userwow@gmail.com"> userwow@gmail.com </a>
-                                    </td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>
-                                        <img class="item-pic rounded" src="{{asset('/assets')}}/pages/media/users/avatar4.jpg">
-                                    </td>
-                                    <td> user1wow </td>
-                                    <td>
-                                        <a href="mailto:userwow@gmail.com"> userwow@gmail.com </a>
-                                    </td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>
-                                        <img class="item-pic rounded" src="{{asset('/assets')}}/pages/media/users/avatar4.jpg">
-                                    </td>
-                                    <td> user1wow </td>
-                                    <td>
-                                        <a href="mailto:userwow@gmail.com"> userwow@gmail.com </a>
-                                    </td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>
-                                        <img class="item-pic rounded" src="{{asset('/assets')}}/pages/media/users/avatar4.jpg">
-                                    </td>
-                                    <td> user1wow </td>
-                                    <td>
-                                        <a href="mailto:userwow@gmail.com"> userwow@gmail.com </a>
-                                    </td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>
-                                        <img class="item-pic rounded" src="{{asset('/assets')}}/pages/media/users/avatar4.jpg">
-                                    </td>
-                                    <td> user1wow </td>
-                                    <td>
-                                        <a href="mailto:userwow@gmail.com"> userwow@gmail.com </a>
-                                    </td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>
-                                        <img class="item-pic rounded" src="{{asset('/assets')}}/pages/media/users/avatar4.jpg">
-                                    </td>
-                                    <td> user1wow </td>
-                                    <td>
-                                        <a href="mailto:userwow@gmail.com"> userwow@gmail.com </a>
-                                    </td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>
-                                        <img class="item-pic rounded" src="{{asset('/assets')}}/pages/media/users/avatar4.jpg">
-                                    </td>
-                                    <td> user1wow </td>
-                                    <td>
-                                        <a href="mailto:userwow@gmail.com"> userwow@gmail.com </a>
+                                        <a style="font-size: 10px" href="{{$user->email}}"> {{$user->email}} </a>
                                     </td>
                                 </tr>
                             </tbody>
@@ -551,84 +298,19 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="odd gradeX">
+                                @foreach ($Allproducts as $Product )
+                                
+                                <tr>      
                                     <td>
-                                        <img class="item-pic rounded" src="{{asset('/assets')}}/pages/media/users/avatar4.jpg">
+                                        <img src="{{ asset('storage/img/' . $Product->image) }}" alt="img">
                                     </td>
-                                    <td> منتج 1 </td>
-                                    <td>
-                                        100
-                                    </td>
-                                </tr>
-                                <tr class="odd gradeX">
-                                    <td>
-                                        <img class="item-pic rounded" src="{{asset('/assets')}}/pages/media/users/avatar4.jpg">
-                                    </td>
-                                    <td> منتج 1 </td>
-                                    <td>
-                                        100
-                                    </td>
-                                </tr>
+                                    
+                                    
+                                           <td> {{$Product->name}}</td>
+                                           <td> {{$Product->quantity}}</td>
 
-                                <tr class="odd gradeX">
-                                    <td>
-                                        <img class="item-pic rounded" src="{{asset('/assets')}}/pages/media/users/avatar4.jpg">
-                                    </td>
-                                    <td> منتج 1 </td>
-                                    <td>
-                                        100
-                                    </td>
-                                </tr>
-
-                                <tr class="odd gradeX">
-                                    <td>
-                                        <img class="item-pic rounded" src="{{asset('/assets')}}/pages/media/users/avatar4.jpg">
-                                    </td>
-                                    <td> منتج 1 </td>
-                                    <td>
-                                        100
-                                    </td>
-                                </tr>
-
-                                <tr class="odd gradeX">
-                                    <td>
-                                        <img class="item-pic rounded" src="{{asset('/assets')}}/pages/media/users/avatar4.jpg">
-                                    </td>
-                                    <td> منتج 1 </td>
-                                    <td>
-                                        100
-                                    </td>
-                                </tr>
-
-                                <tr class="odd gradeX">
-                                    <td>
-                                        <img class="item-pic rounded" src="{{asset('/assets')}}/pages/media/users/avatar4.jpg">
-                                    </td>
-                                    <td> منتج 1 </td>
-                                    <td>
-                                        100
-                                    </td>
-                                </tr>
-
-                                <tr class="odd gradeX">
-                                    <td>
-                                        <img class="item-pic rounded" src="{{asset('/assets')}}/pages/media/users/avatar4.jpg">
-                                    </td>
-                                    <td> منتج 1 </td>
-                                    <td>
-                                        100
-                                    </td>
-                                </tr>
-
-                                <tr class="odd gradeX">
-                                    <td>
-                                        <img class="item-pic rounded" src="{{asset('/assets')}}/pages/media/users/avatar4.jpg">
-                                    </td>
-                                    <td> منتج 1 </td>
-                                    <td>
-                                        100
-                                    </td>
-                                </tr>
+                                        </td>
+                                           @endforeach
                             </tbody>
                         </table>
                     </div>
