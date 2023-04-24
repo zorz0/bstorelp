@@ -7,13 +7,21 @@ use App\Models\ProductImage;
 use App\Models\ProductSize;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
+use Illuminate\Support\Facades\DB;
 
 class WebController extends Controller
 {
    public function products()
    {
 
-    $data=Product::all();
+      $products =DB::table('categories')
+      ->select('categories.*', 'categories.name as category_name', 'products.name as product_name', 'products.price')
+      ->join('products', 'categories.id', '=', 'products.category_id')
+      ->get();
+
+  
+
+    $data=Product::all()->take(3);
 
     $productSizes=ProductSize::all();
    return view('front.store',compact("data","productSizes"));

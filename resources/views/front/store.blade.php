@@ -62,6 +62,8 @@
             </div>
         </div>
     </section>
+    
+
     <section class="u-clearfix u-section-1 container">
         <div class="row store">
             <div class="container">
@@ -109,7 +111,35 @@
             </div>
         </div>
     </section>
-
+    <br>
+    <br>
+<section class="u-clearfix u-section-1 container-fluid">
+    <div class="row store">
+        <div class="ct-blog col-sm-6 col-md-2">
+          <div class="fauxcrop">
+            <a href="#"><img class="category" alt="khayba" src="./images/khayba.jpg"></a>
+          </div>
+        </div>
+       
+        <div class="col-sm-6 col-md-3">
+          <div class="product">
+            <h3>مربى فراولة</h3>
+            <p>مربى الفراولة مع الحبيبات، شهي ولذيذ ..</p>
+            <hr class="myhr">
+            <a href="#"><img class="myimg" alt="product" src="./images/product.jpg"></a>
+            <hr class="myhr">
+            <h3>
+              أ.د 100
+            </h3>
+          </div>
+        </div>
+        <div class="ct-blog col-sm-6 col-md-1">
+          <div style="margin-top: 130%;">
+            <a class="smore2" href="#">مشاهدة المزيد</a>
+          </div>
+        </div>
+      </div>
+</section>
     <section class="u-clearfix u-section-1 container-fluid">
         <div class="row store">
             <div class="ct-blog col-sm-6 col-md-3 my-3">
