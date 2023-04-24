@@ -194,7 +194,9 @@
             </div>
         </div>
     </section>
-
+    <div class=" text-center">
+        <a href="http://127.0.0.1:8000/news"><button class="general-btn  border-0  text-white h4 p-3 m-3 col-2"> تسوق الأن
+    </button></a></div>
     <section>
         <div class="chooseEat container text-center py-2 my-5">
             <h2 class="text-white">إختر ألذ وأشهى المنتجات</h2>
@@ -235,11 +237,11 @@
     <section class="mt-5">
         <div class="container">
             <img src="/assets/images/stoneCover.jpg" alt="Snow" style="width:100%;">
-           
+
             <div class="centered"><h1 class="container2">بيت خيرات سوف<br>قصة بدأت من عام ١٨٨١م <span>
                 <a id="btn" href={{ url('/about') }}><button class="general-btn border-0 text-white h3 p-3 m-4">اعرف
                 عنها</button></a></span></h1></div>
           </div>
-       
+
     </section>
 @endsection
