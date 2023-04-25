@@ -121,10 +121,18 @@
 <section class="u-clearfix u-section-1 container-fluid">
     <div class="row store">
         <div class="ct-blog col-sm-6 col-md-2">
-          <div class="fauxcrop">
-            <a href="#"><img class="category" alt="khayba" src="{{ asset('storage/imgs/' . $value->image) }}"></a>
-        </div>
-        </div>
+            <div class="fauxcrop">
+              <div class="image-container">
+                <a href="#">
+                  <img class="category" style="  filter: brightness(0.5); " alt="khayba" src="{{ asset('storage/imgs/' . $value->image) }}">
+                </a>
+                <div class="text-container">
+                  <p>{{$value->name}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
         @foreach ($value->products as $product)
 
         <div class="col-sm-6 col-md-3">
