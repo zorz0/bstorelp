@@ -354,7 +354,7 @@
     display: inline-block;
     background: #3e3a37;
     width: 90%;
-    float: right;
+    float:right;
     text-align: -webkit-center;
     color: #fff;
     padding-top: 45%;
@@ -582,7 +582,7 @@
     font-size: 1em!important;
     padding: 10px!important;
     color: #000!important;
-    letter-spacing: 5px!important%
+    letter-spacing: 5px!important;
     margin-bottom: 60px!important;
     font-weight: bold!important;
     padding-left: 10px!important;

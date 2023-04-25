@@ -39,6 +39,8 @@ Route::get('/about', function () {
 
 ///web
 Route::get ('/store',[WebController::class,'products'])->name('store');
+Route::get ('/category/{id}',[WebController::class,'allproduct'])->name('allproduct');
+
 Route::get ('/store/{id}',[WebController::class,'products'])->name('store');
 
 Route::post ('/showProduct/{id}',[WebController::class,'showProduct'])->name('showProduct');

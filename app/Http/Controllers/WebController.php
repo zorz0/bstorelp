@@ -73,6 +73,16 @@ class WebController extends Controller
 
 
    }
+   public function allproduct(){
+    $id = request('id');
+$allProduct = DB::table('products')->where('category_id', $id)->get();
+
+return view('front.AllProduct', [
+    'allProduct'=>$allProduct
+
+]);
+
+   }
 
 
 

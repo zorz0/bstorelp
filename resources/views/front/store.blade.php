@@ -168,8 +168,8 @@
     @endforeach
         <div class="ct-blog col-sm-6 col-md-1">
           <div style="margin-top: 130%;">
-            <a class="smore2" href="#">مشاهدة المزيد</a>
-          </div>
+            <a class="smore2" href="{{ route('allproduct', ['id' => $value->id]) }}">مشاهدة المزيد</a>
+        </div>
         </div>
       </div>
 </section>
