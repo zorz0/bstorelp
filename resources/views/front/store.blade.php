@@ -113,26 +113,49 @@
     </section>
     <br>
     <br>
+
+
+    @foreach ($categories as $value)
+        
+
 <section class="u-clearfix u-section-1 container-fluid">
     <div class="row store">
         <div class="ct-blog col-sm-6 col-md-2">
           <div class="fauxcrop">
-            <a href="#"><img class="category" alt="khayba" src="./images/khayba.jpg"></a>
-          </div>
+            <a href="#"><img class="category" alt="khayba" src="{{ asset('storage/imgs/' . $value->image) }}"></a>
         </div>
-       
+        </div>
+        @foreach ($value->products as $product)
+
         <div class="col-sm-6 col-md-3">
           <div class="product">
-            <h3>مربى فراولة</h3>
-            <p>مربى الفراولة مع الحبيبات، شهي ولذيذ ..</p>
+            <form id="FormCard" action="{{ route('showProduct', ['id' => $product->id]) }}" method="post">
+                @csrf
+            <h3>{{ $product->name }}</h3>
+            <p>{{ $product->description }}</p>
             <hr class="myhr">
-            <a href="#"><img class="myimg" alt="product" src="./images/product.jpg"></a>
+            <img class="myimg" width="" alt="product" src="/storage/img/{{ $product->image }}">
             <hr class="myhr">
             <h3>
-              أ.د 100
+                @auth
+
+                @if ($product->sizes[0]!="null")
+            
+                <select name="productSizeId" id="">
+                        @foreach ($product->sizes as $size)
+                        <option value="{{ $size->id }}"> {{ $size->size }}</option>
+
+                        @endforeach
+                    </select>
+
+                    <button type="submit"> اعرض المنتج</button>
+                @endif  
+            @endauth
             </h3>
           </div>
         </div>
+    </form> 
+    @endforeach
         <div class="ct-blog col-sm-6 col-md-1">
           <div style="margin-top: 130%;">
             <a class="smore2" href="#">مشاهدة المزيد</a>
@@ -140,7 +163,10 @@
         </div>
       </div>
 </section>
-    <section class="u-clearfix u-section-1 container-fluid">
+<br>
+<br>
+@endforeach
+  {{--   <section class="u-clearfix u-section-1 container-fluid">
         <div class="row store">
             <div class="ct-blog col-sm-6 col-md-3 my-3">
                 <div class="fauxcrop">
@@ -178,7 +204,7 @@
             @endforeach
         </div>
 
-    </section>
+    </section> --}}
 
     <section class="container my-5">
         <h2 class="text-center">نضمن لك عملية شراء سريعة ، مريحة وآمنة</h2>

@@ -13,19 +13,38 @@ class WebController extends Controller
 {
    public function products()
    {
+      $categories = DB::table('categories')->get();
 
-      $products =DB::table('categories')
-      ->select('categories.*', 'categories.name as category_name', 'products.name as product_name', 'products.price')
-      ->join('products', 'categories.id', '=', 'products.category_id')
-      ->get();
+      $categories->map(function ($category) {
+          $category->products = DB::table('products')
+              ->where('category_id', $category->id)
+              ->get()
+              ->map(function ($product) {
+                  $product->sizes = DB::table('product_size')
+                      ->where('product_id', $product->id)
+                      ->get()
+                      ->toArray();
+                  if (empty($product->sizes)) {
+                      $product->sizes = ['null'];
+                  }
+                  return $product;
+              });
+          return $category;
+      });
+      
+     
+  
 
   
 
     $data=Product::all()->take(3);
 
     $productSizes=ProductSize::all();
-   return view('front.store',compact("data","productSizes"));
-
+    return view('front.store', [
+      'categories'=>$categories
+ 
+  ]);
+  
    }
 
 
