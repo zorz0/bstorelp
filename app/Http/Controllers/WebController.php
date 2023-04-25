@@ -58,9 +58,9 @@ class WebController extends Controller
 
     $dataImages=ProductImage::where('product_id',$data->id)->get();
 
-    $productSize=ProductSize::find($request->productSizeId);
-
-   return view('front.AddTocard',compact("data","dataImages","productSize"));
+/*     $productSize=ProductSize::find($request->productSizeId);
+ */
+   return view('front.AddTocard',compact("data","dataImages"));
 
    }
 

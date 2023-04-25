@@ -162,7 +162,8 @@
                                 
                                 <tr>      
                                     <td>
-                                        <img src="{{ asset('storage/img/' . $item->image) }}" alt="img">
+                                        <img style="    width: 50px;
+                                        height: 50px;" src="{{ asset('storage/img/' . $item->image) }}" alt="img">
                                     </td>
                                     
                                     
@@ -302,7 +303,8 @@
                                 
                                 <tr>      
                                     <td>
-                                        <img src="{{ asset('storage/img/' . $Product->image) }}" alt="img">
+                                        <img style="width: 50px;
+                                        height: 50px;" src="{{ asset('storage/img/' . $Product->image) }}" alt="img">
                                     </td>
                                     
                                     

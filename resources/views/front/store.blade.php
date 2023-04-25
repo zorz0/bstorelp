@@ -132,24 +132,26 @@
             <form id="FormCard" action="{{ route('showProduct', ['id' => $product->id]) }}" method="post">
                 @csrf
             <h3>{{ $product->name }}</h3>
-            <p>{{ $product->description }}</p>
+            <p id="description">{{ $product->description }}</p>
             <hr class="myhr">
             <img class="myimg" width="" alt="product" src="/storage/img/{{ $product->image }}">
             <hr class="myhr">
+            <button type="submit"> اعرض المنتج</button>
+<p style="font-weight: bold">{{$product->price}} د.أ</p>
             <h3>
                 @auth
-
+{{-- 
                 @if ($product->sizes[0]!="null")
             
                 <select name="productSizeId" id="">
                         @foreach ($product->sizes as $size)
-                        <option value="{{ $size->id }}"> {{ $size->size }}</option>
-
+                        <option  value="{{ $size->id }}"> {{ $size->size }}</option>
+                        
                         @endforeach
                     </select>
 
-                    <button type="submit"> اعرض المنتج</button>
-                @endif  
+                @endif   --}}
+
             @endauth
             </h3>
           </div>

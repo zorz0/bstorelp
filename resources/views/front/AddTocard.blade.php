@@ -192,19 +192,19 @@
                     <form action="{{ route('card.store') }}" method="post"> @csrf
                         <div class="product-price">
                             <p class="last-price">السعر القديم:
-                                <span>{{ $productSize->price + $productSize->discount }}</span>
-                            </p>
-                            <p class="new-price">السعر الجديد: <span>{{ $productSize->price }}</span></p>
-                        </div>
+{{--                                 <span>{{ $productSize->price + $productSize->discount }}</span>
+ --}}                            </p>
+{{--                             <p class="new-price">السعر الجديد: <span>{{ $productSize->price }}</span></p>
+ --}}                        </div>
 
                         <div class="product-detail">
                             <h2>معلومات عن المنتج : </h2>
 
 
-                            <input type="text" name="price" value="{{ $productSize['price'] }}" hidden>
-
-                            <input type="text" name="productSize_id" value="{{ $productSize['id'] }}" hidden>
-                            <input type="text" name="product_id" value="{{ $data['id'] }}" hidden>
+{{--                             <input type="text" name="price" value="{{ $productSize['price'] }}" hidden>
+ --}}
+{{--                             <input type="text" name="productSize_id" value="{{ $productSize['id'] }}" hidden>
+ --}}                            <input type="text" name="product_id" value="{{ $data['id'] }}" hidden>
 
                             <input type="text" name="user_id" value="{{ Auth::user()->id }}" hidden>
 
