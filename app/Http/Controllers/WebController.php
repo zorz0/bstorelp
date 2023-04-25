@@ -22,7 +22,10 @@ class WebController extends Controller
               ->map(function ($product) {
                   $product->sizes = DB::table('product_size')
                       ->where('product_id', $product->id)
+                      ->orderByDesc('id')
+                        ->take(3)
                       ->get()
+                      
                       ->toArray();
                   if (empty($product->sizes)) {
                       $product->sizes = ['null'];
