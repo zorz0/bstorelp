@@ -190,8 +190,8 @@
                          <span>4.7(21)</span>
                      </div>
                    
-                     <livewire:show-product-size-price :id="$data->id"/>
- 
+                     <livewire:show-all-categoryw-product :id="$data->id"/>
+
                      <div class="social-links">
                          <p>المشاكة مع: </p>
                          <a href="#">

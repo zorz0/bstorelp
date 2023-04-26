@@ -25,7 +25,7 @@
                           </td>
                           <td  style="border-width: 0;" class="text-success">
                               <div class="d-flex align-items-center">
-                                  <img src="storage/img/{{$cart->product->image}}">
+                                  <img style="width:100px;heigh:100px" src="storage/img/{{$cart->product->image}}">
                               </div>
                           </td>
                           <td  style="width: 25%;border-width: 0px;" class="text-success">

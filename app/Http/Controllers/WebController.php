@@ -18,7 +18,7 @@ class WebController extends Controller
       $categories->map(function ($category) {
           $category->products = DB::table('products')
               ->where('category_id', $category->id)
-              ->get()
+              ->get()->take(3)
               ->map(function ($product) {
                   $product->sizes = DB::table('product_size')
                       ->where('product_id', $product->id)
@@ -60,7 +60,7 @@ class WebController extends Controller
     $id = request('id');
 
      $productSize=ProductSize::find($id);
- 
+    
    return view('front.AddTocard',compact("data","dataImages","productSize"));
 
    }

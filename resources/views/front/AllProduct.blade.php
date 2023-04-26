@@ -7,7 +7,6 @@
         @if ($key % 3 == 0)
           </div>
           <br>
-          
           <div class="row">
         @endif
         <div class="col-sm-6 col-md-4">
