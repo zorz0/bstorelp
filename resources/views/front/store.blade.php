@@ -144,10 +144,12 @@
             <hr class="myhr">
             <img class="myimg" width="" alt="product" src="/storage/img/{{ $product->image }}">
             <hr class="myhr">
+                 @auth
             <button type="submit"> اعرض المنتج</button>
 <p style="font-weight: bold">{{$product->price}} د.أ</p>
             <h3>
-                @auth
+                @endauth
+           
 {{-- 
                 @if ($product->sizes[0]!="null")
             
@@ -160,7 +162,7 @@
 
                 @endif   --}}
 
-            @endauth
+       
             </h3>
           </div>
         </div>
