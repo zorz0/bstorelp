@@ -242,22 +242,22 @@
                                     <p
                                         class="u-align-right u-custom-font u-small-text u-text u-text-default u-text-variant u-text-white u-text-3">
                                         <a href="/index.php"
-                                            class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-custom-color-2 u-text-hover-custom-color-2 u-text-white u-btn-3">الرئيسية<br>
+                                            class="u-active-none u-border-none u-btn u-button-link u-button-style porder-none u-hover-none u-none u-text-active-custom-color-2 u-text-hover-custom-color-2 u-text-white u-btn-3">الرئيسية<br>
                                         </a>
-                                        <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-custom-color-2 u-text-hover-custom-color-2 u-text-white u-btn-3"
+                                        <a class="u-active-none u-border-none u-btn u-button-link u-button-style porder-none u-hover-none u-none u-text-active-custom-color-2 u-text-hover-custom-color-2 u-text-white u-btn-3"
                                             href="{{ url('/news') }}"> أخبارنا
                                         </a>
 
                                         <br>
-                                        <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-custom-color-2 u-text-hover-custom-color-2 u-text-white u-btn-3"
+                                        <a class="u-active-none u-border-none u-btn u-button-link u-button-style porder-none u-hover-none u-none u-text-active-custom-color-2 u-text-hover-custom-color-2 u-text-white u-btn-3"
                                             href="{{ url('/store') }}"> المتجر
                                         </a>
                                         <br>
-                                        <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-custom-color-2 u-text-hover-custom-color-2 u-text-white u-btn-3"
+                                        <a class="u-active-none u-border-none u-btn u-button-link u-button-style porder-none u-hover-none u-none u-text-active-custom-color-2 u-text-hover-custom-color-2 u-text-white u-btn-3"
                                             href="{{ url('/about') }}"> من نحن
                                         </a>
                                         <br>
-                                        <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-custom-color-2 u-text-hover-custom-color-2 u-text-white u-btn-3"
+                                        <a class="u-active-none u-border-none u-btn u-button-link u-button-style porder-none u-hover-none u-none u-text-active-custom-color-2 u-text-hover-custom-color-2 u-text-white u-btn-3"
                                             href="{{ url('/contact') }}">تواصل معنا
                                         </a>
                                     </p>
