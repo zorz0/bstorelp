@@ -118,22 +118,22 @@
                             <ul
                                 class="u-align-center u-custom-font u-nav u-popupmenu-items u-text-active-custom-color-2 u-text-hover-custom-color-2 u-unstyled u-nav-2">
                                 <li class="u-nav-item">
-                                    <a class="u-button-style u-nav-link" href="/index.html">الرئيسية</a>
+                                    <a class=" customfont u-button-style u-nav-link" href="/index.html">الرئيسية</a>
                                 </li>
                                 <li class="u-nav-item">
-                                    <a class="u-button-style u-nav-link" href="#">
+                                    <a class="customfont u-button-style u-nav-link" href="#">
                                         من نحن</a>
                                 </li>
                                 <li class="u-nav-item">
-                                    <a class="u-button-style u-nav-link" href="/store.html">
+                                    <a class="customfont u-button-style u-nav-link" href="/store.html">
                                         المتجر</a>
                                 </li>
                                 <li class="u-nav-item">
-                                    <a class="u-button-style u-nav-link" href="#">
+                                    <a class=" customfont u-button-style u-nav-link" href="#">
                                         أخبارنا</a>
                                 </li>
                                 <li class="u-nav-item">
-                                    <a class="u-button-style u-nav-link" href="/contact.html">
+                                    <a class=" customfont u-button-style u-nav-link" href="/contact.html">
                                         تواصل معنا</a>
                                 </li>
                             </ul>
@@ -215,8 +215,8 @@
                                             class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-custom-color-2 u-text-hover-custom-color-2 u-text-white u-btn-1">
                                             <span style="font-size: 1.125rem;"></span>
                                         </a>
-                                        <span style="font-size: 1.125rem;">تواصل معنا <br>
-                                        </span>0779959058 <br>info@beitkhayratsouf.com <br>جرش - سوف - البرج - قرب نبع
+                                        <span class="customfont" style="font-size: 1.125rem;">تواصل معنا <br>
+                                        </span class="customfont">0779959058 <br>info@beitkhayratsouf.com <br>جرش - سوف - البرج - قرب نبع
                                         المغاسل
                                     </p>
                                 </div>
@@ -229,8 +229,8 @@
                                             class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-custom-color-2 u-text-hover-custom-color-2 u-text-white u-btn-2">
                                             <span style="font-size: 1rem;"></span>
                                         </a>
-                                        <span style="font-size: 1rem;">مواقع التواصل الإجتماعي <br>
-                                        </span> <a href="https://www.facebook.com/baitkhayratsoof1881?mibextid=ZbWKwL">
+                                        <span style="customfont" style="font-size: 1rem;">مواقع التواصل الإجتماعي <br>
+                                        </span> <a class="customfont" href="https://www.facebook.com/baitkhayratsoof1881?mibextid=ZbWKwL">
                                             الفيسبوك</a><br><a
                                             href="https://instagram.com/beitkhairatsouf1881?igshid=YmMyMTA2M2Y="> إنستجرام
                                         </a> <br>تيك توك <br>اليوتيوب
