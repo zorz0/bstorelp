@@ -148,8 +148,8 @@
                  <div class="product-imgs">
                      <div class="img-display">
                          <div class="img-showcase">
-                             <img src="{{ asset($data->image) }}" alt="shoe image">
-                             {{-- <img src = "shoes_images/shoe_2.jpg" alt = "shoe image">
+                          <img src="{{ asset('storage/img/'.$data->image) }}" alt="shoe image">
+                          {{-- <img src = "shoes_images/shoe_2.jpg" alt = "shoe image">
                 <img src = "shoes_images/shoe_3.jpg" alt = "shoe image">
                 <img src = "shoes_images/shoe_4.jpg" alt = "shoe image"> --}}
                          </div>

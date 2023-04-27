@@ -52,7 +52,7 @@
 <body class="u-body u-stick-footer u-xl-mode">
     @extends('layouts.app')
     @section('header')
-    @livewireScripts
+        @livewireScripts
         <header class="u-clearfix u-header u-image lazyload u-header">
             <a href="#" class="u-align-center u-image u-logo u-image-1">
                 <img src="{{ asset('/assets/bks/') }}/images/logo.png" class="u-logo-image u-logo-image-1">
@@ -215,7 +215,8 @@
                                             <span style="font-size: 1.125rem;"></span>
                                         </a>
                                         <span style="font-size: 1.125rem;">تواصل معنا <br>
-                                        </span>0779959058 <br>info@beitkhayratsouf.com <br>جرش - سوف - البرج - قرب نبع المغاسل
+                                        </span>0779959058 <br>info@beitkhayratsouf.com <br>جرش - سوف - البرج - قرب نبع
+                                        المغاسل
                                     </p>
                                 </div>
                             </div>
@@ -228,7 +229,10 @@
                                             <span style="font-size: 1rem;"></span>
                                         </a>
                                         <span style="font-size: 1rem;">مواقع التواصل الإجتماعي <br>
-                                        </span> <a href="https://www.facebook.com/baitkhayratsoof1881?mibextid=ZbWKwL"> الفيسبوك</a><br><a href="https://instagram.com/beitkhairatsouf1881?igshid=YmMyMTA2M2Y=" > إنستجرام </a> <br>تيك توك <br>اليوتيوب
+                                        </span> <a href="https://www.facebook.com/baitkhayratsoof1881?mibextid=ZbWKwL">
+                                            الفيسبوك</a><br><a
+                                            href="https://instagram.com/beitkhairatsouf1881?igshid=YmMyMTA2M2Y="> إنستجرام
+                                        </a> <br>تيك توك <br>اليوتيوب
                                     </p>
                                 </div>
                             </div>
@@ -262,10 +266,22 @@
                         </div>
                     </div>
                 </div>
-                <p class="u-align-center u-custom-font u-text u-text-body-alt-color u-text-4"> Powered By Banana </p>
-                <img src="/public/assets/images/banana.png" style="text-align: center;" >
             </div>
         </footer>
+        <div class="container text-center">
+            <div class="row">
+
+                <div class="col t-center">
+                    <p class="u-align-center u-custom-font u-text u-text-body-alt-color u-text-4"
+                        style="color:#6b7265!important;margin-bottom: -30px!important;"> Powered By Banana </p>
+                        <img src="{{ asset('assets/images/banana.png') }}" style="text-align: center; width:150px;">
+
+                </div>
+
+            </div>
+          
+
+        </div>
     @endsection
 </body>
 
