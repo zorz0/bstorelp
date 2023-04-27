@@ -21,6 +21,7 @@
     <meta property="og:image" content="./images/logo.png">
     <meta property="og:url" content="#">
     @livewireStyles
+
     <link id="u-theme-google-font" rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     <link id="u-page-google-font" rel="stylesheet"
@@ -52,7 +53,7 @@
 <body class="u-body u-stick-footer u-xl-mode">
     @extends('layouts.app')
     @section('header')
-        @livewireScripts
+    @livewireScripts
         <header class="u-clearfix u-header u-image lazyload u-header">
             <a href="#" class="u-align-center u-image u-logo u-image-1">
                 <img src="{{ asset('/assets/bks/') }}/images/logo.png" class="u-logo-image u-logo-image-1">
@@ -279,7 +280,7 @@
                 </div>
 
             </div>
-          
+
 
         </div>
     @endsection

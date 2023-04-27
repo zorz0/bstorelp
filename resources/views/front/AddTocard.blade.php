@@ -1,4 +1,4 @@
-{{-- 
+{{--
     <link rel="stylesheet" href="{{ asset('assets/card/style.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
@@ -91,7 +91,7 @@
             <button type = "submit" class="btn btn-success">
               اضف الي السلة <i class = "fas fa-shopping-cart"></i>
             </button>
-            
+
           </div>
 
           @endauth
@@ -130,18 +130,18 @@
  @section('content')
      <!DOCTYPE html>
      <html dir="rtl">
- 
+
      <head>
- 
- 
+
+
          <link rel="stylesheet" href="{{ asset('/assets') }}/apps/css/productDetails.css">
          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
              integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
              crossorigin="anonymous" />
      </head>
- 
+
      <body>
- 
+
          <div class="card-wrapper">
              <div class="card">
                  <!-- card left -->
@@ -189,8 +189,8 @@
                          <i class="fas fa-star-half-alt"></i>
                          <span>4.7(21)</span>
                      </div>
-                   
-                     <livewire:show-all-categoryw-product :id="$data->id"/>
+
+                      <livewire:show-all-categoryw-product :id="$data->id"/>
 
                      <div class="social-links">
                          <p>المشاكة مع: </p>
@@ -213,11 +213,10 @@
                  </div>
              </div>
          </div>
- 
- 
+
+
          <link rel="stylesheet" href="{{ asset('/assets') }}/apps/scripts/productDetails.js">
      </body>
- 
+
      </html>
  @endsection
- 
