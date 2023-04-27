@@ -15,7 +15,7 @@ public $selectedsizeid;
     public $selectedSize;
     public $selectedPrice;
     public $discount;
-
+public $data2;
    public $quantity;
     
     public function mount($id)
@@ -27,7 +27,7 @@ public $selectedsizeid;
         $this->productSize = ProductSize::where('product_id', $this->data2->id)->get();
         $latestProductSize = ProductSize::where('product_id', $this->data2->id)->latest()->first();
         $this->selectedsizeid=$latestProductSize->id;
-
+        $this->quantity=1;
         $this->selectedSize = $latestProductSize ? $latestProductSize->size : null;
         $this->selectedPrice = $latestProductSize ? $latestProductSize->price : null;
         $this->discount = $latestProductSize ? $latestProductSize->discount : null;

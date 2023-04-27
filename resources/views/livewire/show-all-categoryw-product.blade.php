@@ -21,9 +21,13 @@
                     <li>قيمة التوصيل: <span>مجاني</span></li>
                     <li>الحجم المتوفر:
                         <select style="width: 100px;" wire:model="selectedSize" wire:change="updatePrice">
-                            <option>{{$selectedSize}}</option>
+                            <option value="{{$selectedsizeid}}">{{$selectedSize}}</option>
                             @foreach ($productSize as $item)
+                            @if ($item->id==$selectedsizeid)
+                            @else
                             <option value="{{$item->id}}">{{$item->size}}</option>   
+
+                            @endif
                             @endforeach
                         </select>
                     </li>
