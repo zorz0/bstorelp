@@ -145,9 +145,12 @@
             <img class="myimg" width="" alt="product" src="/storage/img/{{ $product->image }}">
             <hr class="myhr">
                  @auth
+                 @if ($product->sizes[0]!="null")
+
             <button type="submit"> اعرض المنتج</button>
 <p style="font-weight: bold">{{$product->price}} د.أ</p>
             <h3>
+                @endif
                 @endauth
            
 {{-- 
