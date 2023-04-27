@@ -219,40 +219,40 @@
     </section> --}}
 
     <section class="container my-5">
-        <h2 class="text-center">نضمن لك عملية شراء سريعة ، مريحة وآمنة</h2>
+        <h2 class="text-center customfont u-custom-font">نضمن لك عملية شراء سريعة ، مريحة وآمنة</h2>
         <div class="contentVa0">
             <img src="{{ asset('/assets/images/person.png') }}" alt="">
             <div class="contentVa">
-                <h2>تسجيل الدخول</h2>
-                <p>أضف معلوماتك (اسمك ، رقم هاتفك ، موقعك)</p>
+                <h2 class="customfont u-custom-font">تسجيل الدخول</h2>
+                <p class="customfont u-custom-font">أضف معلوماتك (اسمك ، رقم هاتفك ، موقعك)</p>
             </div>
         </div>
         <div class="contentVa0">
             <img src="{{ asset('/assets/images/chart.png') }}" alt="">
             <div class="contentVa">
-                <h2>أضف منتجاتك للسلة</h2>
-                <p>أضف منتجاتك المفضلة للسلة</p>
+                <h2 class="customfont u-custom-font">أضف منتجاتك للسلة</h2>
+                <p class="customfont u-custom-font">أضف منتجاتك المفضلة للسلة</p>
             </div>
         </div>
         <div class="contentVa0">
             <img src="{{ asset('/assets/images/rightSign.png') }}" alt="">
             <div class="contentVa">
-                <h2>تأكيد طلبك</h2>
-                <p>أكد طلبك بعد التحقق من الطلبات وقيمة الفاتورة النهائية</p>
+                <h2 class="customfont u-custom-font">تأكيد طلبك</h2>
+                <p class="customfont u-custom-font">أكد طلبك بعد التحقق من الطلبات وقيمة الفاتورة النهائية</p>
             </div>
         </div>
         <div class="contentVa0">
             <img src="{{ asset('/assets/images/customer.png') }}" alt="">
             <div class="contentVa">
-                <h2>تأكيد موعد وموقع التسليم</h2>
-                <p>سيتواصل معك موظف خدمة العملاء لتأكيد موعد وموقع التسليم</p>
+                <h2 class="customfont u-custom-font">تأكيد موعد وموقع التسليم</h2>
+                <p class="customfont u-custom-font">سيتواصل معك موظف خدمة العملاء لتأكيد موعد وموقع التسليم</p>
             </div>
         </div>
         <div class="contentVa0">
             <img src="{{ asset('/assets/images/car.png') }}" alt="">
             <div class="contentVa">
-                <h2>توصيل وإستلام الطلب خلال ٢٤ ساعة والدفع</h2>
-                <p>توصيل منتجاتك لك لتستلمها، ودفع ثمنها</p>
+                <h2 class="customfont u-custom-font">توصيل وإستلام الطلب خلال ٢٤ ساعة والدفع</h2>
+                <p class="customfont u-custom-font">توصيل منتجاتك لك لتستلمها، ودفع ثمنها</p>
             </div>
         </div>
         <div class="contentVa0">
@@ -263,8 +263,20 @@
         </div>
     </section>
     <div class=" text-center">
-        <a href="http://127.0.0.1:8000/news"><button class="general-btn  border-0  text-white h4 p-3 m-3 col-2"> تسوق الأن
+        
+        <img src="{{ asset('/assets/images/shopping-cart .png') }}" style="height: 100px;transform: rotate(20deg);" alt="">
+
+        <a href="http://127.0.0.1:8000/news"><button  class=" customfont u-custom-font parallelogram-button general-btn  border-0  text-white h4 p-3 m-3 col-2"> تسوق الأن
             </button></a>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div style="padding-right: 40px;margin-bottom: 130px; padding-bottom: 10px; height: 160px;width: 100%;overflow: hidden;position: relative;padding-left: 40px;">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 250" style="transform: scaleY(-1);">
+                <path fill="#bbcf3f" fill-opacity="1" d="M0,224L120,202.7C240,181,480,139,720,144C960,149,1200,181,1320,202.7L1440,224V0H1320C1200,0,960,0,720,0C480,0,240,0,120,0H0V224Z"></path>
+            </svg>
+              <h2 class="customfont u-custom-font" style="position: absolute;margin-top: 40px;top: 50%;left: 50%;transform: translate(-50%, -50%);font-size: 55px;font-weight: bold;">المنتجات الأكثر مبيعًا</h2>          </div>
+          
     </div>
     <section>
         <div class="chooseEat container text-center py-2 my-5">
@@ -283,14 +295,14 @@
             </h2>
         </div>
         <div class="chooseClass">
-            <h2>
+            <h2 class="customfont u-custom-font">
                 تحفظ في عبوات وأماكن مخصصة
             </h2>
             <img src="{{ asset('/assets/images/library.jpg') }}" alt="">
         </div>
         <div class="chooseClass">
             <img src="{{ asset('/assets/images/kais.jpg') }}" alt="">
-            <h2>
+            <h2 class="customfont u-custom-font">
                 تصلك مغلفة بإحكام جاهزة للأكل
             </h2>
         </div>
@@ -298,7 +310,7 @@
 
     <section class="my-5">
         <div class="chooseEatSuger container text-center py-2 my-5">
-            <h2 class="text-white">منتجات خالية من السكر تماما!</h2>
+            <h2  class="text-white">منتجات خالية من السكر تماما!</h2>
         </div>
     </section>
 
