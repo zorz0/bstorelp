@@ -3,7 +3,7 @@
 <section class="u-clearfix u-section-1">
     <div class="container">
         <div class="u-khayba-phone col-md-12">
-            <p class="pt-5 pl-5 text-left">
+            <p class="pt-5 pl-5 text-left u-custom-font">
                 0779959058
             </p>
         </div>
@@ -20,7 +20,7 @@
     <div class="row">
         <div class="container mt-5 mb-5" style="height: 500px;">
             <div class="u-khayba-location col-md-12">
-                <p class="pt-5 pl-5 text-left" style="font-size: 14px;">
+                <p class="pt-5 pl-5 text-left u-custom-font" style="font-size: 14px;">
                     جرش / سوف / منطقة البرج
                 </p>
                 <p class="location">

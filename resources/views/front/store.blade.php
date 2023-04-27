@@ -62,7 +62,7 @@
             </div>
         </div>
     </section>
-    
+
 
     <section class="u-clearfix u-section-1 container">
         <div class="row store">
@@ -72,7 +72,7 @@
                     <h3>
                         أمان
                     </h3>
-                    <p class="font-weight-bolder">
+                    <p class="font-weight-bolder u-custom-font">
                         الدفع عند التوصيل
                     </p>
                 </div>
@@ -80,7 +80,7 @@
                     <h3>
                         صحي
                     </h3>
-                    <p class="font-weight-bolder">
+                    <p class="font-weight-bolder u-custom-font">
                         بدون مواد حافظة
                     </p>
                 </div>
@@ -88,7 +88,7 @@
                     <h3>
                         النظافة
                     </h3>
-                    <p class="font-weight-bolder">
+                    <p class="font-weight-bolder u-custom-font">
                         طعام بيتي صحي
                     </p>
                 </div>
@@ -96,7 +96,7 @@
                     <h3>
                         الجودة
                     </h3>
-                    <p class="font-weight-bolder">
+                    <p class="font-weight-bolder u-custom-font">
                         ضمان جودة المنتجات
                     </p>
                 </div>
@@ -104,7 +104,7 @@
                     <h3>
                         توصيل سريع
                     </h3>
-                    <p class="font-weight-bolder">
+                    <p class="font-weight-bolder u-custom-font">
                         لجميع انحاء المملكة
                     </p>
                 </div>
@@ -116,45 +116,42 @@
 
 
     @foreach ($categories as $value)
-        
-
-<section class="u-clearfix u-section-1 container-fluid">
-    <div class="row store">
-        <div class="ct-blog col-sm-6 col-md-2">
-            <div class="fauxcrop">
-              <div class="image-container">
-                <a href="#">
-                  <img class="category" style="  filter: brightness(0.5); " alt="khayba" src="{{ asset('storage/imgs/' . $value->image) }}">
-                </a>
-                <div class="text-container">
-                  <p>{{$value->name}}</p>
+        <section class="u-clearfix u-section-1 container-fluid">
+            <div class="row store">
+                <div class="ct-blog col-sm-6 col-md-2">
+                    <div class="fauxcrop">
+                        <div class="image-container">
+                            <a href="#">
+                                <img class="category" style="  filter: brightness(0.5); " alt="khayba"
+                                    src="{{ asset('storage/imgs/' . $value->image) }}">
+                            </a>
+                            <div class="text-container">
+                                <p>{{ $value->name }}</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          
-        @foreach ($value->products as $product)
 
-        <div class="col-sm-6 col-md-3">
-          <div class="product">
-            <form id="FormCard" action="{{ route('showProduct', ['id' => $product->id]) }}" method="post">
-                @csrf
-            <h3>{{ $product->name }}</h3>
-            <p id="description">{{ $product->description }}</p>
-            <hr class="myhr">
-            <img class="myimg" width="" alt="product" src="/storage/img/{{ $product->image }}">
-            <hr class="myhr">
-                 @auth
-                 @if ($product->sizes[0]!="null")
+                @foreach ($value->products as $product)
+                    <div class="col-sm-6 col-md-3">
+                        <div class="product">
+                            <form id="FormCard" action="{{ route('showProduct', ['id' => $product->id]) }}" method="post">
+                                @csrf
+                                <h3>{{ $product->name }}</h3>
+                                <p id="description">{{ $product->description }}</p>
+                                <hr class="myhr">
+                                <img class="myimg" width="" alt="product" src="/storage/img/{{ $product->image }}">
+                                <hr class="myhr">
+                                @auth
+                                    @if ($product->sizes[0] != 'null')
+                                        <button type="submit"> اعرض المنتج</button>
+                                        <p style="font-weight: bold">{{ $product->price }} د.أ</p>
+                                        <h3>
+                                    @endif
+                                @endauth
 
-            <button type="submit"> اعرض المنتج</button>
-<p style="font-weight: bold">{{$product->price}} د.أ</p>
-            <h3>
-                @endif
-                @endauth
-           
-{{-- 
-                @if ($product->sizes[0]!="null")
+                                {{-- 
+                @if ($product->sizes[0] != 'null')
             
                 <select name="productSizeId" id="">
                         @foreach ($product->sizes as $size)
@@ -165,23 +162,23 @@
 
                 @endif   --}}
 
-       
-            </h3>
-          </div>
-        </div>
-    </form> 
+
+                                </h3>
+                        </div>
+                    </div>
+                    </form>
+                @endforeach
+                <div class="ct-blog col-sm-6 col-md-1">
+                    <div style="margin-top: 130%;">
+                        <a class="smore2" href="{{ route('allproduct', ['id' => $value->id]) }}">مشاهدة المزيد</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br>
+        <br>
     @endforeach
-        <div class="ct-blog col-sm-6 col-md-1">
-          <div style="margin-top: 130%;">
-            <a class="smore2" href="{{ route('allproduct', ['id' => $value->id]) }}">مشاهدة المزيد</a>
-        </div>
-        </div>
-      </div>
-</section>
-<br>
-<br>
-@endforeach
-  {{--   <section class="u-clearfix u-section-1 container-fluid">
+    {{--   <section class="u-clearfix u-section-1 container-fluid">
         <div class="row store">
             <div class="ct-blog col-sm-6 col-md-3 my-3">
                 <div class="fauxcrop">
@@ -267,7 +264,8 @@
     </section>
     <div class=" text-center">
         <a href="http://127.0.0.1:8000/news"><button class="general-btn  border-0  text-white h4 p-3 m-3 col-2"> تسوق الأن
-    </button></a></div>
+            </button></a>
+    </div>
     <section>
         <div class="chooseEat container text-center py-2 my-5">
             <h2 class="text-white">إختر ألذ وأشهى المنتجات</h2>
@@ -309,10 +307,13 @@
         <div class="container">
             <img src="/assets/images/stoneCover.jpg" alt="Snow" style="width:100%;">
 
-            <div class="centered"><h1 class="container2">بيت خيرات سوف<br>قصة بدأت من عام ١٨٨١م <span>
-                <a id="btn" href={{ url('/about') }}><button class="general-btn border-0 text-white h3 p-3 m-4">اعرف
-                عنها</button></a></span></h1></div>
-          </div>
+            <div class="centered">
+                <h1 class="container2">بيت خيرات سوف<br>قصة بدأت من عام ١٨٨١م <span>
+                        <a id="btn" href={{ url('/about') }}><button
+                                class="general-btn border-0 text-white h3 p-3 m-4">اعرف
+                                عنها</button></a></span></h1>
+            </div>
+        </div>
 
     </section>
 @endsection

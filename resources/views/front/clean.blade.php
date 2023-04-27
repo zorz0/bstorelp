@@ -1,10 +1,10 @@
 @extends('layouts.master')
 @section('content')
     <section class="u-clearfix u-section-1 container">
-        <h1 class="text-center">بيت خيرات سوف</h1>
+        <h1 class="text-center u-custom-font">بيت خيرات سوف</h1>
         <div class="row">
 
-            <p class="text-center text-break fst-italic lh-1">بيت خيرات سوف
+            <p class="text-center text-break fst-italic lh-1 u-custom-font">بيت خيرات سوف
                 بناء من عام ١٨٨١ م كان منزل سكنته عائلة مسيحية ( عائلة البطارسة ) وإحدى أركانه كنيسة يقيموا فيها الصلوات .
                 حجارة البيت تم نقلها من دولة فلسطين على الجمال انتقل اصحابه من المنزل وتم هجره لمدة ٢٤ سنة.
                 يقع المنزل في مدينة جرش - بلدة سوف منطقة البرج ، بيت خيرات سوف هو مشروع تابع لجمعية النور المبين للتنمية
