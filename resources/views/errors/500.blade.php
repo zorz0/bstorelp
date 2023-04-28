@@ -42,11 +42,11 @@
         <div class="col-md-12 page-500">
             <div class=" number font-red"> 500 </div>
             <div class=" details">
-                <h3>Oops! هناك شيء خاطئ.</h3>
-                <p> نحن نعمل على إصلاحه ، يرجى العودة بعد قليل.
+                <h3>{{ __('routingError.500_title') }}</h3>
+                <p>{{ __('routingError.500_content') }}
                     <br/> </p>
                 <p>
-                    <a href="index.html" class="btn red btn-outline"> العودة للرئيسية </a>
+                    <a href="index.html" class="btn red btn-outline">{{ __('routingError.error_handle_button') }}</a>
                     <br> </p>
             </div>
         </div>

@@ -2,5 +2,4 @@
 return [
     'ar' => 'Arabic',
     'en' => 'English',
-
 ];
