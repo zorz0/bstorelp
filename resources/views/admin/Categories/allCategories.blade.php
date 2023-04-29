@@ -7,37 +7,38 @@
     <!-- BEGIN PAGE HEADER-->
     <!-- BEGIN PAGE BAR -->
     <div class="page-bar">
-        <ul class="page-breadcrumb" dir="{{ getDirection() }}">
+        <ul class="page-breadcrumb">
             <li>
-                <a href="index.html">{{ __('admin_.home') }}</a>
+                <a href="index.html">الرئيسية</a>
                 <i class="fa fa-circle"></i>
             </li>
             <li>
-                <a href="#">{{ __('admin_.categories') }}</a>
+                <a href="#">الفئات</a>
                 <i class="fa fa-circle"></i>
             </li>
             <li>
-                <span>{{ __('admin_.all_categories') }}</span>
+                <span>جميع الفئات</span>
             </li>
         </ul>
     </div>
     <!-- END PAGE BAR -->
     <!-- BEGIN PAGE TITLE-->
-    <h3 class="page-title" align="{{ getAlign() }}">{{ __('admin_.all_categories') }}
+    <h3 class="page-title"> جميع الفئات
         {{-- <small>managed datatable samples</small> --}}
     </h3>
     <!-- END PAGE TITLE-->
-    <div class="row" dir="{{ getDirection() }}">
+    <div class="row">
         <div class="col-md-12">
             <div class="row">
                 <div class="col-md-12">
                     <div class="portlet light bordered">
                         <div class="portlet-title">
                             <div class="caption">
-                               <a href="{{route('categories.create')}}"> <span class="caption-subject font-dark sbold uppercase">{{ __('admin_.add_category') }}</span>
+                                <i class="icon-settings font-dark"></i>
+                               <a href="{{route('categories.create')}}"> <span class="caption-subject font-dark sbold uppercase">اضافة فئة جديدة</span>
                                </a>
-
-
+                               
+         
                             </div>
                         </div>
                         <div class="portlet-body form">
@@ -47,24 +48,24 @@
 
                                 <div class="form-body">
                                     <div class="form-group">
-                                        <label class="col-md-2 control-label">{{ __('admin_.category_name') }}</label>
+                                        <label class="col-md-2 control-label">اسم الفئة</label>
                                         <div class="col-md-6">
-                                            <input type="text" name="name" class="form-control" placeholder="{{ __('admin_.category_name') }}" required>
-                                            <span class="help-block">{{ __('admin_.insert_category_image') }}</span>
+                                            <input type="text" name="name" class="form-control" placeholder="اسم الفئة" required>
+                                            <span class="help-block"> ادخل هنا اسم الفئة. </span>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-md-2 control-label">{{ __('admin_.category_image') }}</label>
+                                        <label class="col-md-2 control-label">صورة الفئة</label>
                                         <div class="col-md-6">
-                                            <input type="file" name="image"  placeholder="{{ __('admin_.category_image') }}" required>
-                                            <span class="help-block"> {{ __('admin_.insert_category_image') }} </span>
+                                            <input type="file" name="image"  placeholder="صورة للفئة" required>
+                                            <span class="help-block"> ارفع هنا صورة للفئة. </span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-actions">
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <button type="submit" class="btn green">{{ __('admin_.save_button') }}</button>
+                                            <button type="submit" class="btn green">حفظ</button>
                                             {{-- <button type="button" class="btn default">Cancel</button> --}}
                                         </div>
                                     </div>
@@ -77,25 +78,25 @@
                                @csrf
                                 <div class="form-body">
                                     <div class="form-group">
-                                        <label class="col-md-2 control-label">{{ __('admin_.category_name') }}</label>
+                                        <label class="col-md-2 control-label">اسم الفئة</label>
                                         <div class="col-md-6">
                                             <input type="text" name="name" class="form-control" value="{{$category->name}}" required>
-                                            <span class="help-block">{{ __('admin_.insert_category_name') }}</span>
+                                            <span class="help-block">  ادخل هنا اسم الفئة الجديد .</span>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-md-2 control-label">{{ __('admin_.category_image') }}</label>
+                                        <label class="col-md-2 control-label">صورة الفئة</label>
                                         <div class="col-md-6">
-                                            <input type="file" name="image"  placeholder="{{ __('admin_.category_image') }}" >
+                                            <input type="file" name="image"  placeholder="صورة للفئة" >
                                             <img src="./storage/imgs{{$category->image}}" alt="">
-                                            <span class="help-block"> {{ __('admin_.insert_category_image') }}</span>
+                                            <span class="help-block"> ارفع هنا صورة جديدة للفئة . </span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-actions">
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <button type="submit" class="btn green">{{ __('admin_.save_button') }}</button>
+                                            <button type="submit" class="btn green">حفظ</button>
                                             {{-- <button type="button" class="btn default">Cancel</button> --}}
                                         </div>
                                     </div>
@@ -111,7 +112,7 @@
                 <div class="portlet-title">
                     <div class="caption font-dark">
                         <i class="icon-settings font-dark"></i>
-                        <span class="caption-subject bold uppercase"> {{ __('admin_.categories') }}</span>
+                        <span class="caption-subject bold uppercase"> الفئات</span>
                     </div>
                 </div>
                 <div class="portlet-body">
@@ -126,21 +127,21 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="btn-group pull-right">
-                                        <button class="btn green  btn-outline dropdown-toggle" data-toggle="dropdown">{{ __('admin_.tools') }}
+                                        <button class="btn green  btn-outline dropdown-toggle" data-toggle="dropdown">أدوات
                                             <i class="fa fa-angle-down"></i>
                                         </button>
                                         <ul class="dropdown-menu pull-right">
                                             <li>
                                                 <a href="javascript:;">
-                                                    <i class="fa fa-print"></i> {{ __('admin_.print') }} </a>
+                                                    <i class="fa fa-print"></i> طباعة </a>
                                             </li>
                                             <li>
                                                 <a href="javascript:;">
-                                                    <i class="fa fa-file-pdf-o"></i>{{ __('admin_.savePDF') }} </a>
+                                                    <i class="fa fa-file-pdf-o"></i> حفظ كـ PDF </a>
                                             </li>
                                             <li>
                                                 <a href="javascript:;">
-                                                    <i class="fa fa-file-excel-o"></i>{{ __('admin_.exportExcel') }} </a>
+                                                    <i class="fa fa-file-excel-o"></i> استيراد إلى Excel </a>
                                             </li>
                                         </ul>
                                     </div>
@@ -158,11 +159,11 @@
                                             <span></span>
                                         </label>
                                     </th>
-                                    <th>{{ __('admin_.category_name') }} </th>
-                                    <th>{{ __('admin_.category_image') }}</th>
+                                    <th> اسم الفئة </th>
+                                    <th>صورة الفئة</th>
 
-                                    <th> {{ __('admin_.join_time') }}</th>
-                                    <th> {{ __('admin_.procedures') }}</th>
+                                    <th> انضم في </th>
+                                    <th> اجراءات </th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -183,21 +184,20 @@
                                         <td>
                                             <div class="btn-group">
                                                 <button class="btn btn-xs green dropdown-toggle" type="button"
-                                                    data-toggle="dropdown" aria-expanded="false"> {{ __('admin_.procedures') }}
-                                                    <i class="fa fa-angle-down"></i>
+                                                    data-toggle="dropdown" aria-expanded="false"> اجراءات
                                                     <i class="fa fa-angle-down"></i>
                                                 </button>
                                                 <ul class="dropdown-menu" role="menu">
                                                     <li>
 
                                                         <a href="{{ route('categories.edit', ['id' => $category->id]) }}">
-                                                            <i class="icon-docs"></i> {{ __('admin_.edit') }} </a>
+                                                            <i class="icon-docs"></i> تعديل </a>
 
                                                     </li>
                                                     <li>
 
                                                     <a href="{{route('categories.destroy',['id'=>$category->id])}}" >
-                                                        <i class="icon-docs"></i> {{ __('admin_.delete') }}  </a>
+                                                        <i class="icon-docs"></i> حذف  </a>
 
                                                     </li>
                                                     {{-- <li>

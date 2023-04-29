@@ -129,7 +129,7 @@
  @extends('layouts.master')
  @section('content')
      <!DOCTYPE html>
-     <html dir="{{ getDirection() }}">
+     <html dir="rtl">
 
      <head>
 
@@ -148,8 +148,8 @@
                  <div class="product-imgs">
                      <div class="img-display">
                          <div class="img-showcase">
-                             <img src="{{ asset($data->image) }}" alt="shoe image">
-                             {{-- <img src = "shoes_images/shoe_2.jpg" alt = "shoe image">
+                          <img src="{{ asset('storage/img/'.$data->image) }}" alt="shoe image">
+                          {{-- <img src = "shoes_images/shoe_2.jpg" alt = "shoe image">
                 <img src = "shoes_images/shoe_3.jpg" alt = "shoe image">
                 <img src = "shoes_images/shoe_4.jpg" alt = "shoe image"> --}}
                          </div>
@@ -190,10 +190,10 @@
                          <span>4.7(21)</span>
                      </div>
 
-                     <livewire:show-product-size-price :id="$data->id"/>
+                      <livewire:show-all-categoryw-product :id="$data->id"/>
 
                      <div class="social-links">
-                         <p>{{ __('addToCard.share_with') }} </p>
+                         <p>المشاكة مع: </p>
                          <a href="#">
                              <i class="fab fa-facebook-f"></i>
                          </a>

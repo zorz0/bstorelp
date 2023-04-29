@@ -65,14 +65,16 @@
             </div>
             <p class="u-align-center u-custom-font u-text u-text-1" data-lang-en=""></p>
             <div style="direction: rtl;">
-                <p class="u-align-center u-custom-font u-text u-text-1">
-                    {{ __('master.wsuf_info') }}
+                <p class="u-align-center u-custom-font u-text u-text-1">بناء من عام 1881م كان منزل لعائلة مسيحية | عائلة
+                    البطارسة | وإحدى أركانه كنيسة يقيموا فيها الصلوات.
+                    <br>حجارة البيت تم نقلها من دولة فلسطين على الجمال انتقل أصحابه من المنزل وتم هجره لمدة 24
+                    سنة.&nbsp;
                 </p>
             </div>
             {{-- <img class="u-image u-image-contain u-image-default lazyload u-image-2" alt=""
                 data-src="{{ asset('/assets/bks') }}/images/-2.png"> --}}
             <div class=" text-center"> <a href={{ url('/about') }}><button
-                        class="general-btn border-0 text-white h4 p-3 m-3"> {{ __('master.continue_reading') }}
+                        class="general-btn border-0 text-white h4 p-3 m-3">متابعة القراءة
                     </button></a></div>
 
         </div>
@@ -82,7 +84,7 @@
         <img class="u-image u-image-contain u-image-default lazyload u-image-3" alt=""
             data-src="{{ asset('/assets/bks') }}/images/dots.png">
         <p class="u-align-center u-custom-font u-text u-text-1">
-            {{ __('master.wsuf_food_quality') }}
+            أجود أنواع الأطعمة الصحية من مكونات طبيعية تجدونها في متجر بيت خيرات سوف
         </p>
         <div class="col-md-12 col-sx-4 store">
             @foreach ($latestCategory as $record)
@@ -100,7 +102,16 @@
         <div class="u-khayba">
         </div>
         <div class="u-khayba-footer">
-            <p>{{ __('master.goShop') }}</p>
+            <p style="color: #6B7265;">الذهاب إلى المتجر</p>
+        </div>
+        <div class="row d-none" id="wav">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#bbcf3f" fill-opacity="1" d="M0,64L120,101.3C240,139,480,213,720,234.7C960,256,1200,224,1320,208L1440,192L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#0099ff" fill-opacity="1" d="M0,224L120,202.7C240,181,480,139,720,144C960,149,1200,203,1320,224L1440,245V0H1320C1200,0,960,0,720,0C480,0,240,0,120,0H0V224Z"></path>
+          </svg>
+          
         </div>
     </section>
 
@@ -109,7 +120,7 @@
             {{-- <img class="u-image u-image-contain u-image-default lazyload u-image-2" alt=""
                 data-src="{{ asset('/assets/bks') }}/images/news.png"> --}}
             <div class=" text-center"> <a href={{ url('/news') }}><button
-                        class="general-btn  border-0  text-white h4 p-3 m-3 col-2"> {{ __('master.ourNews') }}
+                        class="general-btn  border-0  text-white h4 p-3 m-3 col-2"> أخبارنا
                     </button></a></div>
         </div>
         <div class="col-md-12 col-sx-4">

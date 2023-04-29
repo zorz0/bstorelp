@@ -8,13 +8,13 @@
         <!-- BEGIN PAGE HEADER-->
         <!-- BEGIN PAGE BAR -->
         <div class="page-bar">
-            <ul class="page-breadcrumb" dir="{{ getDirection() }}">
+            <ul class="page-breadcrumb">
                 <li>
-                    <a href="index.html">{{ __('admin_.home') }}</a>
+                    <a href="index.html">الرئيسية</a>
                     <i class="fa fa-circle"></i>
                 </li>
                 <li>
-                    <a href="{{ url('users') }}">{{ __('admin_.settings') }}</a>
+                    <a href="{{ url('users') }}">الاعدادات</a>
                     <i class="fa fa-circle"></i>
                 </li>
             </ul>
@@ -26,7 +26,7 @@
             </div>
         @endif
         <!-- BEGIN PAGE TITLE-->
-        <h3 class="page-title">
+        <h3 class="page-title"> اعدادات الموقع
         </h3>
         @if ($errors->any())
             {!! implode('', $errors->all('<div>:message</div>')) !!}
@@ -39,65 +39,65 @@
                 @csrf
                 @method('put')
                 <div class="form-group col-md-4">
-                    <label class="control-label">{{  __('admin_.site_name') }}</label>
-                    <input type="text" placeholder="{{  __('admin_.full_name') }}" class="form-control" name="title"
+                    <label class="control-label">اسم الموقع</label>
+                    <input type="text" placeholder="الاسم بالكامل" class="form-control" name="title"
                         value="{{ $setting->title }}">
                 </div>
                 <div class="form-group col-md-4">
-                    <label class="control-label">{{  __('admin_.phone_number') }}</label>
+                    <label class="control-label">رقم الهاتف</label>
                     <input type="text" placeholder="0123456789" name="phone" class="form-control"
                         value="{{ $setting->phone }}">
                 </div>
                 <div class="form-group col-md-4">
-                    <label class="control-label">{{  __('admin_.main_concurrency') }}</label>
+                    <label class="control-label">العملة الرئيسية</label>
                     <input type="text" placeholder="د.أ" name="currency" class="form-control"
                         value="{{ $setting->currency }}">
                 </div>
                 <div class="form-group col-md-6">
-                    <label class="control-label">{{  __('admin_.logo') }}</label>
+                    <label class="control-label">الشعار</label>
                     <input type="file" accept="image/" name="logo" />
                     <img src="{{ $setting->logo }}" width="50px" alt="">
                 </div>
                 <div class="form-group col-md-6">
-                    <label class="control-label">{{  __('admin_.link_small_pic') }}</label>
+                    <label class="control-label">الصورة المصغرة بالرابط</label>
                     <input type="file" accept="image/" name="favicon" />
                     <img src="value='{{ $setting->favicon }}'" width="50px" alt="">
                 </div>
                 <div class="form-group col-md-12">
-                    <label class="control-label">{{  __('admin_.banner_image') }}</label>
+                    <label class="control-label">صورة البانر</label>
                     <input type="file" accept="image/" name="panerImgs" class="dropify" />
                         <img src="value='{{ $setting->panerImgs }}'" width="50px" alt="">
                 </div>
                 <div class="form-group col-md-4">
-                    <label class="control-label">{{  __('admin_.site_email') }}</label>
+                    <label class="control-label">البريد الالكتروني للموقع</label>
                     <input type="email" placeholder="User@gmail.com" name="email" class="form-control"
                         value="{{ $setting->email }}">
                 </div>
                 <div class="form-group col-md-4">
-                    <label class="control-label">{{  __('admin_.address') }}</label>
+                    <label class="control-label">العنوان</label>
                     <input type="text" class="form-control" name="address" value="{{ $setting->address }}">
                 </div>
                 <div class="form-group col-md-4">
-                    <label class="control-label">{{  __('admin_.facebook_link') }}</label>
+                    <label class="control-label">فيسبوك</label>
                     <input type="text" class="form-control" name="facebook" value="{{ $setting->facebook }}">
                 </div>
                 <div class="form-group col-md-4">
-                    <label class="control-label">{{  __('admin_.twitter_link') }}</label>
+                    <label class="control-label">تويتر</label>
                     <input type="text" class="form-control" name="twitter" value="{{ $setting->twitter }}">
                 </div>
                 <div class="form-group col-md-4">
-                    <label class="control-label">{{  __('admin_.instagram_link') }}</label>
+                    <label class="control-label">انستجرام</label>
                     <input type="text" class="form-control" name="instagram" value="{{ $setting->instagram }}">
                 </div>
                 <div class="form-group col-md-4">
-                    <label class="control-label">{{  __('admin_.youtube_link') }}</label>
+                    <label class="control-label">يوتيوب</label>
                     <input type="text" class="form-control" name="youtube" value="{{ $setting->youtube }}">
                 </div>
                 <div class="form-group col-md-12">
-                    <label class="control-label">{{  __('admin_.about_site') }}</label>
+                    <label class="control-label">عن الموقع</label>
                     <textarea class="ckeditor form-control" name="description" rows="6">{{ $setting->description }}</textarea>
                 </div>
-                <button type="submit" class="btn green">{{  __('admin_.save_button') }} </button>
+                <button type="submit" class="btn green"> حفظ </button>
             </form>
 
             <!-- END FORM-->

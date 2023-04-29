@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html style="font-size: 16px;" lang="en">
+<html style="font-size: 16px;" lang="ar-SA">
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,7 @@
     <meta name="keywords" content="بيت خيرات سوف">
     <meta name="description"
         content="بناء من عام 1881م كان منزل لعائلة مسيحية | عائلة البطارسة | وإحدى أركانه كنيسة يقيموا فيها الصلوات. حجارة البيت تم نقلها من دولة فلسطين على الجمال انتقل أصحابه من المنزل وتم هجره لمدة 24 سنة.">
-    <title>{{ __('app.app_name') }}</title>
+    <title>بيت خيرات سوف</title>
     <link rel="stylesheet" href="{{ asset('/assets/bks/') }}/nicepage.css" media="screen">
     <link rel="stylesheet" href="{{ asset('/assets/bks/') }}/news.css" media="screen">
     <link rel="stylesheet" href="{{ asset('/assets/bks/') }}/style.css" media="screen">
@@ -20,6 +20,7 @@
 حجارة البيت تم نقلها من دولة فلسطين على الجمال انتقل أصحابه من المنزل وتم هجره لمدة 24 سنة.">
     <meta property="og:image" content="./images/logo.png">
     <meta property="og:url" content="#">
+    @livewireStyles
 
     <link id="u-theme-google-font" rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
@@ -52,6 +53,7 @@
 <body class="u-body u-stick-footer u-xl-mode">
     @extends('layouts.app')
     @section('header')
+    @livewireScripts
         <header class="u-clearfix u-header u-image lazyload u-header">
             <a href="#" class="u-align-center u-image u-logo u-image-1">
                 <img src="{{ asset('/assets/bks/') }}/images/logo.png" class="u-logo-image u-logo-image-1">
@@ -80,31 +82,31 @@
                         <li class="u-nav-item">
                             <a class="mt-2 u-active-custom-color-2 u-bottom-left-radius-50 u-bottom-right-radius-50 u-button-style u-hover-custom-color-2 u-nav-link u-text-active-white u-text-hover-white"
                                 href="{{ url('/contact') }}">
-                                {{ __('master.contact') }}
+                                {{ __('message.Concet us') }}
                             </a>
                         </li>
                         <li class="u-nav-item">
                             <a class="mt-2 u-active-custom-color-2 u-bottom-left-radius-50 u-bottom-right-radius-50 u-button-style u-hover-custom-color-2 u-nav-link u-text-active-white u-text-hover-white"
                                 href="{{ url('/about') }}">
-                                {{ __('master.about') }}
+                                {{ __('message.About us') }}
                             </a>
                         </li>
                         <li class="u-nav-item active">
                             <a class="mt-2 u-active-custom-color-2 u-bottom-left-radius-50 u-bottom-right-radius-50 u-button-style u-hover-custom-color-2 u-nav-link u-text-active-white u-text-hover-white"
                                 href="{{ url('/') }}">
-                                {{ __('master.home') }}
+                                {{ __('message.home') }}
                             </a>
                         </li>
                         <li class="u-nav-item">
                             <a class="mt-2 u-active-custom-color-2 u-bottom-left-radius-50 u-bottom-right-radius-50 u-button-style u-hover-custom-color-2 u-nav-link u-text-active-white u-text-hover-white"
                                 href="{{ url('/store') }}">
-                                {{ __('master.store') }}
+                                {{ __('message.store') }}
                             </a>
                         </li>
                         <li class="u-nav-item">
                             <a class="mt-2 u-active-custom-color-2 u-bottom-left-radius-50 u-bottom-right-radius-50 u-button-style u-hover-custom-color-2 u-nav-link u-text-active-white u-text-hover-white"
                                 href="{{ url('/news') }}">
-                                {{ __('master.ourNews') }}
+                                {{ __('message.Our news') }}
                             </a>
                         </li>
                     </ul>
@@ -116,19 +118,23 @@
                             <ul
                                 class="u-align-center u-custom-font u-nav u-popupmenu-items u-text-active-custom-color-2 u-text-hover-custom-color-2 u-unstyled u-nav-2">
                                 <li class="u-nav-item">
-                                    <a class="u-button-style u-nav-link" href="/index.html">{{ __('master.home')  }}</a>
+                                    <a class=" customfont u-button-style u-nav-link" href="/index.html">الرئيسية</a>
                                 </li>
                                 <li class="u-nav-item">
-                                    <a class="u-button-style u-nav-link" href="#">{{ __('master.about') }}</a>
+                                    <a class="customfont u-button-style u-nav-link" href="#">
+                                        من نحن</a>
                                 </li>
                                 <li class="u-nav-item">
-                                    <a class="u-button-style u-nav-link" href="/store.html">{{ __('master.store')  }}</a>
+                                    <a class="customfont u-button-style u-nav-link" href="/store.html">
+                                        المتجر</a>
                                 </li>
                                 <li class="u-nav-item">
-                                    <a class="u-button-style u-nav-link" href="#">{{ __('master.ourNews')  }}</a>
+                                    <a class=" customfont u-button-style u-nav-link" href="#">
+                                        أخبارنا</a>
                                 </li>
                                 <li class="u-nav-item">
-                                    <a class="u-button-style u-nav-link" href="/contact.html">{{ __('master.contact')  }}</a>
+                                    <a class=" customfont u-button-style u-nav-link" href="/contact.html">
+                                        تواصل معنا</a>
                                 </li>
                             </ul>
                         </div>
@@ -209,8 +215,9 @@
                                             class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-custom-color-2 u-text-hover-custom-color-2 u-text-white u-btn-1">
                                             <span style="font-size: 1.125rem;"></span>
                                         </a>
-                                        <span style="font-size: 1.125rem;">{{ __('master.contact') }}<br>
-                                        </span>0779959058 <br>info@beitkhayratsouf.com <br>{{ __('contact.places') }}
+                                        <span class="customfont" style="font-size: 1.125rem;">تواصل معنا <br>
+                                        </span class="customfont">0779959058 <br>info@beitkhayratsouf.com <br>جرش - سوف - البرج - قرب نبع
+                                        المغاسل
                                     </p>
                                 </div>
                             </div>
@@ -222,8 +229,11 @@
                                             class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-custom-color-2 u-text-hover-custom-color-2 u-text-white u-btn-2">
                                             <span style="font-size: 1rem;"></span>
                                         </a>
-                                        <span style="font-size: 1rem;"> {{ __('master.social_sites') }} <br>
-                                        </span> <a href="https://www.facebook.com/baitkhayratsoof1881?mibextid=ZbWKwL"> {{ __('master.facebook') }}</a><br><a href="https://instagram.com/beitkhairatsouf1881?igshid=YmMyMTA2M2Y=" > {{ __('master.instagram') }} </a> <br>{{ __('master.tiktok') }} <br>{{ __('master.youtube') }}
+                                        <span style="customfont" style="font-size: 1rem;">مواقع التواصل الإجتماعي <br>
+                                        </span> <a class="customfont" href="https://www.facebook.com/baitkhayratsoof1881?mibextid=ZbWKwL">
+                                            الفيسبوك</a><br><a
+                                            href="https://instagram.com/beitkhairatsouf1881?igshid=YmMyMTA2M2Y="> إنستجرام
+                                        </a> <br>تيك توك <br>اليوتيوب
                                     </p>
                                 </div>
                             </div>
@@ -233,23 +243,23 @@
                                     <p
                                         class="u-align-right u-custom-font u-small-text u-text u-text-default u-text-variant u-text-white u-text-3">
                                         <a href="/index.php"
-                                            class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-custom-color-2 u-text-hover-custom-color-2 u-text-white u-btn-3">{{ __('master.home') }}<br>
+                                            class="u-active-none u-border-none u-btn u-button-link u-button-style porder-none u-hover-none u-none u-text-active-custom-color-2 u-text-hover-custom-color-2 u-text-white u-btn-3">الرئيسية<br>
                                         </a>
-                                        <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-custom-color-2 u-text-hover-custom-color-2 u-text-white u-btn-3"
-                                            href="{{ url('/news') }}"> {{ __('master.ourNews') }}
+                                        <a class="u-active-none u-border-none u-btn u-button-link u-button-style porder-none u-hover-none u-none u-text-active-custom-color-2 u-text-hover-custom-color-2 u-text-white u-btn-3"
+                                            href="{{ url('/news') }}"> أخبارنا
                                         </a>
 
                                         <br>
-                                        <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-custom-color-2 u-text-hover-custom-color-2 u-text-white u-btn-3"
-                                            href="{{ url('/store') }}"> {{ __('master.store') }}
+                                        <a class="u-active-none u-border-none u-btn u-button-link u-button-style porder-none u-hover-none u-none u-text-active-custom-color-2 u-text-hover-custom-color-2 u-text-white u-btn-3"
+                                            href="{{ url('/store') }}"> المتجر
                                         </a>
                                         <br>
-                                        <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-custom-color-2 u-text-hover-custom-color-2 u-text-white u-btn-3"
-                                            href="{{ url('/about') }}"> {{ __('master.about') }}
+                                        <a class="u-active-none u-border-none u-btn u-button-link u-button-style porder-none u-hover-none u-none u-text-active-custom-color-2 u-text-hover-custom-color-2 u-text-white u-btn-3"
+                                            href="{{ url('/about') }}"> من نحن
                                         </a>
                                         <br>
-                                        <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-custom-color-2 u-text-hover-custom-color-2 u-text-white u-btn-3"
-                                            href="{{ url('/contact') }}">{{ __('master.contact') }}
+                                        <a class="u-active-none u-border-none u-btn u-button-link u-button-style porder-none u-hover-none u-none u-text-active-custom-color-2 u-text-hover-custom-color-2 u-text-white u-btn-3"
+                                            href="{{ url('/contact') }}">تواصل معنا
                                         </a>
                                     </p>
                                 </div>
@@ -257,12 +267,23 @@
                         </div>
                     </div>
                 </div>
-                <p class="u-align-center u-custom-font u-text u-text-body-alt-color u-text-4"> {{ __('master.powered',['name' => 'banana']) }} </p>
-                <img src="/public/assets/images/banana.png" style="text-align: center;" >
             </div>
         </footer>
+        <div class="container text-center">
+            <div class="row">
+
+                <div class="col t-center">
+                    <p class="u-align-center u-custom-font u-text u-text-body-alt-color u-text-4"
+                        style="color:#6b7265!important;margin-bottom: -30px!important;"> Powered By Banana </p>
+                        <img src="{{ asset('assets/images/banana.png') }}" style="text-align: center; width:150px;">
+
+                </div>
+
+            </div>
+
+
+        </div>
     @endsection
 </body>
 
 </html>
-@livewireScripts

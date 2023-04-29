@@ -8,23 +8,23 @@
     <!-- BEGIN PAGE BAR -->
 
     <div class="page-bar">
-        <ul class="page-breadcrumb" dir="{{ getDirection() }}">
+        <ul class="page-breadcrumb">
             <li>
-                <a href="{{url('/dashboard/index')}}">{{  __('admin_.home') }}</a>
+                <a href="{{url('/dashboard/index')}}">الرئيسية</a>
                 <i class="fa fa-circle"></i>
             </li>
             <li>
-                <a href="{{route('posts.index')}}">{{  __('admin_.posts') }}</a>
+                <a href="{{route('posts.index')}}">المقالات</a>
                 <i class="fa fa-circle"></i>
             </li>
             <li>
-                <span>{{  __('admin_.all_posts') }}</span>
+                <span>جميع المقالات</span>
             </li>
         </ul>
     </div>
     <!-- END PAGE BAR -->
     <!-- BEGIN PAGE TITLE-->
-    <h3 class="page-title">{{  __('admin_.all_posts') }}
+    <h3 class="page-title"> جميع المقالات
         {{-- <small>managed datatable samples</small> --}}
     </h3>
     <!-- END PAGE TITLE-->
@@ -35,7 +35,7 @@
                 <div class="portlet-title">
                     <div class="caption font-dark">
                         <i class="icon-settings font-dark"></i>
-                        <span class="caption-subject bold uppercase"> {{  __('admin_.posts') }}</span>
+                        <span class="caption-subject bold uppercase"> المقالات</span>
                     </div>
                 </div>
                 <div class="portlet-body">
@@ -43,28 +43,28 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="btn-group">
-                                    <a href="{{route('posts.create')}}" id="sample_editable_1_new" class="btn sbold green">{{  __('admin_.add_post') }}
+                                    <a href="{{route('posts.create')}}" id="sample_editable_1_new" class="btn sbold green"> أضافة مقال
                                         <i class="fa fa-plus"></i>
                                     </a>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="btn-group pull-right">
-                                    <button class="btn green  btn-outline dropdown-toggle" data-toggle="dropdown">{{  __('admin_.tools') }}
+                                    <button class="btn green  btn-outline dropdown-toggle" data-toggle="dropdown">أدوات
                                         <i class="fa fa-angle-down"></i>
                                     </button>
                                     <ul class="dropdown-menu pull-right">
                                         <li>
                                             <a href="javascript:;">
-                                                <i class="fa fa-print"></i>{{  __('admin_.print') }} </a>
+                                                <i class="fa fa-print"></i> طباعة </a>
                                         </li>
                                         <li>
                                             <a href="javascript:;">
-                                                <i class="fa fa-file-pdf-o"></i> {{  __('admin_.savePDF') }}</a>
+                                                <i class="fa fa-file-pdf-o"></i> حفظ كـ PDF </a>
                                         </li>
                                         <li>
                                             <a href="javascript:;">
-                                                <i class="fa fa-file-excel-o"></i>{{  __('admin_.exportExcel') }}</a>
+                                                <i class="fa fa-file-excel-o"></i> استيراد إلى Excel </a>
                                         </li>
                                     </ul>
                                 </div>
@@ -80,9 +80,9 @@
                                         <span></span>
                                     </label>
                                 </th>
-                                <th> {{  __('admin_.post_title') }}</th>
-                                <th>{{  __('admin_.post_image') }}</th>
-                                <th> {{  __('admin_.procedures') }} </th>
+                                <th> عنوان المقال</th>
+                                <th>  صورة المقال</th>
+                                <th> اجراءات </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -117,7 +117,7 @@
                                             </li>
                                             <li>
                                                 <a href="{{route('posts.destroy',['id'=>$blog->id])}}">
-                                                    <i class="icon-docs" onclick="return confirm({{ __('admin_.delete_post_confirm') }})"></i> {{ __('admin_.delete') }} </a>
+                                                    <i class="icon-docs" onclick="return confirm('هل انت متأكد انك تريد حذف هذا المقال ؟')"></i> حذف </a>
                                             </li>
                                             {{-- <li>
                                                 <a href="javascript:;">

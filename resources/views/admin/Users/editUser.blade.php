@@ -7,23 +7,23 @@
     <!-- BEGIN PAGE HEADER-->
     <!-- BEGIN PAGE BAR -->
     <div class="page-bar">
-        <ul class="page-breadcrumb" dir="{{ getDirection() }}">
+        <ul class="page-breadcrumb">
             <li>
-                <a href="index.html">{{ __('users_.home') }}</a>
+                <a href="index.html">الرئيسية</a>
                 <i class="fa fa-circle"></i>
             </li>
             <li>
-                <a href="{{route('users.index')}}">{{ __('users_.members') }}</a>
+                <a href="{{route('users.index')}}">الأعضاء</a>
                 <i class="fa fa-circle"></i>
             </li>
             <li>
-                <span>{{ __('users_.edit_user') }}</span>
+                <span>تعديل العضو</span>
             </li>
         </ul>
     </div>
     <!-- END PAGE BAR -->
     <!-- BEGIN PAGE TITLE-->
-    <h3 class="page-title" align="{{ getAlign() }}">{{ __('users_.edit_user') }}
+    <h3 class="page-title"> تعديل العضو
     </h3>
     <!-- END PAGE TITLE-->
     <div class="portlet-body form">
@@ -31,12 +31,12 @@
         <form role="form" action="{{route('users.update',['id'=>$user->id])}}" method="POST">
             @csrf
             <div class="form-group col-md-6">
-                <label class="control-label">{{ __('users_.editFields.name') }}</label>
+                <label class="control-label">الاسم</label>
                 <input type="text" value="{{$user->name}}" class="form-control" name="name" required>
             </div>
 
             <div class="form-group col-md-6">
-                <label class="control-label">{{ __('users_.editFields.email') }}</label>
+                <label class="control-label">البريد الالكتروني</label>
                 <input type="email" value="{{$user->email}}" class="form-control" name="email" required>
             </div>
             {{-- <div class="form-group col-md-6">
@@ -44,7 +44,7 @@
                 <input type="password" name="password" class="form-control">
             </div> --}}
             <div class="form-group col-md-12">
-                <button type="submit" class="btn green">{{ __('users_.actions.save') }} </button>
+                <button type="submit" class="btn green"> حفظ </button>
             </div>
 
         </form>
