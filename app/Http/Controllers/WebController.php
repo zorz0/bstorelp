@@ -45,18 +45,29 @@ class WebController extends Controller
 
     $productSizes=ProductSize::all();
     
-    $mostProduct = Card::select('product_id')
+    $allMostProduct = Card::select('product_id')
     ->whereNotNull('order_id')
     ->groupBy('product_id')
     ->orderByRaw('COUNT(*) DESC')
     ->take(4)
     ->get();
 
+$allMostProduct->each(function ($mostProduct) {
+    // Get the product data for this most popular product
+    $productData = DB::table('products')
+        ->where('id', $mostProduct->product_id)
+        ->get();
+        
+    
+  
+    $mostProduct->productData = $productData;
+});
+
 
 
     return view('front.store', [
       'categories'=>$categories,
-      'mostProduct'=>$mostProduct
+      'allMostProduct'=>$allMostProduct
     
   ]);
   

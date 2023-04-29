@@ -275,7 +275,7 @@
                 <div class="col t-center">
                     <p class="u-align-center u-custom-font u-text u-text-body-alt-color u-text-4"
                         style="color:#6b7265!important;margin-bottom: -30px!important;"> Powered By Banana </p>
-                        <img src="{{ asset('assets/images/banana.png') }}" style="text-align: center; width:150px;">
+                        <img src="{{ asset('assets/images/banana.png') }}" style="text-align: center; width:100px;">
 
                 </div>
 
