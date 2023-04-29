@@ -125,7 +125,7 @@
                                 <img class="category" style="  filter: brightness(0.5); " alt="khayba"
                                     src="{{ asset('storage/imgs/' . $value->image) }}">
                             </a>
-                            <div class="text-container">
+                            <div class="text-container customfont u-custom-font">
                                 <p>{{ $value->name }}</p>
                             </div>
                         </div>
@@ -137,8 +137,9 @@
                         <div class="product">
                             <form id="FormCard" action="{{ route('showProduct', ['id' => $product->id]) }}" method="post">
                                 @csrf
-                                <h3>{{ $product->name }}</h3>
-                                <p id="description">{{ $product->description }}</p>
+                                <h3 class="customfont u-custom-font" style="font-size: 30px">{{ $product->name }}</h3>
+                                <p id="description" style="font-size: 25px" class="customfont u-custom-font">
+                                    {{ $product->description }}</p>
                                 <hr class="myhr">
                                 <img class="myimg" width="" alt="product" src="/storage/img/{{ $product->image }}">
                                 <hr class="myhr">
@@ -263,69 +264,131 @@
         </div>
     </section>
     <div class=" text-center">
-        
-        <img src="{{ asset('/assets/images/shopping-cart .png') }}" style="height: 100px;transform: rotate(20deg);" alt="">
 
-        <a href="http://127.0.0.1:8000/news"><button  class=" customfont u-custom-font parallelogram-button general-btn  border-0  text-white h4 p-3 m-3 col-2"> تسوق الأن
+        <img src="{{ asset('/assets/images/shopping-cart .png') }}"
+            style="height: 100px;transform: rotate(20deg);position: absolute;margin-left: -80px;margin-top: -10px;"
+            alt="">
+
+        <a href="http://127.0.0.1:8000/news"><button
+                class="customfont u-custom-font parallelogram-button general-btn border-0 text-white h4 p-3 m-3 col-2"
+                style="
+            color: black;
+        ">
+                <span style="font-size: 40px;
+          font-weight: bold;     text-shadow: 0 0 2px black;
+"
+                    class="customfont u-custom-font">بدء التسوق</span>
             </button></a>
     </div>
     <div class="row">
         <div class="col">
-            <div style="padding-right: 40px;margin-bottom: 130px; padding-bottom: 10px; height: 160px;width: 100%;overflow: hidden;position: relative;padding-left: 40px;">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 250" style="transform: scaleY(-1);">
-                <path fill="#bbcf3f" fill-opacity="1" d="M0,224L120,202.7C240,181,480,139,720,144C960,149,1200,181,1320,202.7L1440,224V0H1320C1200,0,960,0,720,0C480,0,240,0,120,0H0V224Z"></path>
-            </svg>
-              <h2 class="customfont u-custom-font" style="position: absolute;margin-top: 40px;top: 50%;left: 50%;transform: translate(-50%, -50%);font-size: 55px;font-weight: bold;">المنتجات الأكثر مبيعًا</h2>          </div>
-          
-    </div>
-    <section>
-        <div class="chooseEat container text-center py-2 my-5">
-            <h2 class="text-white">إختر ألذ وأشهى المنتجات</h2>
-        </div>
-    </section>
+            <div
+                style="padding-right: 40px;margin-bottom: 130px; padding-bottom: 10px; height: 160px;width: 100%;overflow: hidden;position: relative;padding-left: 40px;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 250" style="transform: scaleY(-1);">
+                    <path fill="#bbcf3f" fill-opacity="1"
+                        d="M0,224L120,202.7C240,181,480,139,720,144C960,149,1200,181,1320,202.7L1440,224V0H1320C1200,0,960,0,720,0C480,0,240,0,120,0H0V224Z">
+                    </path>
+                </svg>
+                <h2 class="customfont u-custom-font"
+                    style="    text-shadow: 0 0 2px black;
+               position: absolute;margin-top: 40px;top: 50%;left: 50%;transform: translate(-50%, -50%);font-size: 55px;font-weight: bold;">
+                    المنتجات الأكثر مبيعًا</h2>
+            </div>
 
-    <section class="container chooseClass0 my-5">
-        <div class="d-flex justify-center">
-            <img src="{{ asset('/assets/images/soufKitchen.jpg') }}" alt="">
         </div>
-        <div class="chooseClass">
-            <img src="{{ asset('/assets/images/friends.jpg') }}" alt="">
-            <h2>
-                تصنع منتجات بيت خيرات سوف من أيدي نساء أردنيات
-            </h2>
-        </div>
-        <div class="chooseClass">
-            <h2 class="customfont u-custom-font">
-                تحفظ في عبوات وأماكن مخصصة
-            </h2>
-            <img src="{{ asset('/assets/images/library.jpg') }}" alt="">
-        </div>
-        <div class="chooseClass">
-            <img src="{{ asset('/assets/images/kais.jpg') }}" alt="">
-            <h2 class="customfont u-custom-font">
-                تصلك مغلفة بإحكام جاهزة للأكل
-            </h2>
-        </div>
-    </section>
-
-    <section class="my-5">
-        <div class="chooseEatSuger container text-center py-2 my-5">
-            <h2  class="text-white">منتجات خالية من السكر تماما!</h2>
-        </div>
-    </section>
-
-
-    <section class="mt-5">
-        <div class="container">
-            <img src="/assets/images/stoneCover.jpg" alt="Snow" style="width:100%;">
-
-            <div class="centered">
-                <h1 class="container2">بيت خيرات سوف<br>قصة بدأت من عام ١٨٨١م <span>
-                        <a id="btn" href={{ url('/about') }}><button
-                                class="general-btn border-0 text-white h3 p-3 m-4">اعرف
-                                عنها</button></a></span></h1>
+        {{-- here --}}
+        <div class="row store">
+            
+            <div class="col-sm-6 col-md-3">
+                <div class="product">
+                    <form id="FormCard" action="http://127.0.0.1:8000/showProduct/1" method="post"><input
+                            type="hidden" name="_token" value="irT9ZCW87wFOqdXaSYNp8WjTAtKxJh9ErLcw9IvQ">
+                        <h3 class="customfont u-custom-font" style="font-size: 30px;">coffe</h3>
+                        <p id="description" class="customfont u-custom-font" style="font-size: 25px;">coffe with milk</p>
+                        <hr class="myhr"><img class="myimg" alt="product"
+                            src="/storage/img/christina-wocintechchat-com-Q80LYxv_Tbs-unsplash.jpg">
+                        <hr class="myhr">
+                    </form>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="product">
+                    <form id="FormCard" action="http://127.0.0.1:8000/showProduct/2" method="post"><input
+                            type="hidden" name="_token" value="irT9ZCW87wFOqdXaSYNp8WjTAtKxJh9ErLcw9IvQ">
+                        <h3 class="customfont u-custom-font" style="font-size: 30px;">milk</h3>
+                        <p id="description" class="customfont u-custom-font" style="font-size: 25px;">sugar milk</p>
+                        <hr class="myhr"><img class="myimg" alt="product"
+                            src="/storage/img/mohammad-naser-K0-F4rIB8xU-unsplash.jpg">
+                        <hr class="myhr">
+                    </form>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="product">
+                    <form id="FormCard" action="http://127.0.0.1:8000/showProduct/6" method="post"><input
+                            type="hidden" name="_token" value="irT9ZCW87wFOqdXaSYNp8WjTAtKxJh9ErLcw9IvQ">
+                        <h3 class="customfont u-custom-font" style="font-size: 30px;">juice</h3>
+                        <p id="description" class="customfont u-custom-font" style="font-size: 25px;">the best juscie
+                            tyousd enasfhf hsfagfnasjfbaug hcsaygwfba gcashbyag ascjasgdygydbjasbd ghasbagcy</p>
+                        <hr class="myhr"><img class="myimg" alt="product"
+                            src="/storage/img/hisham-zayadneh-t4yAeUQzxXY-unsplash.jpg">
+                        <hr class="myhr">
+                    </form>
+                </div>
+            </div>
+            <div class="ct-blog col-sm-6 col-md-1">
+                <div style="margin-top: 130%;"><a class="smore2" href="http://127.0.0.1:8000/category/1">مشاهدة
+                        المزيد</a></div>
             </div>
         </div>
+        <section>
+            <div class="chooseEat container text-center py-2 my-5">
+                <h2 class="text-white">إختر ألذ وأشهى المنتجات</h2>
+            </div>
+        </section>
 
-    </section>
-@endsection
+        <section class="container chooseClass0 my-5">
+            <div class="d-flex justify-center">
+                <img src="{{ asset('/assets/images/soufKitchen.jpg') }}" alt="">
+            </div>
+            <div class="chooseClass customfont u-custom-font">
+                <img src="{{ asset('/assets/images/friends.jpg') }}" alt="">
+                <h2>
+                    تصنع منتجات بيت خيرات سوف من أيدي نساء أردنيات
+                </h2>
+            </div>
+            <div class="chooseClass">
+                <h2 class="customfont u-custom-font">
+                    تحفظ في عبوات وأماكن مخصصة
+                </h2>
+                <img src="{{ asset('/assets/images/library.jpg') }}" alt="">
+            </div>
+            <div class="chooseClass">
+                <img src="{{ asset('/assets/images/kais.jpg') }}" alt="">
+                <h2 class="customfont u-custom-font">
+                    تصلك مغلفة بإحكام جاهزة للأكل
+                </h2>
+            </div>
+        </section>
+
+        <section class="my-5">
+            <div class="chooseEatSuger container text-center py-2 my-5">
+                <h2 class="text-white">منتجات خالية من السكر تماما!</h2>
+            </div>
+        </section>
+
+
+        <section class="mt-5">
+            <div class="container">
+                <img src="/assets/images/stoneCover.jpg" alt="Snow" style="width:100%;">
+
+                <div class="centered">
+                    <h1 class="container2">بيت خيرات سوف<br>قصة بدأت من عام ١٨٨١م <span>
+                            <a id="btn" href={{ url('/about') }}><button
+                                    class="general-btn border-0 text-white h3 p-3 m-4">اعرف
+                                    عنها</button></a></span></h1>
+                </div>
+            </div>
+
+        </section>
+    @endsection

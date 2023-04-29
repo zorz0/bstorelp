@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\Card;
 use App\Models\ProductImage;
 use App\Models\ProductSize;
 use Illuminate\Http\Request;
@@ -43,9 +44,21 @@ class WebController extends Controller
     $data=Product::all()->take(3);
 
     $productSizes=ProductSize::all();
+    
+    $mostProduct = Card::select('product_id')
+    ->whereNotNull('order_id')
+    ->groupBy('product_id')
+    ->orderByRaw('COUNT(*) DESC')
+    ->take(4)
+    ->get();
+
+
+    dd($mostProduct);
+
     return view('front.store', [
-      'categories'=>$categories
- 
+      'categories'=>$categories,
+      'mostProduct'=>$mostProduct
+    
   ]);
   
    }

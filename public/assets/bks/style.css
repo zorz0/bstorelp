@@ -386,8 +386,8 @@ body {
   }
   
   .parallelogram-button::before {
-    border-radius: 0 50px
-50px 0;
+    border-radius: 0 30px 22px 0;
+
     content: '';
     position: absolute;
     top: 0; 
