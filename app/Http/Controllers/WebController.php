@@ -53,7 +53,6 @@ class WebController extends Controller
     ->get();
 
 
-    dd($mostProduct);
 
     return view('front.store', [
       'categories'=>$categories,
