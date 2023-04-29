@@ -7,13 +7,13 @@
     <!-- BEGIN PAGE HEADER-->
     <!-- BEGIN PAGE BAR -->
     <div class="page-bar">
-        <ul class="page-breadcrumb" dir="{{ getDirection() }}">
+        <ul class="page-breadcrumb">
             <li>
-                <a href="index.html">{{ __('dashboard_.messages.home') }}</a>
+                <a href="index.html">الرئيسية</a>
                 <i class="fa fa-circle"></i>
             </li>
             <li>
-                <span>{{ __('dashboard_.messages.control_panel') }}</span>
+                <span>لوحة التحكم</span>
             </li>
         </ul>
         {{-- <div class="page-toolbar">
@@ -45,7 +45,7 @@
     </div>
     <!-- END PAGE BAR -->
     <!-- BEGIN PAGE TITLE-->
-    <h3 class="page-title" align="{{ getAlign() }}"> {{ __('dashboard_.messages.control_panel') }}
+    <h3 class="page-title"> لوحة التحكم
         {{-- <small>dashboard & statistics</small> --}}
     </h3>
     <!-- END PAGE TITLE-->
@@ -58,9 +58,9 @@
                 </div>
                 <div class="details">
                     <div class="number"> 1684 </div>
-                    <div class="desc"> {{ __('dashboard_.messages.sales') }} </div>
+                    <div class="desc"> مبيعات </div>
                 </div>
-                <a class="more" href="javascript:;">{{ __('dashboard_.actions.show_more') }}
+                <a class="more" href="javascript:;"> عرض المزيد
                     <i class="m-icon-swapleft m-icon-white"></i>
                 </a>
             </div>
@@ -72,9 +72,9 @@
                 </div>
                 <div class="details">
                     <div class="number"> 1127 </div>
-                    <div class="desc"> {{ __('dashboard_.messages.orders') }} </div>
+                    <div class="desc"> الطلبات </div>
                 </div>
-                <a class="more" href="javascript:;"> {{ __('dashboard_.actions.show_more') }}
+                <a class="more" href="javascript:;"> عرض المزيد
                     <i class="m-icon-swapleft m-icon-white"></i>
                 </a>
             </div>
@@ -86,9 +86,9 @@
                 </div>
                 <div class="details">
                     <div class="number"> 1970.54  د.أ</div>
-                    <div class="desc"> {{ __('dashboard_.messages.sales_average') }} </div>
+                    <div class="desc"> متوسط المبيعات </div>
                 </div>
-                <a class="more" href="javascript:;">{{ __('dashboard_.actions.show_more') }}
+                <a class="more" href="javascript:;"> عرض المزيد
                     <i class="m-icon-swapleft m-icon-white"></i>
                 </a>
             </div>
@@ -101,7 +101,7 @@
                 <div class="portlet-title tabbable-line">
                     <div class="caption">
                         <i class="icon-globe font-dark hide"></i>
-                        <span class="caption-subject font-dark bold uppercase">{{ __('dashboard_.messages.latest_orders') }}</span>
+                        <span class="caption-subject font-dark bold uppercase">احدث الطلبات</span>
                     </div>
                 </div>
                 <div class="portlet-body">
@@ -110,9 +110,9 @@
                         <table class="table table-striped table-bordered table-hover table-checkable order-column" id="sample_1">
                             <thead>
                                 <tr>
-                                    <th>{{ __('dashboard_.messages.order.order_number') }}</th>
-                                    <th>{{ __('dashboard_.messages.order.order_price') }}</th>
-                                    <th>{{ __('dashboard_.messages.order.order_status') }}</th>
+                                    <th> رقم الطلب </th>
+                                    <th> قيمة الطلب </th>
+                                    <th> حالة الطلب</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -125,8 +125,8 @@
 
                                     </tr>
                                     @endforeach
-
-
+                                    
+                                
                             </tbody>
                         </table>
                     </div>
@@ -141,7 +141,7 @@
                 <div class="portlet-title tabbable-line">
                     <div class="caption">
                         <i class="icon-globe font-dark hide"></i>
-                        <span class="caption-subject font-dark bold uppercase">{{ __('dashboard_.messages.latest_products') }}</span>
+                        <span class="caption-subject font-dark bold uppercase">احدث المنتجات</span>
                     </div>
                 </div>
                 <div class="portlet-body">
@@ -150,30 +150,30 @@
                         <table class="table table-striped table-bordered table-hover table-checkable order-column" id="sample_1">
                             <thead>
                                 <tr>
-                                    <th> {{ __('dashboard_.messages.latest_product.product_image') }} </th>
-                                    <th>{{ __('dashboard_.messages.latest_product.product_name') }}</th>
-                                    <th>{{ __('dashboard_.messages.latest_product.product_quantity') }}</th>
+                                    <th> صورة </th>
+                                    <th> اسم المنتج </th>
+                                    <th> الكمية </th>
                                 </tr>
                             </thead>
                             <tbody>
-
-
+                                
+                                    
                                         @foreach ($products as $item )
-
-                                <tr>
+                                
+                                <tr>      
                                     <td>
                                         <img style="    width: 50px;
                                         height: 50px;" src="{{ asset('storage/img/' . $item->image) }}" alt="img">
                                     </td>
-
-
+                                    
+                                    
                                            <td> {{$item->name}}</td>
                                            <td> {{$item->quantity}}</td>
 
                                         </td>
                                            @endforeach
 
-
+                                    
 
                                 </tr>
                             </tbody>
@@ -244,7 +244,7 @@
                 <div class="portlet-title tabbable-line">
                     <div class="caption">
                         <i class="icon-globe font-dark hide"></i>
-                        <span class="caption-subject font-dark bold uppercase">{{ __('dashboard_.messages.latest_members') }}</span>
+                        <span class="caption-subject font-dark bold uppercase">احدث الأعضاء</span>
                     </div>
                 </div>
                 <div class="portlet-body">
@@ -253,14 +253,14 @@
                         <table class="table table-striped table-bordered table-hover table-checkable order-column" id="sample_1">
                             <thead>
                                 <tr>
-                                    <th> {{ __('dashboard_.messages.member.member_number') }} </th>
-                                    <th> {{ __('dashboard_.messages.member.member_name') }}</th>
-                                    <th> {{ __('dashboard_.messages.member.member_email') }}</th>
+                                    <th> الرقم </th>
+                                    <th> اسم العميل </th>
+                                    <th> البريد الالكتروني </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach ($users as $user )
-
+                                    
                                 @endforeach
                                 <tr class="odd gradeX">
                                     <td>
@@ -284,7 +284,7 @@
                 <div class="portlet-title tabbable-line">
                     <div class="caption">
                         <i class="icon-globe font-dark hide"></i>
-                        <span class="caption-subject font-dark bold uppercase">{{ __('dashboard_.messages.products') }}</span>
+                        <span class="caption-subject font-dark bold uppercase">المنتجات</span>
                     </div>
                 </div>
                 <div class="portlet-body">
@@ -293,21 +293,21 @@
                         <table class="table table-striped table-bordered table-hover table-checkable order-column" id="sample_1">
                             <thead>
                                 <tr>
-                                    <th>{{ __('dashboard_.messages.product.product_image') }}</th>
-                                    <th>{{ __('dashboard_.messages.product.product_name') }}</th>
-                                    <th>{{ __('dashboard_.messages.product.product_quantity') }}</th>
+                                    <th> صورة </th>
+                                    <th> اسم المنتج </th>
+                                    <th> الكمية </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach ($Allproducts as $Product )
-
-                                <tr>
+                                
+                                <tr>      
                                     <td>
                                         <img style="width: 50px;
                                         height: 50px;" src="{{ asset('storage/img/' . $Product->image) }}" alt="img">
                                     </td>
-
-
+                                    
+                                    
                                            <td> {{$Product->name}}</td>
                                            <td> {{$Product->quantity}}</td>
 

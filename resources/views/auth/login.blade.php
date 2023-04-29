@@ -5,33 +5,32 @@
 <div class="container">
     <body class=" login">
         <!-- BEGIN LOGO -->
-
+      
         <!-- END LOGO -->
         <!-- BEGIN LOGIN -->
         <div class="content">
             <!-- BEGIN LOGIN FORM -->
             <form method="POST" action="{{ route('login') }}">
                 @csrf
-                <div class="form-title" dir="{{ getDirection() }}">
-                    <span class="form-title">{{ __('login.first_welcome')  }}.</span>
-                    <span class="form-subtitle">{{ __('login.second_welcome')  }}.</span>
+                <div class="form-title">
+                    <span class="form-title">Welcome.</span>
+                    <span class="form-subtitle">Please login.</span>
                 </div>
-                <div class="alert alert-danger display-hide " dir="{{ getDirection() }}">
+                <div class="alert alert-danger display-hide">
                     <button class="close" data-close="alert"></button>
-                    <span> {{ __('login.empty_message') }} </span>
+                    <span> Enter any username and password. </span>
                 </div>
                 <div class="form-group">
                     <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
-                    <label class="control-label visible-ie8 visible-ie9">{{ __('login.email_label') }}</label>
+                    <label class="control-label visible-ie8 visible-ie9">Username</label>
                     <input id="email" style="font-size: 18px"  type="email" class="form-control  @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                     @error('email')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
-                    @enderror
-                    <div class="form-group">
-                    <label for="password" class="control-label visible-ie8 visible-ie9">{{ __('login.password_label') }}</label>
+                    @enderror                <div class="form-group">
+                    <label for="password" class="control-label visible-ie8 visible-ie9">{{ __('Password') }}</label>
 
                     <input style= "margin-top: 15px;margin-bottom: 15px;" id="password" type="password" class="form-control form-control-solid placeholder-no-fix @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
@@ -41,26 +40,26 @@
                         </span>
                     @enderror
                     <div class="form-actions">
-                    <button type="submit" class="btn red btn-block uppercase"> {{ __('login.login_button') }}</button>
+                    <button type="submit" class="btn red btn-block uppercase"> {{ __('Login') }}</button>
                 </div>
                 <div class="form-actions">
                     <div class="pull-left">
                         <label class="rememberme mt-checkbox mt-checkbox-outline">
-                            <input type="checkbox" name="remember" value="1" /> {{ __('login.remember')  }}
+                            <input type="checkbox" name="remember" value="1" /> Remember me
                             <span></span>
                         </label>
                     </div>
                     <div class="pull-right forget-password-block">
                         @if (Route::has('password.request'))
                         <a  id="forget-password" class="forget-password" href="{{ route('password.request') }}">
-                            {{ __('login.forgot') }}
+                            {{ __('Forgot Your Password?') }}
                         </a>
                     @endif                    </div>
                 </div>
-
+             
                 </div>
                 <div class="login-options">
-                    <h4 class="pull-left">{{ __('login.else_login')  }}</h4>
+                    <h4 class="pull-left">Or login with</h4>
                     <ul class="social-icons pull-right">
                         <li>
                             <a class="social-icon-color facebook" data-original-title="facebook" href="javascript:;"></a>
@@ -76,26 +75,25 @@
                         </li>
                     </ul>
                 </div>
-                </div>
            {{--      <div class="create-account">
                     <p>
                         <a href="javascript:;" class="btn-primary btn" id="register-btn">Create an account</a>
                     </p>
                 </div> --}}
-
+               
             </form>
             <!-- END LOGIN FORM -->
             <!-- BEGIN FORGOT PASSWORD FORM -->
-
-
-
+              
+               
+          
             <!-- END FORGOT PASSWORD FORM -->
             <!-- BEGIN REGISTRATION FORM -->
             <form class="register-form" action="index.html" method="post">
                 <div class="form-title">
-                    <span class="form-title">{{ __('signup.register_title') }}</span>
+                    <span class="form-title">Sign Up</span>
                 </div>
-                <p class="hint"> {{ __('signup.instruction')  }}: </p>
+                <p class="hint"> Enter your personal details below: </p>
                 <div class="form-group">
                     <label class="control-label visible-ie8 visible-ie9">Full Name</label>
                     <input class="form-control placeholder-no-fix" type="text" placeholder="Full Name" name="fullname" /> </div>
@@ -380,7 +378,7 @@
         <!-- END LOGIN -->
         <!--[if lt IE 9]>
 <script src="../assets/global/plugins/respond.min.js"></script>
-<script src="../assets/global/plugins/excanvas.min.js"></script>
+<script src="../assets/global/plugins/excanvas.min.js"></script> 
 <![endif]-->
         <!-- BEGIN CORE PLUGINS -->
         <script src="../assets/global/plugins/jquery.min.js" type="text/javascript"></script>
@@ -404,7 +402,7 @@
         <!-- END PAGE LEVEL SCRIPTS -->
         <!-- BEGIN THEME LAYOUT SCRIPTS -->
         <!-- END THEME LAYOUT SCRIPTS -->
-
+   
         <script>
 let element = document.querySelector("#app > nav");
 
@@ -417,7 +415,7 @@ element.style.fontSize = "15px";
 document.querySelector("#app > nav > div > a").style.fontSize="20px";
 document.querySelector("#app > nav > div > a").style.marginTop="20px";
 
-        </script>
+        </script> 
     </body>
 </div>
 @endsection

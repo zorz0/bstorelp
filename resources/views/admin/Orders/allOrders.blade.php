@@ -10,23 +10,23 @@
     <!-- BEGIN PAGE HEADER-->
     <!-- BEGIN PAGE BAR -->
     <div class="page-bar">
-        <ul class="page-breadcrumb" dir="{{ getDirection() }}">
+        <ul class="page-breadcrumb">
             <li>
-                <a href="{{url('/')}}">{{ __('admin_.home') }}</a>
+                <a href="{{url('/')}}">الرئيسية</a>
                 <i class="fa fa-circle"></i>
             </li>
             <li>
-                <a href="{{url('orders')}}">{{ __('admin_.orders') }}</a>
+                <a href="{{url('orders')}}">الطلبات</a>
                 <i class="fa fa-circle"></i>
             </li>
             <li>
-                <span>{{ __('admin_.all_orders') }}</span>
+                <span>جميع الطلبات</span>
             </li>
         </ul>
     </div>
     <!-- END PAGE BAR -->
     <!-- BEGIN PAGE TITLE-->
-    <h3 class="page-title" align="{{ getAlign() }}">{{ __('admin_.all_orders') }}
+    <h3 class="page-title"> جميع الطلبات
         {{-- <small>managed datatable samples</small> --}}
     </h3>
     <!-- END PAGE TITLE-->
@@ -37,7 +37,7 @@
                 <div class="portlet-title">
                     <div class="caption font-dark">
                         <i class="icon-settings font-dark"></i>
-                        <span class="caption-subject bold uppercase"> {{ __('admin_.orders') }}</span>
+                        <span class="caption-subject bold uppercase"> الطلبات</span>
                     </div>
                 </div>
                 <div class="portlet-body">
@@ -45,28 +45,28 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="btn-group">
-                                    <a href="{{route('orders.create')}}" id="sample_editable_1_new" class="btn sbold green">{{ __('admin_.add_order') }}
+                                    <a href="{{route('orders.create')}}" id="sample_editable_1_new" class="btn sbold green"> أضافة طلب
                                         <i class="fa fa-plus"></i>
                                     </a>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="btn-group pull-right">
-                                    <button class="btn green  btn-outline dropdown-toggle" data-toggle="dropdown">{{ __('admin_.tools') }}
+                                    <button class="btn green  btn-outline dropdown-toggle" data-toggle="dropdown">أدوات
                                         <i class="fa fa-angle-down"></i>
                                     </button>
                                     <ul class="dropdown-menu pull-right">
                                         <li>
                                             <a href="javascript:;">
-                                                <i class="fa fa-print"></i> {{ __('admin_.print') }} </a>
+                                                <i class="fa fa-print"></i> طباعة </a>
                                         </li>
                                         <li>
                                             <a href="javascript:;">
-                                                <i class="fa fa-file-pdf-o"></i> {{ __('admin_.savePDF') }} </a>
+                                                <i class="fa fa-file-pdf-o"></i> حفظ كـ PDF </a>
                                         </li>
                                         <li>
                                             <a href="javascript:;">
-                                                <i class="fa fa-file-excel-o"></i> {{ __('admin_.exportExcel') }} </a>
+                                                <i class="fa fa-file-excel-o"></i> استيراد إلى Excel </a>
                                         </li>
                                     </ul>
                                 </div>
@@ -84,15 +84,15 @@
                                         <span></span>
                                     </label>
                                 </th>
-                                <th> {{ __('admin_.order_number') }}</th>
-                                <th> {{ __('admin_.customer_name') }} </th>
-                                <th> {{ __('admin_.shipping_address') }} </th>
-                                <th> {{ __('admin_.order_date') }} </th>
-                                <th> {{ __('admin_.customer_phone_number') }}</th>
-                                <th> {{ __('admin_.wholesale_price') }}</th>
+                                <th> رقم الطلب </th>
+                                <th> اسم العميل </th>
+                                <th> عنوان الشحن </th>
+                                <th> تاريخ الطلب </th>
+                                <th> رقم الموبيل</th>
+                                <th> سعر الجملة </th>
 
-                                <th> {{ __('admin_.order_status') }} </th>
-                                <th> {{ __('admin_.procedures') }} </th>
+                                <th> الحالة </th>
+                                <th> الاجراءات </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -127,14 +127,14 @@
                                         @if($order->status=='accept')
 
                                         <button class="btn btn-xs green dropdown-toggle" type="button"
-                                        data-toggle="dropdown" aria-expanded="false"> {{ __('admin_.order_accepted') }}
+                                        data-toggle="dropdown" aria-expanded="false"> مقبول
                                         <i class="fa fa-angle-down"></i>
                                     </button>
                                      @endif
                                      @if($order->status=='reject')
 
                                      <button class="btn btn-xs red dropdown-toggle" type="button"
-                                     data-toggle="dropdown" aria-expanded="false"> {{ __('admin_.order_rejected') }}
+                                     data-toggle="dropdown" aria-expanded="false"> مرفوض
                                      <i class="fa fa-angle-down"></i>
                                  </button>
                                   @endif
@@ -142,7 +142,7 @@
 
 
                                         <button class="btn btn-xs yellow dropdown-toggle" type="button"
-                                            data-toggle="dropdown" aria-expanded="false"> {{ __('admin_.under_check') }}
+                                            data-toggle="dropdown" aria-expanded="false"> تحت المراجعة
                                             <i class="fa fa-angle-down"></i>
                                         </button>
 
@@ -151,11 +151,11 @@
                                         <ul class="dropdown-menu" role="menu">
                                             <li>
                                                 <a href="{{ route('update.status',['id'=>$order->id,'status'=>'accept']) }}">
-                                                    <i class="icon-docs"></i> {{ __('admin_.order_accept') }} </a>
+                                                    <i class="icon-docs"></i> مقبول </a>
                                             </li>
                                             <li>
                                                 <a href="{{ route('update.status',['id'=>$order->id,'status'=>'reject']) }}">
-                                                    <i class="icon-tag"></i> {{ __('admin_.order_reject') }} </a>
+                                                    <i class="icon-tag"></i> مرفوض </a>
                                             </li>
 
                                         </ul>
@@ -165,12 +165,12 @@
                                 <td>
                                     <div class="btn-group">
                                         <button class="btn btn-xs green dropdown-toggle" type="button"
-
+                                        
                                         onclick="window.location.href='{{ route('orders.details', ['id' => $order->id]) }}'">
-                                            {{ __('admin_.order_details') }}
+                                    التفاصيل
                                     <i class="fa fa-angle-down"></i>
                                 </button>
-
+                                      
                                     </div>
                                 </td>
                             </tr>

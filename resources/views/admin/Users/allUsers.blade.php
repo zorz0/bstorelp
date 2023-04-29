@@ -7,23 +7,23 @@
     <!-- BEGIN PAGE HEADER-->
     <!-- BEGIN PAGE BAR -->
     <div class="page-bar">
-        <ul class="page-breadcrumb" dir="{{ getDirection() }}">
+        <ul class="page-breadcrumb">
             <li>
-                <a href="index.html">{{ __('users_.home') }}</a>
+                <a href="index.html">الرئيسية</a>
                 <i class="fa fa-circle"></i>
             </li>
             <li>
-                <a href="#">{{ __('users_.members') }}</a>
+                <a href="#">الأعضاء</a>
                 <i class="fa fa-circle"></i>
             </li>
             <li>
-                <span>{{ __('users_.all_members') }}</span>
+                <span>جميع الأعضاء</span>
             </li>
         </ul>
     </div>
     <!-- END PAGE BAR -->
     <!-- BEGIN PAGE TITLE-->
-    <h3 class="page-title" align="{{ getAlign() }}">{{ __('users_.all_members') }}
+    <h3 class="page-title"> جميع الأعضاء
         {{-- <small>managed datatable samples</small> --}}
     </h3>
     <!-- END PAGE TITLE-->
@@ -34,7 +34,7 @@
                 <div class="portlet-title">
                     <div class="caption font-dark">
                         <i class="icon-settings font-dark"></i>
-                        <span class="caption-subject bold uppercase"> {{ __('users_.members') }}</span>
+                        <span class="caption-subject bold uppercase"> الأعضاء</span>
                     </div>
                 </div>
                 <div class="portlet-body">
@@ -42,7 +42,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="btn-group">
-                                    <a href="{{route('users.create')}}" id="sample_editable_1_new" class="btn sbold green">{{ __('users_.actions.add_user') }}
+                                    <a href="{{route('users.create')}}" id="sample_editable_1_new" class="btn sbold green"> أضافة عضو
                                         <i class="fa fa-plus"></i>
                                     </a>
                                 </div>
@@ -57,21 +57,21 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="btn-group pull-right">
-                                    <button class="btn green  btn-outline dropdown-toggle" data-toggle="dropdown">{{ __('users_.actions.tools') }}
+                                    <button class="btn green  btn-outline dropdown-toggle" data-toggle="dropdown">أدوات
                                         <i class="fa fa-angle-down"></i>
                                     </button>
                                     <ul class="dropdown-menu pull-right">
                                         <li>
                                             <a href="{{url('addUser')}}">
-                                                <i class="fa fa-print"></i> {{ __('users_.actions.print') }} </a>
+                                                <i class="fa fa-print"></i> طباعة </a>
                                         </li>
                                         <li>
                                             <a href="{{url('addUser')}}">
-                                                <i class="fa fa-file-pdf-o"></i>{{ __('users_.actions.savePDF') }}</a>
+                                                <i class="fa fa-file-pdf-o"></i> حفظ كـ PDF </a>
                                         </li>
                                         <li>
                                             <a href="{{url('addUser')}}">
-                                                <i class="fa fa-file-excel-o"></i>{{ __('users_.actions.exportExcel') }}</a>
+                                                <i class="fa fa-file-excel-o"></i> استيراد إلى Excel </a>
                                         </li>
                                     </ul>
                                 </div>
@@ -88,11 +88,11 @@
                                         <span></span>
                                     </label>
                                 </th>
-                                <th> {{ __('users_.info.username') }} </th>
-                                <th>{{ __('users_.info.email') }}</th>
-                                <th>{{ __('users_.info.status') }} </th>
-                                <th>{{ __('users_.info.joined_at') }}</th>
-                                <th> {{ __('users_.actions.procedures') }} </th>
+                                <th> اسم المستخدم </th>
+                                <th> البريد الالكتروني </th>
+                                <th> الحالة </th>
+                                <th> انضم في </th>
+                                <th> اجراءات </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -111,23 +111,23 @@
                                     <a href="mailto:{{$user->email}}"> {{$user->email}} </a>
                                 </td>
                                 <td>
-                                    <span class="label label-sm label-success"> {{ __('users_.info.verified') }} </span>
+                                    <span class="label label-sm label-success"> اعتمد </span>
                                 </td>
                                 <td class="center">{{$user->created_at}} </td>
                                 <td>
                                     <div class="btn-group">
-                                        <button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"> {{ __('users_.actions.procedures') }}
+                                        <button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"> اجراءات
                                             <i class="fa fa-angle-down"></i>
                                         </button>
                                         <ul class="dropdown-menu" role="menu">
                                             <li>
                                                 <a href="{{route('users.edit',['id'=>$user->id])}}">
-                                                    <i class="icon-user"></i> {{ __('users_.actions.edit_user') }} </a>
+                                                    <i class="icon-user"></i> تعديل </a>
                                             </li>
                                             @if($user->id != auth()->user()->id)
                                             <li>
-                                                <a href="{{route('users.destroy',['id'=>$user->id])}}" onclick="return confirm({{ __('users_.actions.remove_user_confirmation') }})">
-                                                    <i class="icon-user"></i>{{ __('users_.actions.remove_user') }}</a>
+                                                <a href="{{route('users.destroy',['id'=>$user->id])}}" onclick="return confirm('هل انت متأكد من حذف هذا العضو ؟')">
+                                                    <i class="icon-user"></i> حذف </a>
 
                                                 </li>
                                                 @endif
