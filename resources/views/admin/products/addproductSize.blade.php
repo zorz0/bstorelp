@@ -7,23 +7,23 @@
     <!-- BEGIN PAGE HEADER-->
     <!-- BEGIN PAGE BAR -->
     <div class="page-bar">
-        <ul class="page-breadcrumb" dir="{{ getDirection() }}">
+        <ul class="page-breadcrumb">
             <li>
-                <a href="index.html">{{ __('products_.home') }}</a>
+                <a href="index.html">الرئيسية</a>
                 <i class="fa fa-circle"></i>
             </li>
             <li>
-                <a href="#">{{ __('products_.products') }}</a>
+                <a href="#">المنتجات</a>
                 <i class="fa fa-circle"></i>
             </li>
             <li>
-                <span>{{ __('products_.actions.add_product') }}</span>
+                <span>اضافة منتج</span>
             </li>
         </ul>
     </div>
     <!-- END PAGE BAR -->
     <!-- BEGIN PAGE TITLE-->
-    <h3 class="page-title" align="{{ getAlign() }}">{{ __('products_.actions.add_product') }}
+    <h3 class="page-title"> اضافة منتج
     </h3>
     <!-- END PAGE TITLE-->
     <div class="portlet-body form">
@@ -35,7 +35,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label class="control-label col-md-3">{{ __('products_.productFields.product_name') }}</label>
+                            <label class="control-label col-md-3">اسم المنتج </label>
 
                             <div class="col-md-9">
                         <span>{{ $products['name'] }}</span>
@@ -53,10 +53,10 @@
 
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label class="control-label col-md-3">{{ __('products_.productFields.weight') }}</label>
+                            <label class="control-label col-md-3">الوزن</label>
                             <div class="col-md-9">
                                 <input type="text" name="size" class="form-control" placeholder="100">
-                                <span class="help-block"> {{ __('products_.messages.weight_insertion') }} </span>
+                                <span class="help-block"> الوزن المنتج يكتب هنا </span>
                             </div>
                         </div>
                     </div>
@@ -67,10 +67,10 @@
 
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label class="control-label col-md-3">{{ __('products_.productFields.quantity') }}</label>
+                                <label class="control-label col-md-3">العدد</label>
                                 <div class="col-md-9">
                                     <input type="number" name="quantity" class="form-control" placeholder="100">
-                                    <span class="help-block">{{ __('products_.messages.quantity_insertion') }} </span>
+                                    <span class="help-block"> عدد المنتج يكتب هنا </span>
                                 </div>
                             </div>
                         </div>
@@ -78,20 +78,20 @@
 
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label class="control-label col-md-3">{{ __('products_.productFields.price') }}</label>
+                            <label class="control-label col-md-3">السعر</label>
                             <div class="col-md-9">
                                 <input type="number" name="price" class="form-control" placeholder="100">
-                                <span class="help-block">{{ __('products_.messages.price_insertion') }}</span>
+                                <span class="help-block">سعر المنتج يكتب هنا </span>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label class="control-label col-md-3">{{ __('products_.productFields.discount') }}</label>
+                            <label class="control-label col-md-3">الخصم</label>
                             <div class="col-md-9">
                                 <input type="number" name="discount" class="form-control" placeholder="100">
-                                <span class="help-block">{{ __('products_.productFields.discount') }} </span>
+                                <span class="help-block">الخصم علي المنتج يكتب هنا </span>
                             </div>
                         </div>
                     </div>
@@ -108,7 +108,7 @@
                             <div class="col-md-6">
                                 <div class="row">
                                     <div class="col-md-offset-3 col-md-9">
-                                        <button type="submit" class="btn green">{{ __('products_.actions.add') }}</button>
+                                        <button type="submit" class="btn green">اضافة</button>
                                         {{-- <button type="button" class="btn default">Cancel</button> --}}
                                     </div>
                                 </div>

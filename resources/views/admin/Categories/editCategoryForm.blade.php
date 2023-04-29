@@ -9,21 +9,21 @@
     <div class="page-bar">
         <ul class="page-breadcrumb">
             <li>
-                <a href="index.html">{{ __('admin_.home') }}</a>
+                <a href="index.html">الرئيسية</a>
                 <i class="fa fa-circle"></i>
             </li>
             <li>
-                <a href="#">{{ __('admin_.categories') }}</a>
+                <a href="#">الفئات</a>
                 <i class="fa fa-circle"></i>
             </li>
             <li>
-                <span>{{ __('admin_.all_categories') }}</span>
+                <span>جميع الفئات</span>
             </li>
         </ul>
     </div>
     <!-- END PAGE BAR -->
     <!-- BEGIN PAGE TITLE-->
-    <h3 class="page-title">{{ __('admin_.all_categories') }}
+    <h3 class="page-title"> جميع الفئات
         {{-- <small>managed datatable samples</small> --}}
     </h3>
     <!-- END PAGE TITLE-->
@@ -35,38 +35,38 @@
                         <div class="portlet-title">
                             <div class="caption">
                                 <i class="icon-settings font-dark"></i>
+                           
+                                <span class="caption-subject font-dark sbold uppercase">تعديل الفئة </span>
 
-                                <span class="caption-subject font-dark sbold uppercase">{{ __('admin_.edit_category') }} </span>
-
-
+                    
 
                             </div>
                         </div>
                         <div class="portlet-body form">
-
+                      
                             <form class="form-horizontal" action="{{route('categories.update',['id'=>$category->id])}}" method="POST" enctype="multipart/form-data" role="form">
                                @csrf
 
                                 <div class="form-body">
                                     <div class="form-group">
-                                        <label class="col-md-2 control-label">{{ __('admin_.category_name') }}</label>
+                                        <label class="col-md-2 control-label">اسم الفئة</label>
                                         <div class="col-md-6">
                                             <input type="text" name="name" class="form-control" value="{{$category->name}}" required>
-                                            <span class="help-block"> {{ __('admin_.insert_category_name') }} </span>
+                                            <span class="help-block"> ادخل هنا اسم الفئة. </span>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-md-2 control-label"{{ __('admin_.category_image') }}</label>
+                                        <label class="col-md-2 control-label">صورة الفئة</label>
                                         <div class="col-md-6">
                                             <input type="file" name="image"  placeholder="صورة للفئة" >
-                                            <span class="help-block">{{ __('admin_.insert_category_image') }} </span>
+                                            <span class="help-block"> ارفع هنا صورة للفئة. </span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-actions">
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <button type="submit" class="btn green">{{ __('admin_.save_button') }}</button>
+                                            <button type="submit" class="btn green">حفظ</button>
                                             {{-- <button type="button" class="btn default">Cancel</button> --}}
                                         </div>
                                     </div>

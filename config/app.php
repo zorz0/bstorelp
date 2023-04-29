@@ -82,7 +82,7 @@ return [
     |
     */
 
-    'locale' => 'ar',
+    'locale' => 'en',
 
     /*
     |--------------------------------------------------------------------------
@@ -96,8 +96,6 @@ return [
     */
 
     'fallback_locale' => 'en',
-    'hideDefaultLocaleInURL' => true,
-    'useAcceptLanguageHeader' => false,
 
     /*
     |--------------------------------------------------------------------------

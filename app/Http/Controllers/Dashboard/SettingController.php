@@ -32,9 +32,7 @@ class SettingController extends Controller
             $panerImgs = ImageUpload::uploadImage($request->panerImgs, null, null, 'setting/');
             $setting->update(['panerImgs' => $panerImgs]);
         }
-        $success_edit = trans('admin_.successfully_change_settings_message');
-        $success_return_message = trans('admin_.return_change_settings_message');
-        Alert::success($success_edit);
-        return redirect()->route('dashboard.settings.index')->with('success', $success_return_message);
+        Alert::success('تم تعديل البيانات بنجاح', 'يمكنك رؤية التعديل في الموقع');
+        return redirect()->route('dashboard.settings.index')->with('success', 'تم تحديث الاعدادات بنجاح');
     }
 }

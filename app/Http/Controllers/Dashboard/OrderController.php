@@ -48,7 +48,7 @@ $data=Order::create([
     "name"=>$request["name"],
     "postal_code"=>$request["postal_code"],
     "shipping_price"=>$request["shipping_price"],
-
+  
 
 ]);
 $Order_id = $data->id;
@@ -59,8 +59,8 @@ foreach ($cards as $card) {
     $card->order_id = $Order_id;
     $card->save();
 }
-   $message = trans('orders_.messages.order_register_success');
-   Alert::success($message);
+
+   Alert::success('تم تسجيل الطلب بنجاح', 'طلبكم قيد التنفيذ');
 
  return redirect(route('home'));
 
@@ -74,9 +74,9 @@ public function updateStatus( $id,$status){
     $order->update([
         'status'=>$status
     ]);
-    $message = trans('orders_.messages.status_changed');
-    Alert::success($message);
 
+    Alert::success( ' تم تعديل حالة الطلب');
+ 
 return back();
 
 }
@@ -91,11 +91,11 @@ $data=Order::create([
     "name"=>$request["name"],
     "postal_code"=>$request["postal_code"],
     "shipping_price"=>$request["shipping_price"],
-
+  
 
 ]);
 return redirect(route('orders.index'));
 
 }
-
+    
 }
