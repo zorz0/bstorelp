@@ -8,7 +8,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>بيت خيرات سوف | لوحة التحكم</title>
+    <title>{{  __('admin_.admin-site-title') }}</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <meta content="" name="description" />
@@ -107,8 +107,8 @@
             </div> --}}
             <style>
                 .top-menu{
-                    margin: 5px !important;
-                    
+                    margin: 10px !important;
+
 
                 }
                 .top-menu a{
@@ -141,7 +141,7 @@
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
                                              document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
+                                {{ __('app.logout') }}
                             </a>
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -153,7 +153,7 @@
             </div>
             <!-- END TOP NAVIGATION MENU -->
         </div>
-    
+
         <!-- END HEADER INNER -->
     </div>
     <!-- END HEADER -->
