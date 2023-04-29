@@ -5,12 +5,12 @@
     <div class="card" align="center">
 
     <!-- <h5>Title description, Dec 7, 2017</h5> -->
-           
-       
+
+
             <!DOCTYPE html>
 
-<html lang="en" dir="rtl">
-   
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" dir="rtl">
+
 
     <head>
         <meta charset="utf-8" />
@@ -55,18 +55,18 @@
                     <div class="blog-single-img">
                         <img src="/storage/imgs/{{$blog->image}}" /> </div>
 
-                       
+
 
                     <div class="blog-single-desc">
                    <p>{{$blog->description}}<p>
                     </div>
-              
-                  
+
+
                 </div>
             </div>
             <div class="col-lg-3">
                 <div class="blog-single-sidebar bordered blog-container">
-                  
+
                     <div class="blog-single-sidebar-recent">
                         <h3 class="blog-sidebar-title uppercase">Recent Posts</h3>
                         <ul>
@@ -76,22 +76,22 @@
 
                             </li>
                         @endforeach
-                        
-                          
-                        
+
+
+
                         </ul>
                     </div>
-                
-                   
+
+
                 </div>
             </div>
         </div>
     </div>        <!-- BEGIN HEADER -->
-     
+
         <!-- END HEADER -->
         <!-- BEGIN HEADER & CONTENT DIVIDER -->
         <div class="clearfix"> </div>
-    
+
         <script src="../assets/global/plugins/jquery.min.js" type="text/javascript"></script>
         <script src="../assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
         <script src="../assets/global/plugins/js.cookie.min.js" type="text/javascript"></script>
@@ -108,11 +108,9 @@
         <script src="../assets/layouts/layout/scripts/demo.min.js" type="text/javascript"></script>
         <script src="../assets/layouts/global/scripts/quick-sidebar.min.js" type="text/javascript"></script>
         <!-- END THEME LAYOUT SCRIPTS -->
-    </body>
 
 </html>
-        
 
 
-</section>
+
 @endsection
