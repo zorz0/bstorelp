@@ -141,7 +141,7 @@
                                 <p id="description" style="font-size: 25px" class="customfont u-custom-font">
                                     {{ $product->description }}</p>
                                 <hr class="myhr">
-                                <img class="myimg" width="" alt="product" src="/storage/img/{{ $product->image }}">
+                                <img class="myimg" width="" alt="product" src="{{ asset('storage/img/'.$product->image) }}">
                                 <hr class="myhr">
                                 @auth
                                     @if ($product->sizes[0] != 'null')
