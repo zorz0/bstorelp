@@ -116,19 +116,20 @@
                             <ul
                                 class="u-align-center u-custom-font u-nav u-popupmenu-items u-text-active-custom-color-2 u-text-hover-custom-color-2 u-unstyled u-nav-2">
                                 <li class="u-nav-item">
-                                    <a class="u-button-style u-nav-link" href="/index.html">{{ __('master.home')  }}</a>
+                                    <a class="u-button-style u-nav-link" href="/index.html">{{ __('master.home') }}</a>
                                 </li>
                                 <li class="u-nav-item">
                                     <a class="u-button-style u-nav-link" href="#">{{ __('master.about') }}</a>
                                 </li>
                                 <li class="u-nav-item">
-                                    <a class="u-button-style u-nav-link" href="/store.html">{{ __('master.store')  }}</a>
+                                    <a class="u-button-style u-nav-link" href="/store.html">{{ __('master.store') }}</a>
                                 </li>
                                 <li class="u-nav-item">
-                                    <a class="u-button-style u-nav-link" href="#">{{ __('master.ourNews')  }}</a>
+                                    <a class="u-button-style u-nav-link" href="#">{{ __('master.ourNews') }}</a>
                                 </li>
                                 <li class="u-nav-item">
-                                    <a class="u-button-style u-nav-link" href="/contact.html">{{ __('master.contact')  }}</a>
+                                    <a class="u-button-style u-nav-link"
+                                        href="/contact.html">{{ __('master.contact') }}</a>
                                 </li>
                             </ul>
                         </div>
@@ -223,7 +224,11 @@
                                             <span style="font-size: 1rem;"></span>
                                         </a>
                                         <span style="font-size: 1rem;"> {{ __('master.social_sites') }} <br>
-                                        </span> <a href="https://www.facebook.com/baitkhayratsoof1881?mibextid=ZbWKwL"> {{ __('master.facebook') }}</a><br><a href="https://instagram.com/beitkhairatsouf1881?igshid=YmMyMTA2M2Y=" > {{ __('master.instagram') }} </a> <br>{{ __('master.tiktok') }} <br>{{ __('master.youtube') }}
+                                        </span> <a href="https://www.facebook.com/baitkhayratsoof1881?mibextid=ZbWKwL">
+                                            {{ __('master.facebook') }}</a><br><a
+                                            href="https://instagram.com/beitkhairatsouf1881?igshid=YmMyMTA2M2Y=">
+                                            {{ __('master.instagram') }} </a> <br>{{ __('master.tiktok') }}
+                                        <br>{{ __('master.youtube') }}
                                     </p>
                                 </div>
                             </div>
@@ -257,10 +262,22 @@
                         </div>
                     </div>
                 </div>
-                <p class="u-align-center u-custom-font u-text u-text-body-alt-color u-text-4"> {{ __('master.powered',['name' => 'banana']) }} </p>
-                <img src="/public/assets/images/banana.png" style="text-align: center;" >
+              
+
             </div>
+           
         </footer>
+        <div class="container text-center">
+            <div class="row">
+                <div class="col t-center">
+                    <p class="u-align-center u-custom-font u-text u-text-body-alt-color u-text-4"
+                        style="color: rgb(107, 114, 101) !important; margin-bottom: -30px !important;">
+                        {{ __('master.powered', ['name' => 'banana']) }} </p><img
+                        src="http://127.0.0.1:8000/assets/images/banana.png"
+                        style="text-align: center; width: 100px;">
+                </div>
+            </div>
+        </div>
     @endsection
 </body>
 
