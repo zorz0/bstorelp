@@ -141,7 +141,7 @@
                                 <p id="description" style="font-size: 25px" class="customfont u-custom-font">
                                     {{ $product->description }}</p>
                                 <hr class="myhr">
-                                <img class="myimg" width="" alt="product" src="{{ asset('storage/img/'.$product->image) }}">
+                                <img class="myimg" width="" alt="product" src="/storage/img/{{ $product->image }}">
                                 <hr class="myhr">
                                 @auth
                                     @if ($product->sizes[0] != 'null')
@@ -354,66 +354,20 @@
             </div>
         </section>
 
-        <section class="my-5">
-
-            <div class="row">
-
-
-                <section class="container chooseClass0 my-5">
-                    <div class="d-flex justify-center"><img src="http://127.0.0.1:8000/assets/images/soufKitchen.jpg"
-                            alt=""></div>
-                    <div class="chooseClass customfont u-custom-font"><img
-                            src="http://127.0.0.1:8000/assets/images/friends.jpg" alt="">
-                        <h2> تصنع منتجات بيت خيرات سوف من أيدي نساء أردنيات </h2>
-                    </div>
-                    <div class="chooseClass">
-                        <h2 class="customfont u-custom-font"> تحفظ في عبوات وأماكن مخصصة </h2><img
-                            src="http://127.0.0.1:8000/assets/images/library.jpg" alt="">
-                    </div>
-                    <div class="chooseClass"><img src="http://127.0.0.1:8000/assets/images/kais.jpg" alt="">
-                        <h2 class="customfont u-custom-font"> تصلك مغلفة بإحكام جاهزة للأكل </h2>
-                    </div>
-                </section>
-                <section class="my-5">
-                    <div class="row mt-2">
-                        <div class="col text-center">
-                            <div class=" mt-2 rounded-circle d-inline-block" style="width: 30px; height: 30px; background-color:black;"></div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <div
-                                style="padding-right: 40px; margin-bottom: 130px; padding-bottom: 10px; height: 160px; width: 100%; overflow: hidden; position: relative; padding-left: 40px;">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 250"
-                                    style="transform: scaleY(-1);">
-                                    <path fill="#11111" fill-opacity="1"
-                                        d="M0,224L120,202.7C240,181,480,139,720,144C960,149,1200,181,1320,202.7L1440,224V0H1320C1200,0,960,0,720,0C480,0,240,0,120,0H0V224Z">
-                                    </path>
-                                </svg>
-
-                                <h2 class="customfont u-custom-font"
-                                    style="color:white; text-shadow: black 0px 0px 2px; position: absolute; margin-top: 40px; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 55px; font-weight: bold;">
-                                    ! منتجات خالية من السكر تماما </h2>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="mt-5">
-                    <div class="container"><img src="/assets/images/stoneCover.jpg" alt="Snow" style="width: 100%;">
-                        <div class="centered">
-                            <h1 class="container2">بيت خيرات سوف<br>قصة بدأت من عام ١٨٨١م <span><a id="btn"
-                                        href="http://127.0.0.1:8000/about"><button
-                                            class="general-btn border-0 text-white h3 p-3 m-4">اعرف
-                                            عنها</button></a></span></h1>
-                        </div>
-                    </div>
-                </section>
-                
-               
-             
-            </div>
-        </section>
-
-
      
+
+
+        <section class="mt-5">
+            <div class="container">
+                <img src="/assets/images/stoneCover.jpg" alt="Snow" style="width:100%;">
+
+                <div class="centered">
+                    <h1 class="container2">بيت خيرات سوف<br>قصة بدأت من عام ١٨٨١م <span>
+                            <a id="btn" href={{ url('/about') }}><button
+                                    class="general-btn border-0 text-white h3 p-3 m-4">اعرف
+                                    عنها</button></a></span></h1>
+                </div>
+            </div>
+
+        </section>
     @endsection
