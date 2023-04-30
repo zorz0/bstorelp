@@ -10,7 +10,7 @@ use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Support\Facades\DB;
 use Livewire\Component;
 class ShowAllCategorywProduct extends Component
-{
+{ 
 public $selectedsizeid;
     public $selectedSize;
     public $selectedPrice;
