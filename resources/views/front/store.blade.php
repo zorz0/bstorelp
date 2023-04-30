@@ -70,42 +70,45 @@
 
                 <div class="col-md-2 box3">
                     <h3>
-                        أمان
+                                                {{ __('store_.security.title') }}
+
                     </h3>
                     <p class="font-weight-bolder u-custom-font">
-                        الدفع عند التوصيل
+                        {{ __('store_.security.content') }}
                     </p>
                 </div>
                 <div class="col-md-2 box">
                     <h3>
-                        صحي
+                        {{ __('store_.health.title') }}
+
                     </h3>
                     <p class="font-weight-bolder u-custom-font">
-                        بدون مواد حافظة
+                        {{ __('store_.health.content') }}
                     </p>
                 </div>
                 <div class="col-md-2 box">
                     <h3>
-                        النظافة
+                        {{ __('store_.cleanliness.title') }}
                     </h3>
                     <p class="font-weight-bolder u-custom-font">
-                        طعام بيتي صحي
+                        {{ __('store_.cleanliness.content') }}
                     </p>
                 </div>
                 <div class="col-md-2 box">
                     <h3>
-                        الجودة
+                        {{ __('store_.quality.title') }}
+
                     </h3>
                     <p class="font-weight-bolder u-custom-font">
-                        ضمان جودة المنتجات
+                        {{ __('store_.security.content') }}
                     </p>
                 </div>
                 <div class="col-md-2 box2">
                     <h3>
-                        توصيل سريع
+                        {{ __('store_.delivery.title') }}
                     </h3>
                     <p class="font-weight-bolder u-custom-font">
-                        لجميع انحاء المملكة
+                        {{ __('store_.delivery.content') }}
                     </p>
                 </div>
             </div>
@@ -145,7 +148,7 @@
                                 <hr class="myhr">
                                 @auth
                                     @if ($product->sizes[0] != 'null')
-                                        <button type="submit"> اعرض المنتج</button>
+                                        <button type="submit"> {{ __('store_.buttons.show_product') }}</button>
                                         <p style="font-weight: bold">{{ $product->price }} د.أ</p>
                                         <h3>
                                     @endif
@@ -171,7 +174,7 @@
                 @endforeach
                 <div class="ct-blog col-sm-6 col-md-1">
                     <div style="margin-top: 130%;">
-                        <a class="smore2" href="{{ route('allproduct', ['id' => $value->id]) }}">مشاهدة المزيد</a>
+                        <a class="smore2" href="{{ route('allproduct', ['id' => $value->id]) }}">{{ __('store_.buttons.watch_more') }}</a>
                     </div>
                 </div>
             </div>
@@ -220,52 +223,52 @@
     </section> --}}
 
     <section class="container my-5">
-        <h2 class="text-center customfont u-custom-font">نضمن لك عملية شراء سريعة ، مريحة وآمنة</h2>
+        <h2 class="text-center customfont u-custom-font">{{ __('store_.messages.assurance') }}</h2>
         <div class="contentVa0">
             <img src="{{ asset('/assets/images/person.png') }}" alt="">
             <div class="contentVa">
-                <h2 class="customfont u-custom-font">تسجيل الدخول</h2>
-                <p class="customfont u-custom-font">أضف معلوماتك (اسمك ، رقم هاتفك ، موقعك)</p>
+                <h2 class="customfont u-custom-font">{{ __('store_.messages.login') }} </h2>
+                <p class="customfont u-custom-font"> {{ __('store_.messages.add_information') }}</p>
             </div>
         </div>
         <div class="contentVa0">
             <img src="{{ asset('/assets/images/chart.png') }}" alt="">
             <div class="contentVa">
-                <h2 class="customfont u-custom-font">أضف منتجاتك للسلة</h2>
-                <p class="customfont u-custom-font">أضف منتجاتك المفضلة للسلة</p>
+                <h2 class="customfont u-custom-font">{{ __('store_.messages.add_cart_products') }}  </h2>
+                <p class="customfont u-custom-font">{{ __('store_.messages.add_favorite_products_to_cart') }}   </p>
             </div>
         </div>
         <div class="contentVa0">
             <img src="{{ asset('/assets/images/rightSign.png') }}" alt="">
             <div class="contentVa">
-                <h2 class="customfont u-custom-font">تأكيد طلبك</h2>
-                <p class="customfont u-custom-font">أكد طلبك بعد التحقق من الطلبات وقيمة الفاتورة النهائية</p>
+                <h2 class="customfont u-custom-font">{{ __('store_.messages.order_check') }} </h2>
+                <p class="customfont u-custom-font">{{ __('store_.messages.order_check_information') }} </p>
             </div>
         </div>
         <div class="contentVa0">
             <img src="{{ asset('/assets/images/customer.png') }}" alt="">
             <div class="contentVa">
-                <h2 class="customfont u-custom-font">تأكيد موعد وموقع التسليم</h2>
-                <p class="customfont u-custom-font">سيتواصل معك موظف خدمة العملاء لتأكيد موعد وموقع التسليم</p>
+                <h2 class="customfont u-custom-font"> {{ __('store_.messages.delivery_confirm') }}  </h2>
+                <p class="customfont u-custom-font">  {{ __('store_.messages.delivery_confirm_information') }}   </p>
             </div>
         </div>
         <div class="contentVa0">
             <img src="{{ asset('/assets/images/car.png') }}" alt="">
             <div class="contentVa">
-                <h2 class="customfont u-custom-font">توصيل وإستلام الطلب خلال ٢٤ ساعة والدفع</h2>
-                <p class="customfont u-custom-font">توصيل منتجاتك لك لتستلمها، ودفع ثمنها</p>
+                <h2 class="customfont u-custom-font">  {{ __('store_.messages.one_day_shipping') }}</h2>
+                <p class="customfont u-custom-font">  {{ __('store_.messages.one_day_shipping_information') }}   </p>
             </div>
         </div>
         <div class="contentVa0">
             <img src="{{ asset('/assets/images/heart.png') }}" alt="">
             <div class="contentVa">
-                <h2 class="text-danger">الإستمتاع بألذ وأشهى المنتجات من بيت خيرات سوف</h2>
+                <h2 class="text-danger"> {{ __('store_.messages.enjoy_delicious_meals') }}</h2>
             </div>
         </div>
     </section>
     <section style="margin-bottom: 150px">
         <div class="chooseEat container text-center py-2 my-5 ">
-            <h2 class="text-white">إختر ألذ وأشهى المنتجات</h2>
+            <h2 class="text-white"> {{ __('store_.messages.choose_delicious_meals') }} </h2>
         </div>
     </section>
     <div class=" text-center">
@@ -282,7 +285,7 @@
                 <span style="font-size: 40px;
           font-weight: bold;     text-shadow: 0 0 2px black;
 "
-                    class="customfont u-custom-font">بدء التسوق</span>
+                    class="customfont u-custom-font"> {{ __('store_.buttons.shop_now') }}</span>
             </button></a>
     </div>
     <div class="row mt-2">
@@ -324,8 +327,8 @@
             @endforeach
 
             <div class="ct-blog col-sm-6 col-md-1">
-                <div style="margin-top: 130%;"><a class="smore2" href="http://127.0.0.1:8000/category/1">مشاهدة
-                        المزيد</a></div>
+                <div style="margin-top: 130%;"><a class="smore2" href="http://127.0.0.1:8000/category/1">{{ __('store_.buttons.watch_more') }}
+                        </a></div>
             </div>
         </div>
 
@@ -337,24 +340,47 @@
             <div class="chooseClass customfont u-custom-font">
                 <img src="{{ asset('/assets/images/friends.jpg') }}" alt="">
                 <h2>
-                    تصنع منتجات بيت خيرات سوف من أيدي نساء أردنيات
+                    {{ __('store_.messages.who_make_our_food') }}
                 </h2>
             </div>
             <div class="chooseClass">
                 <h2 class="customfont u-custom-font">
-                    تحفظ في عبوات وأماكن مخصصة
+                    {{ __('store_.messages.storing_details') }}
                 </h2>
                 <img src="{{ asset('/assets/images/library.jpg') }}" alt="">
             </div>
             <div class="chooseClass">
                 <img src="{{ asset('/assets/images/kais.jpg') }}" alt="">
                 <h2 class="customfont u-custom-font">
-                    تصلك مغلفة بإحكام جاهزة للأكل
+                    {{ __('store_.messages.packing_details') }}
                 </h2>
             </div>
         </section>
 
-     
+        <section class="my-5">
+            <div class="row mt-2">
+                <div class="col text-center">
+                    <div class=" mt-2 rounded-circle d-inline-block" style="width: 30px; height: 30px; background-color:black;"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div
+                        style="padding-right: 40px; margin-bottom: 130px; padding-bottom: 10px; height: 160px; width: 100%; overflow: hidden; position: relative; padding-left: 40px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 250"
+                            style="transform: scaleY(-1);">
+                            <path fill="#11111" fill-opacity="1"
+                                d="M0,224L120,202.7C240,181,480,139,720,144C960,149,1200,181,1320,202.7L1440,224V0H1320C1200,0,960,0,720,0C480,0,240,0,120,0H0V224Z">
+                            </path>
+                        </svg>
+
+                        <h2 class="customfont u-custom-font"
+                            style="color:white; text-shadow: black 0px 0px 2px; position: absolute; margin-top: 40px; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 40px; font-weight: bold;">
+                             {{ __('store_.messages.sugar_free') }} </h2>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
         <section class="mt-5">
@@ -362,10 +388,10 @@
                 <img src="/assets/images/stoneCover.jpg" alt="Snow" style="width:100%;">
 
                 <div class="centered">
-                    <h1 class="container2">بيت خيرات سوف<br>قصة بدأت من عام ١٨٨١م <span>
+                    <h1 class="container2">  {{ __('store_.shop_name') }}<br>  {{ __('store_.messages.story_start') }}   <span>
                             <a id="btn" href={{ url('/about') }}><button
-                                    class="general-btn border-0 text-white h3 p-3 m-4">اعرف
-                                    عنها</button></a></span></h1>
+                                    class="general-btn border-0 text-white h3 p-3 m-4">{{ __('store_.buttons.know_about') }}
+                                    </button></a></span></h1>
                 </div>
             </div>
 
