@@ -68,7 +68,7 @@
                 <div class="blog-single-sidebar bordered blog-container">
 
                     <div class="blog-single-sidebar-recent">
-                        <h3 class="blog-sidebar-title uppercase">Recent Posts</h3>
+                        <h3 class="blog-sidebar-title uppercase">{{ __('news_.recent_news') }}</h3>
                         <ul>
                             @foreach ($latestBlogs as $item)
                             <li>
