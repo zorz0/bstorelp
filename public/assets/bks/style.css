@@ -715,6 +715,7 @@ body {
             
     padding-left: calc(var(--bs-gutter-x) * 0.8) !important;
     padding-right: unset!important;
+    margin-right: 20px!important;
         }
         #NonSugar{
             color: #353331!important;
