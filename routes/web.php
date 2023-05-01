@@ -70,6 +70,7 @@ Route::get('/news', [HomeController::class,'blogs'])->name('news');
 ////end save order
 Auth::routes();
 
+
 //  Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
  Route::get('/', [HomeController::class,'index'])->name('home');
  Route::get('/{category}', [HomeController::class,'showProducts'])->name('products');

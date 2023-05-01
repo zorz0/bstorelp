@@ -112,11 +112,11 @@
                         class="general-btn  border-0  text-white h4 p-3 m-3 col-2"> {{ __('master.ourNews') }}
                     </button></a></div>
         </div>
-        <div class="col-md-12 col-sx-4">
+        <div class="col-md-12 col-sx-4" id="test">
             @foreach ($latestBlogs as $record)
                 <div class="ct-blog col-sm-6 col-md-4">
                     <div class="fauxcrop">
-                        <a href="#"><img alt="News Entry" src="{{ asset($record->image) }}"></a>
+                        <a href="{{ route('news.details', ['id' => $record->id]) }}"><img alt="News Entry" src="{{ asset('/storage/imgs/'.$record->image) }}"></a>
                     </div>
                 </div>
             @endforeach

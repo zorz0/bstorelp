@@ -1,6 +1,7 @@
 @font-face {
     font-family: '29L';
-    src: url('/fonts/fonts/29LTAzerTRIAL-RegularTRIAL.woff') format('woff');
+    src: url('../font/29LTAzerTRIAL-RegularTRIAL.woff.ttf') format('woff2'),
+         url('../font/29LTAzerTRIAL-RegularTRIAL.woff') format('woff');
     font-weight: bold;
     font-style: normal;
 }
@@ -532,7 +533,7 @@ body {
 .rightcolumn {
     font-family: '29L';
     float: left;
-    width: 25%;
+    width: 23%;
     text-align: right;
     padding-left: 20px;
 }
@@ -674,4 +675,28 @@ body {
     padding-top: 0!important;
   }
   
+      /* responsive store Page
       
+      
+      */
+    
+
+
+
+      .resWatchMore{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        width: 7rem;;
+      }
+.ct-blog2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card{
+    padding:5px;
+    background: transparent;
+    background-color: unset!important;}

@@ -16,42 +16,9 @@
             </div>
             @endforeach
             {{$blogs->links()}}
-       <div class="card">
-            <h2 align="{{ getAlign() }}">{{ __('news_.news_title') }}</h2>
-            <!-- <h5>Title description, Sep 2, 2017</h5> -->
-            <div class="fakeimg">
-                <a href="#"><img class="myimg" alt="product" src="{{asset('/assets/bks')}}/images/product.jpg"></a>
-                <a href="#"><img class="myimg" alt="product" src="{{asset('/assets/bks')}}/images/product.jpg"></a>
-                <a href="#"><img class="myimg" alt="product" src="{{asset('/assets/bks')}}/images/product.jpg"></a>
-                <a href="#"><img class="myimg" alt="product" src="{{asset('/assets/bks')}}/images/product.jpg"></a>
-            </div>
-            <p>{{ __('news_.news_content') }}
-                <span class="font-weight-bolder"><a href="">{{ __('news_.continue_reading') }}</a></span></p>
-        </div>
-            <div class="card">
-                <h2 align="{{ getAlign() }}">{{ __('news_.news_title') }}</h2>
-                <!-- <h5>Title description, Sep 2, 2017</h5> -->
-                <div class="fakeimg">
-                    <a href="#"><img class="myimg" alt="product" src="{{asset('/assets/bks')}}/images/product.jpg"></a>
-                    <a href="#"><img class="myimg" alt="product" src="{{asset('/assets/bks')}}/images/product.jpg"></a>
-                    <a href="#"><img class="myimg" alt="product" src="{{asset('/assets/bks')}}/images/product.jpg"></a>
-                    <a href="#"><img class="myimg" alt="product" src="{{asset('/assets/bks')}}/images/product.jpg"></a>
-                </div>
-                <p>{{ __('news_.news_content') }}
-                    <span class="font-weight-bolder"><a href="">{{ __('news_.continue_reading') }}</a></span></p>
-            </div>
-            <div class="card">
-                <h2 align="{{ getAlign() }}"> {{ __('news_.news_title') }}</h2>
-                <!-- <h5>Title description, Sep 2, 2017</h5> -->
-                <div class="fakeimg">
-                    <a href="#"><img class="myimg" alt="product" src="{{asset('/assets/bks')}}/images/product.jpg"></a>
-                    <a href="#"><img class="myimg" alt="product" src="{{asset('/assets/bks')}}/images/product.jpg"></a>
-                    <a href="#"><img class="myimg" alt="product" src="{{asset('/assets/bks')}}/images/product.jpg"></a>
-                    <a href="#"><img class="myimg" alt="product" src="{{asset('/assets/bks')}}/images/product.jpg"></a>
-                </div>
-                <p>{{ __('news_.news_content') }}
-                    <span class="font-weight-bolder"><a href="">{{ __('news_.continue_reading') }}</a></span></p>
-            </div>
+      
+           
+          
     </div>
     <div class="rightcolumn">
         <h2 align="{{ getAlign() }}">{{ __('news_.latest_news') }}</h2>
@@ -63,36 +30,8 @@
         </div>
         @endforeach
         {{$latestBlogs->links()}}
-      <div class="card">
-            <h2 class="text-center">{{ __('news_.news_title') }}</h2>
-            <div class="fakeimg2">
-                <a href="#"><img class="myimg" alt="product" src="{{asset('/assets/bks')}}/images/product.jpg"></a>
-            </div>
-        </div>
-        <div class="card">
-            <h2 class="text-center">{{ __('news_.news_title') }}</h2>
-            <div class="fakeimg2">
-                <a href="#"><img class="myimg" alt="product" src="{{asset('/assets/bks')}}/images/product.jpg"></a>
-            </div>
-        </div>
-        <div class="card">
-            <h2 class="text-center">{{ __('news_.news_title') }}</h2>
-            <div class="fakeimg2">
-                <a href="#"><img class="myimg" alt="product" src="{{asset('/assets/bks')}}/images/product.jpg"></a>
-            </div>
-        </div>
-        <div class="card">
-            <h2 class="text-center">{{ __('news_.news_title') }}</h2>
-            <div class="fakeimg2">
-                <a href="#"><img class="myimg" alt="product" src="{{asset('/assets/bks')}}/images/product.jpg"></a>
-            </div>
-        </div>
-        <div class="card">
-            <h2 class="text-center">{{ __('news_.news_title') }}</h2>
-            <div class="fakeimg2">
-                <a href="#"><img class="myimg" alt="product" src="{{asset('/assets/bks')}}/images/product.jpg"></a>
-            </div>
-        </div>
+     
+      
     </div>
 </section>
 @endsection
