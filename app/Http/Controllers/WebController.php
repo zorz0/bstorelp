@@ -57,20 +57,29 @@ $allMostProduct->each(function ($mostProduct) {
     $productData = DB::table('products')
         ->where('id', $mostProduct->product_id)
         ->get();
+        $sizes=DB::table('product_size')
+        ->where('id', $mostProduct->product_id)
+        ->get();
+        
+     
+
         
     
   
     $mostProduct->productData = $productData;
+    $mostProduct->sizes=$sizes;
 });
 
-
+$ProductWithoutSugar= DB::table('products')
+->where('id', "1")->take(4)
+->get();
 
     return view('front.store', [
       'categories'=>$categories,
-      'allMostProduct'=>$allMostProduct
-    
+      'allMostProduct'=>$allMostProduct,
+    'ProductWithoutSugar'=>$ProductWithoutSugar
   ]);
-  
+
    }
 
 

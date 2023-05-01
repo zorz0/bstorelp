@@ -4,6 +4,8 @@
          url('../font/29LTAzerTRIAL-RegularTRIAL.woff') format('woff');
     font-weight: bold;
     font-style: normal;
+    font-size: 20px;
+
 }
 body {
     font-family: '29L', sans-serif;
@@ -207,6 +209,7 @@ body {
     font-weight: 700;
     color: #6B7265;
 }
+
 
 @media (max-width: 390px) {
     .foter-start {
@@ -700,3 +703,16 @@ body {
     padding:5px;
     background: transparent;
     background-color: unset!important;}
+  
+    @media (max-width: 576px) {
+        /* styles for most phones */
+        #BestSelling{
+            width: 100%;
+            text-align: center;
+            height: inherit;
+        }
+        #NonSugar{
+            color: black;
+        }
+      }
+   

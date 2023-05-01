@@ -123,7 +123,7 @@
 
         <section class="u-clearfix u-section-1 container-fluid">
             <div class="row store">
-                <div class="col-sm-2">
+                <div class="col-sm-3">
                     <div class="card border-0">
                         <div class="card-body">
                             <div class="image-container">
@@ -142,13 +142,13 @@
                 @foreach ($value->products as $product)
                    
                     
-                <div class="col-sm-3">
+                <div class="col-sm-2 ContainerProduct  ">
                     <div class="card">
                         <div class="card-body">
                             <form id="FormCard" action="{{ route('showProduct', ['id' => $product->id]) }}" method="post">
                                 @csrf
-                                <h5 class="card-title text-center">{{ $product->name }}</h5>
-                                <p class="card-text text-center">{{ $product->description }}</p>
+                                <h5 class="card-title text-center  customfont u-custom-font " style="font-size:1.4rem">{{ $product->name }}</h5>
+                                <p class="card-text text-center customfont u-custom-font " style="font-size:1.2rem">{{ $product->description }}</p>
                                 <hr class="myhr">
                                 <img class="myimg mx-auto d-block" width="" alt="product" src="/storage/img/{{ $product->image }}">
                                 <hr class="myhr ">
@@ -157,7 +157,7 @@
                                         <div class="d-flex justify-content-center">
                                             <button type="submit">{{ __('store_.buttons.show_product') }}</button>
                                         </div>
-                                        <p style="font-weight: bold; " class="text-center">{{ $product->price }} د.أ</p>
+                                        <p style="font-weight: bold; " class="text-center customfont u-custom-font " style="font-size:1.3rem">{{ $product->price }} د.أ</p>
                                         <h3>
                                     @endif
                                 @endauth
@@ -169,14 +169,15 @@
                      
                        
                 @endforeach
-                <div class="col-sm-2" style="display: flex;
+                <div class="col-sm-3" style="display: flex;
                 justify-content: center;
                 align-items: center;">
                     <div class="card border-0">
                         <div class="card-body" >
                           
                     <a href="{{ route('allproduct', ['id' => $value->id]) }}">
-                        <button type="button" class="btn btn-success" style="background-color: #bfdd1d;    border-radius: 20px 0px 0px 20px; padding: 25px; border:0;">{{ __('store_.buttons.watch_more') }}</button>
+                        <button type="button" class="btn btn-success" style=" color: green;
+                        font-weight: bold; background-color: #bfdd1d;    border-radius: 20px 0px 0px 20px; padding: 25px; border:0;">{{ __('store_.buttons.watch_more') }}</button>
                         </a>
                         </div>
                     </div>
@@ -187,45 +188,7 @@
         <br>
         <br>
     @endforeach
-    {{--   <section class="u-clearfix u-section-1 container-fluid">
-        <div class="row store">
-            <div class="ct-blog col-sm-6 col-md-3 my-3">
-                <div class="fauxcrop">
-                    <a href="#"><img class="category" alt="khayba"
-                            src="{{ asset('/assets/bks') }}/images/khayba.jpg"></a>
-                </div>
-            </div>
-            @foreach ($data as $value)
-                <div class="col-sm-6 col-md-3 my-3">
-                    <form id="FormCard" action="{{ route('showProduct', ['id' => $value['id']]) }}" method="post">
-                        @csrf
-                        <div class="product">
-                            <h3>{{ $value['name'] }}</h3>
-                            <p>{{ $value['description'] }}</p>
-                            <hr class="myhr">
-                            <img class="myimg" width="" alt="product" src="/storage/img/{{ $value->image }}">
-                            <hr class="myhr">
-                            @auth
-
-                                @if (!empty($productSizes[0]))
-                                    <select name="productSizeId" id="">
-                                        @foreach ($productSizes as $size)
-                                            @if ($value->id == $size->product_id)
-                                                <option value="{{ $size['id'] }}"> {{ $size['size'] }}</option>
-                                            @endif
-                                        @endforeach
-                                    </select>
-
-                                    <button type="submit"> اعرض المنتج</button>
-                                @endif
-                            @endauth
-                        </div>
-                    </form>
-                </div>
-            @endforeach
-        </div>
-
-    </section> --}}
+   
 
     <section class="container my-5">
         <h2 class="text-center customfont u-custom-font">{{ __('store_.messages.assurance') }}</h2>
@@ -282,17 +245,8 @@
             style="height: 100px;transform: rotate(20deg);position: absolute;margin-left: -80px;margin-top: -10px;"
             alt="">
 
-        <a href="http://127.0.0.1:8000/news"><button
-                class="customfont u-custom-font parallelogram-button general-btn border-0 text-white h4 p-3 m-3 col-2"
-                style="
-            color: black;
-        ">
-                <span style="font-size: 40px;
-          font-weight: bold;     text-shadow: 0 0 2px black;
-"
-                    class="customfont u-custom-font"> {{ __('store_.buttons.shop_now') }}</span>
-            </button></a>
-            <button type="button" class="btn btn-success" style="background-color: #bfdd1d;    border-radius: 20px 0px 0px 20px; padding: 25px; border:0;"> {{ __('store_.buttons.shop_now') }}</button>
+            <button type="button" class="btn btn-success " style="  margin-left: 18px; background-color: #bfdd1d;  color:#6B7265; font-size: 25px;
+            font-weight: bold;  border-radius: 0 30px 22px 0; text-shadow: 0 0 2px black; padding: 20px;margin-top: 18px; border:0; transform: skew(-30deg);"> {{ __('store_.buttons.shop_now') }}</button>
 
     </div>
     <div class="row mt-2">
@@ -320,26 +274,50 @@
         {{-- here --}}
         <div class="row store">
             @foreach ($allMostProduct as $item)
-                <div class="col-sm-6 col-md-3 productContainer" >
-                    <div class="product">
-                        <h3 class="customfont u-custom-font" style="font-size: 30px;">{{ $item->productData[0]->name }}
-                        </h3>
-                        <p id="description" class="customfont u-custom-font" style="font-size: 25px;">
-                            {{ $item->productData[0]->description }}</p>
-                        <hr class="myhr">
-                        <img class="myimg" width="" alt="product"
-                            src="/storage/img/{{ $item->productData[0]->image }}">
-                        <hr class="myhr">
+               
+                <div class="col-sm-3 ContainerProduct  ">
+                    <div class="card">
+                        <div class="card-body">
+                            <form id="FormCard" action="{{ route('showProduct', ['id' => $item->productData[0]->id]) }}" method="post">
+
+                                @csrf
+                                <h5 class="card-title text-center  customfont u-custom-font " style="font-size:1.4rem">{{ $item->productData[0]->name }}</h5>
+                                <p class="card-text text-center customfont u-custom-font " style="font-size:1.2rem"> {{ $item->productData[0]->description }}</p></p>
+                                <hr class="myhr">
+                                <img class="myimg mx-auto d-block" width="" alt="product" src="/storage/img/{{$item->productData[0]->image}}">
+                                <hr class="myhr ">
+                                @auth
+                                @if ($item->sizes[0]->id != '')
+                                    <div class="d-flex justify-content-center">
+                                        <button type="submit">{{ __('store_.buttons.show_product') }}</button>
+                                    </div>
+                                    <p style="font-weight: bold; " class="text-center customfont u-custom-font " style="font-size:1.3rem">{{ $product->price }} د.أ</p>
+                                    <h3>
+                                @endif
+                            @endauth
+                                    </form>
+                           
+                        </div>
                     </div>
                 </div>
+                
             @endforeach
-
-            <div class="ct-blog col-sm-6 col-md-1">
-                <div style="margin-top: 130%;" class="WatchMoreDiv"><a class="smore2" href="http://127.0.0.1:8000/category/1">{{ __('store_.buttons.watch_more') }}
-                        </a></div>
+            <div class="col-sm-3" style="display: flex;
+            justify-content: center;
+            align-items: center;">
+                <div class="card border-0">
+                    <div class="card-body" >
+                      
+                <a href="http://127.0.0.1:8000/category/2">
+                    <button type="button" class="btn btn-success" style=" color: green;
+                    font-weight: bold; background-color: #bfdd1d;    border-radius: 20px 0px 0px 20px; padding: 25px; border:0;">{{ __('store_.buttons.watch_more') }}</button>
+                    </a>
+                    </div>
+                </div>
             </div>
+         
         </div>
-
+        
 
         <section class="container chooseClass0 my-5">
             <div class="d-flex justify-center">
@@ -382,14 +360,77 @@
                             </path>
                         </svg>
 
-                        <h2 class="customfont u-custom-font"
+                        <h2 id="NonSugar" class="customfont u-custom-font "
                             style="color:white; text-shadow: black 0px 0px 2px; position: absolute; margin-top: 50px; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 40px; font-weight: bold;">
                              {{ __('store_.messages.sugar_free') }} </h2>
                     </div>
                 </div>
             </div>
         </section>
+      
+        @foreach ($categories as $value)
+        @if (
+            $value->id==1
+        )
+            
+    
+        <div class="row">
 
+        <section class="u-clearfix u-section-1 container-fluid">
+            <div class="row store">
+             
+                
+                @foreach ($value->products as $product)
+                   
+                    
+                <div class="col-sm-4 ContainerProduct">
+                    <div class="card">
+                        <div class="card-body">
+                            <form id="FormCard" action="{{ route('showProduct', ['id' => $product->id]) }}" method="post">
+                                @csrf
+                                <h5 class="card-title text-center  customfont u-custom-font " style="font-size:1.4rem">{{ $product->name }}</h5>
+                                <p class="card-text text-center customfont u-custom-font " style="font-size:1.2rem">{{ $product->description }}</p>
+                                <hr class="myhr">
+                                <img class="myimg mx-auto d-block" width="" alt="product" src="/storage/img/{{ $product->image }}">
+                                <hr class="myhr ">
+                                @auth
+                                    @if ($product->sizes[0] != 'null')
+                                        <div class="d-flex justify-content-center">
+                                            <button type="submit">{{ __('store_.buttons.show_product') }}</button>
+                                        </div>
+                                        <p style="font-weight: bold; " class="text-center customfont u-custom-font " style="font-size:1.3rem">{{ $product->price }} د.أ</p>
+                                        <h3>
+                                    @endif
+                                @endauth
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+                     
+                       
+                @endforeach
+                <div class="col-sm-3" style="display: flex;
+                justify-content: center;
+                align-items: center;">
+                    <div class="card border-0">
+                        <div class="card-body" >
+                          
+                    <a href="{{ route('allproduct', ['id' => $value->id]) }}">
+                        <button type="button" class="btn btn-success" style=" color: green;
+                        font-weight: bold; background-color: #bfdd1d;    border-radius: 20px 0px 0px 20px; padding: 25px; border:0;">{{ __('store_.buttons.watch_more') }}</button>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </section>
+        <br>
+        <br>
+        @endif
+    @endforeach
+   
 
         <section class="mt-5">
             <div class="container">
@@ -404,4 +445,5 @@
             </div>
 
         </section>
+        
     @endsection

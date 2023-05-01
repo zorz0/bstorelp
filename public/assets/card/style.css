@@ -1,10 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+@font-face {
+    font-family: '29L';
+    src: url('../font/29LTAzerTRIAL-RegularTRIAL.woff.ttf') format('woff2'),
+         url('../font/29LTAzerTRIAL-RegularTRIAL.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-size: 20px;
 
+}
+body {
+    font-family: '29L', sans-serif;
+  }
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: '29L';
 }
 body{
     line-height: 1.5;
