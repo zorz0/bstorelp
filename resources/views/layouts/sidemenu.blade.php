@@ -27,7 +27,7 @@
                     <i class="icon-close"></i>
                 </a>
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search...">
+                    <input type="text" class="form-control" placeholder="{{  __('admin_.search') }}">
                     <span class="input-group-btn">
                         <a href="javascript:;" class="btn submit">
                             <i class="icon-magnifier"></i>
@@ -40,14 +40,14 @@
         <li class="nav-item  ">
             <a href="{{url('/dashboard/index')}}" class="nav-link ">
                 <i class="icon-home"></i>
-                <span class="title">الرئيسية</span>
+                <span class="title">{{  __('admin_.home') }}</span>
             </a>
         </li>
-      
+
         <li class="nav-item  ">
             <a href="{{route('users.index')}}" class="nav-link ">
                 <i class="icon-users"></i>
-                <span class="title">الأعضاء</span>
+                <span class="title">{{  __('admin_.members') }}</span>
             </a>
         </li>
         {{-- <li class="nav-item start active open">
@@ -82,25 +82,25 @@
             </ul>
         </li> --}}
         <li class="heading">
-            <h3 class="uppercase">المنتجات</h3>
+            <h3 class="uppercase">{{  __('admin_.products') }}</h3>
         </li>
         <li class="nav-item  ">
             <a href="javascript:;" class="nav-link nav-toggle">
                 <i class="icon-basket"></i>
-                <span class="title">المنتجات</span>
+                <span class="title">{{  __('admin_.products') }}</span>
                 <span class="arrow"></span>
             </a>
             <ul class="sub-menu">
                 <li class="nav-item  ">
                     <a href="{{route('product')}}" class="nav-link ">
                         <i class="icon-home"></i>
-                        <span class="title">المنتجات</span>
+                        <span class="title">{{  __('admin_.products') }}</span>
                     </a>
                 </li>
                 <li class="nav-item  ">
                     <a href="{{route('product.create')}}" class="nav-link ">
                         <i class="icon-basket"></i>
-                        <span class="title">اضافة منتج</span>
+                        <span class="title">{{  __('admin_.add_product') }} </span>
                     </a>
                 </li>
             </ul>
@@ -108,14 +108,14 @@
         <li class="nav-item  ">
             <a href="javascript:;" class="nav-link nav-toggle">
                 <i class="icon-basket"></i>
-                <span class="title">الطلبات</span>
+                <span class="title">{{  __('admin_.orders') }}</span>
                 <span class="arrow"></span>
             </a>
             <ul class="sub-menu">
                     <li class="nav-item  ">
                         <a href="{{route('orders.index')}}" class="nav-link ">
                             <i class="icon-home"></i>
-                            <span class="title">الطلبات</span>
+                            <span class="title">{{  __('admin_.orders') }}</span>
                         </a>
                     </li>
                 {{--  <li class="nav-item  ">
@@ -127,19 +127,19 @@
             </ul>
         </li>
         <li class="heading">
-            <h3 class="uppercase">الفئات</h3>
+            <h3 class="uppercase">{{  __('admin_.categories') }}</h3>
         </li>
         <li class="nav-item  ">
             <a href="javascript:;" class="nav-link nav-toggle">
                 <i class="icon-feed"></i>
-                <span class="title">الفئات</span>
+                <span class="title">{{  __('admin_.categories') }}</span>
                 <span class="arrow"></span>
             </a>
             <ul class="sub-menu">
                 <li class="nav-item  ">
                     <a href="{{route('categories.index')}}" class="nav-link ">
                         <i class="icon-docs"></i>
-                        <span class="title">جميع الفئات</span>
+                        <span class="title">{{  __('admin_.all_categories') }}</span>
                     </a>
                 </li>
             </ul>
@@ -147,20 +147,20 @@
         <li class="nav-item  ">
             <a href="javascript:;" class="nav-link nav-toggle">
                 <i class="icon-feed"></i>
-                <span class="title">المقالات</span>
+                <span class="title">{{  __('admin_.posts') }}</span>
                 <span class="arrow"></span>
             </a>
             <ul class="sub-menu">
                 <li class="nav-item  ">
                     <a href="{{route('posts.index')}}" class="nav-link ">
                         <i class="icon-docs"></i>
-                        <span class="title">المقالات</span>
+                        <span class="title">{{  __('admin_.posts') }}</span>
                     </a>
                 </li>
                 <li class="nav-item  ">
                     <a href="{{route('posts.create')}}" class="nav-link ">
                         <i class="icon-layers"></i>
-                        <span class="title">اضافة مقال</span>
+                        <span class="title">{{  __('admin_.add_post') }}</span>
                     </a>
                 </li>
             </ul>
@@ -168,7 +168,7 @@
         <li class="nav-item  ">
             <a href="{{url('/dashboard/settings')}}" class="nav-link ">
                 <i class="icon-settings"></i>
-                <span class="title">الاعدادات</span>
+                <span class="title">{{  __('admin_.settings') }}</span>
             </a>
         </li>
     </ul>
