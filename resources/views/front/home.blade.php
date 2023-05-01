@@ -99,6 +99,7 @@
     <section>
         <div class="u-khayba">
         </div>
+
         <div class="u-khayba-footer">
             <p>{{ __('master.goShop') }}</p>
         </div>
@@ -109,7 +110,7 @@
             {{-- <img class="u-image u-image-contain u-image-default lazyload u-image-2" alt=""
                 data-src="{{ asset('/assets/bks') }}/images/news.png"> --}}
             <div class=" text-center"> <a href={{ url('/news') }}><button
-                        class="general-btn  border-0  text-white h4 p-3 m-3 col-2"> {{ __('master.ourNews') }}
+                        class="general-btn  border-0  text-white h4 p-3 m-3 "> {{ __('master.ourNews') }}
                     </button></a></div>
         </div>
         <div class="col-md-12 col-sx-4" id="test">

@@ -678,13 +678,7 @@ body {
     padding-top: 0!important;
   }
   
-      /* responsive store Page
-      
-      
-      */
-    
-
-
+   
 
       .resWatchMore{
         display: flex;
@@ -714,5 +708,27 @@ body {
         #NonSugar{
             color: black;
         }
+        .F1{
+            text-align: center;
+        }
+        .row > * {
+            
+    padding-left: calc(var(--bs-gutter-x) * 0.8) !important;
+    padding-right: unset!important;
+        }
+        #NonSugar{
+            color: #353331!important;
+        }
+        .contentVa0{
+            
+        }
       }
+      .row > * {
+            
+        padding-left: calc(var(--bs-gutter-x) * 1) !important;
+        padding-right: unset!important;
+        
+            }
+
+      
    

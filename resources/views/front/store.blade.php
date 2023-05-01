@@ -68,7 +68,7 @@
         <div class="row store">
             <div class="container">
 
-                <div class="col-md-2 box3">
+                <div class="col-md-2 box3 F1">
                     <h3>
                                                 {{ __('store_.security.title') }}
 
@@ -77,7 +77,7 @@
                         {{ __('store_.security.content') }}
                     </p>
                 </div>
-                <div class="col-md-2 box">
+                <div class="col-md-2 box F1">
                     <h3>
                         {{ __('store_.health.title') }}
 
@@ -86,7 +86,7 @@
                         {{ __('store_.health.content') }}
                     </p>
                 </div>
-                <div class="col-md-2 box">
+                <div class="col-md-2 box F1">
                     <h3>
                         {{ __('store_.cleanliness.title') }}
                     </h3>
@@ -94,7 +94,7 @@
                         {{ __('store_.cleanliness.content') }}
                     </p>
                 </div>
-                <div class="col-md-2 box">
+                <div class="col-md-2 box F1">
                     <h3>
                         {{ __('store_.quality.title') }}
 
@@ -103,7 +103,7 @@
                         {{ __('store_.security.content') }}
                     </p>
                 </div>
-                <div class="col-md-2 box2">
+                <div class="col-md-2 box2 F1" >
                     <h3>
                         {{ __('store_.delivery.title') }}
                     </h3>
@@ -383,7 +383,7 @@
                 @foreach ($value->products as $product)
                    
                     
-                <div class="col-sm-4 ContainerProduct">
+                <div class="col-sm-3 ContainerProduct">
                     <div class="card">
                         <div class="card-body">
                             <form id="FormCard" action="{{ route('showProduct', ['id' => $product->id]) }}" method="post">
