@@ -238,22 +238,22 @@
                                     <p
                                         class="u-align-right u-custom-font u-small-text u-text u-text-default u-text-variant u-text-white u-text-3">
                                         <a href="/index.php"
-                                            class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-custom-color-2 u-text-hover-custom-color-2 u-text-white u-btn-3">{{ __('master.home') }}<br>
+                                            class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-custom-color-2 u-text-hover-custom-color-2 u-text-white u-btn-3" style="padding-top: 0!important;">{{ __('master.home') }}<br>
                                         </a>
-                                        <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-custom-color-2 u-text-hover-custom-color-2 u-text-white u-btn-3"
+                                        <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-custom-color-2 u-text-hover-custom-color-2 u-text-white u-btn-3" style="padding-top: 0!important;"
                                             href="{{ url('/news') }}"> {{ __('master.ourNews') }}
                                         </a>
 
                                         <br>
-                                        <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-custom-color-2 u-text-hover-custom-color-2 u-text-white u-btn-3"
+                                        <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-custom-color-2 u-text-hover-custom-color-2 u-text-white u-btn-3"style="padding-top: 0!important;"
                                             href="{{ url('/store') }}"> {{ __('master.store') }}
                                         </a>
                                         <br>
-                                        <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-custom-color-2 u-text-hover-custom-color-2 u-text-white u-btn-3"
+                                        <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-custom-color-2 u-text-hover-custom-color-2 u-text-white u-btn-3"style="padding-top: 0!important;"
                                             href="{{ url('/about') }}"> {{ __('master.about') }}
                                         </a>
                                         <br>
-                                        <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-custom-color-2 u-text-hover-custom-color-2 u-text-white u-btn-3"
+                                        <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-custom-color-2 u-text-hover-custom-color-2 u-text-white u-btn-3"style="padding-top: 0!important;"
                                             href="{{ url('/contact') }}">{{ __('master.contact') }}
                                         </a>
                                     </p>
@@ -272,7 +272,7 @@
                 <div class="col t-center">
                     <p class="u-align-center u-custom-font u-text u-text-body-alt-color u-text-4"
                         style="color: rgb(107, 114, 101) !important; margin-bottom: -30px !important;">
-                        {{ __('master.powered', ['name' => 'banana']) }} </p><img
+                        {{ __('master.powered',['name' => 'banana']) }} </p><img
                         src="http://127.0.0.1:8000/assets/images/banana.png"
                         style="text-align: center; width: 100px;">
                 </div>

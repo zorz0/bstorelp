@@ -304,8 +304,8 @@
                 </svg>
                 <h2 class="customfont u-custom-font"
                     style="    text-shadow: 0 0 2px black;
-               position: absolute;margin-top: 40px;top: 50%;left: 50%;transform: translate(-50%, -50%);font-size: 55px;font-weight: bold;">
-                    المنتجات الأكثر مبيعًا</h2>
+               position: absolute;margin-top: 50px;top: 50%;left: 50%;transform: translate(-50%, -50%);font-size: 55px;font-weight: bold;">
+                {{ __('store_.messages.Best_selling_products') }}  </h2>
             </div>
 
         </div>
@@ -375,7 +375,7 @@
                         </svg>
 
                         <h2 class="customfont u-custom-font"
-                            style="color:white; text-shadow: black 0px 0px 2px; position: absolute; margin-top: 40px; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 40px; font-weight: bold;">
+                            style="color:white; text-shadow: black 0px 0px 2px; position: absolute; margin-top: 50px; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 40px; font-weight: bold;">
                              {{ __('store_.messages.sugar_free') }} </h2>
                     </div>
                 </div>

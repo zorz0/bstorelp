@@ -49,6 +49,7 @@ return [
         'storing_details' => 'Kept in containers and designated places',
         'packing_details' => 'Arrives tightly packed ready to eat',
         'sugar_free' => 'Completely sugar free products!',
+        'Best_selling_products'=>'Best selling products',
         'story_start' => 'A story that begins in 1881 AD'
     ]
 ];

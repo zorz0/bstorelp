@@ -341,6 +341,9 @@ body {
     max-width: 300px;
 
 }
+@media screen {
+    
+}
 .image-container {
     position: relative;
   }
