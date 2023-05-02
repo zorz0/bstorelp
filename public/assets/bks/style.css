@@ -247,11 +247,7 @@ body {
     background-image: url(./images/khayba1.png);
     background-size: cover;
 }
-.beforebtn{
- 
-    background-image: url(../images/Arch_cleanup.jpg);
-    background-repeat: no-repeat;
-}
+
 .u-khayba-footer {
     background-position: 50% 50%;
     height: 160px;
@@ -703,6 +699,9 @@ body {
     background-color: unset!important;}
   
     @media (max-width: 576px) {
+        #beforeBtn{
+            margin-top: -40px;
+        }
         /* styles for most phones */
         #BestSelling{
             width: 100%;

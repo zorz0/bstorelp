@@ -102,9 +102,9 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12 position-relative p-0">
-                    <img style=" margin-top:-90px;width: 100%;" src="{{ asset('assets/images/Arch_cleanup.jpg') }}" alt="..." class="img-thumbnail">
+                    <img id="myImage" style=" margin-top:-90px;width: 100%;" src="{{ asset('assets/images/BeforeBtn.png') }}" alt="..." >
                     <div class="position-absolute top-50 start-50 translate-middle">
-                        <p>{{ __('master.goShop') }}</p>
+                        <h2  class="u-custom-font"><a  id="beforeBtn" style="text-decoration: none" href="/store">{{ __('master.goShop') }}</a></h2>
                     </div>
                 </div>
             </div>
@@ -112,7 +112,9 @@
           </div>
           
         
-      
+        <div class="u-khayba-footer">
+            
+        </div>
     </section>
 
     <section class="u-clearfix u-section-1">
@@ -143,4 +145,26 @@
             </div> --}}
         </div>
     </section>
+    <script>
+        console.log("hey")
+      setTimeout(() => {
+        btn= document.getElementById("beforeBtn");
+        const image = document.getElementById('myImage');
+
+        btn.addEventListener('mouseout', function() {
+  image.src = 'assets/images/BeforeBtn.png';
+  console.log("NoChange");
+
+  document.getElementById("beforeBtn").style.color="black";
+
+});
+
+btn.addEventListener('mouseover', function() {
+  image.src = 'assets/images/archAfter.png';
+  console.log("change");
+  document.getElementById("beforeBtn").style.color="white";
+
+});
+      }, 1500);
+    </script>
 @endsection
