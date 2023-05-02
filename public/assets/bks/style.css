@@ -708,9 +708,7 @@ body {
             text-align: center;
             height: inherit;
         }
-        #NonSugar{
-            color: black;
-        }
+       
         .F1{
             text-align: center;
         }
@@ -722,11 +720,22 @@ body {
         }
         #NonSugar{
             color: #353331!important;
+            width: 50%;
+        }
+     
+        #BestSelling{
+            margin-top: 10px!important;
+            font-size: 25px!important;
+        }
+        .u-custom-font2{
+            text-align: center!important;
         }
         .contentVa0{
-            
+            flex-wrap: nowrap!important;
         }
       }
+      #sec-350b > div > div > div > div > div{
+        padding-right: 15%;      }
       .row > * {
             
         padding-left: calc(var(--bs-gutter-x) * 1) !important;

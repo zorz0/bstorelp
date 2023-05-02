@@ -323,21 +323,21 @@
             <div class="d-flex justify-center">
                 <img src="{{ asset('/assets/images/soufKitchen.jpg') }}" alt="">
             </div>
-            <div class="chooseClass customfont u-custom-font">
+            <div class="chooseClass customfont u-custom-font u-custom-font2">
                 <img src="{{ asset('/assets/images/friends.jpg') }}" alt="">
-                <h2>
+                <h2 class="customfont u-custom-font u-custom-font2">
                     {{ __('store_.messages.who_make_our_food') }}
                 </h2>
             </div>
             <div class="chooseClass">
-                <h2 class="customfont u-custom-font">
+                <h2 class="customfont u-custom-font u-custom-font2">
                     {{ __('store_.messages.storing_details') }}
                 </h2>
                 <img src="{{ asset('/assets/images/library.jpg') }}" alt="">
             </div>
             <div class="chooseClass">
                 <img src="{{ asset('/assets/images/kais.jpg') }}" alt="">
-                <h2 class="customfont u-custom-font">
+                <h2 class="customfont u-custom-font u-custom-font2">
                     {{ __('store_.messages.packing_details') }}
                 </h2>
             </div>
