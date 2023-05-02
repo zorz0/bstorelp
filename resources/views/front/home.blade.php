@@ -97,12 +97,22 @@
     </section>
 
     <section>
-        <div class="u-khayba">
+        <div class="u-khayba" style="z-index:5">
         </div>
-
-        <div class="u-khayba-footer">
-            <p>{{ __('master.goShop') }}</p>
-        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 position-relative p-0">
+                    <img style=" margin-top:-90px;width: 100%;" src="{{ asset('assets/images/Arch_cleanup.jpg') }}" alt="..." class="img-thumbnail">
+                    <div class="position-absolute top-50 start-50 translate-middle">
+                        <p>{{ __('master.goShop') }}</p>
+                    </div>
+                </div>
+            </div>
+            
+          </div>
+          
+        
+      
     </section>
 
     <section class="u-clearfix u-section-1">

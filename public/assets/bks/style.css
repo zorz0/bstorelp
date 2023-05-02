@@ -244,10 +244,14 @@ body {
 .u-khayba {
     background-position: 50% 50%;
     height: 520px;
-    background-image: url(./images/khayba.png);
+    background-image: url(./images/khayba1.png);
     background-size: cover;
 }
-
+.beforebtn{
+ 
+    background-image: url(../images/Arch_cleanup.jpg);
+    background-repeat: no-repeat;
+}
 .u-khayba-footer {
     background-position: 50% 50%;
     height: 160px;

@@ -116,20 +116,20 @@
                             <ul
                                 class="u-align-center u-custom-font u-nav u-popupmenu-items u-text-active-custom-color-2 u-text-hover-custom-color-2 u-unstyled u-nav-2">
                                 <li class="u-nav-item">
-                                    <a class="u-button-style u-nav-link" href="/index.html">{{ __('master.home') }}</a>
+                                    <a class="u-button-style u-nav-link" href="/">{{ __('master.home') }}</a>
                                 </li>
                                 <li class="u-nav-item">
-                                    <a class="u-button-style u-nav-link" href="#">{{ __('master.about') }}</a>
+                                    <a class="u-button-style u-nav-link" href="/about">{{ __('master.about') }}</a>
                                 </li>
                                 <li class="u-nav-item">
-                                    <a class="u-button-style u-nav-link" href="/store.html">{{ __('master.store') }}</a>
+                                    <a class="u-button-style u-nav-link" href="/store">{{ __('master.store') }}</a>
                                 </li>
                                 <li class="u-nav-item">
-                                    <a class="u-button-style u-nav-link" href="#">{{ __('master.ourNews') }}</a>
+                                    <a class="u-button-style u-nav-link" href="/news">{{ __('master.ourNews') }}</a>
                                 </li>
                                 <li class="u-nav-item">
                                     <a class="u-button-style u-nav-link"
-                                        href="/contact.html">{{ __('master.contact') }}</a>
+                                        href="/contact">{{ __('master.contact') }}</a>
                                 </li>
                             </ul>
                         </div>
