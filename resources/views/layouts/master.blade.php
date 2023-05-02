@@ -200,66 +200,102 @@
             <div class="u-clearfix u-sheet u-sheet-1">
                 <div class="u-clearfix u-expanded-width u-gutter-30 u-layout-wrap u-layout-wrap-1">
                     <div class="u-gutter-0 u-layout">
-                        <div class="u-layout-row">
-                            <div
-                                class="u-align-left u-container-style u-layout-cell u-left-cell u-size-20 u-layout-cell-1">
-                                <div class="u-container-layout u-container-layout-1">
-                                    <p
-                                        class="u-align-right u-custom-font u-small-text u-text u-text-default u-text-variant u-text-white u-text-1">
-                                        <a href="/index.html"
-                                            class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-custom-color-2 u-text-hover-custom-color-2 u-text-white u-btn-1">
-                                            <span style="font-size: 1.125rem;"></span>
-                                        </a>
-                                        <span style="font-size: 1.125rem;">{{ __('master.contact') }}<br>
-                                        </span>0779959058 <br>info@beitkhayratsouf.com <br>{{ __('contact.places') }}
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="u-align-left u-container-style u-layout-cell u-size-20 u-layout-cell-2">
-                                <div class="u-container-layout u-valign-middle u-container-layout-2">
-                                    <p
-                                        class="u-align-right u-custom-font u-small-text u-text u-text-default u-text-variant u-text-white u-text-2">
-                                        <a href="/الرئيسية.html"
-                                            class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-custom-color-2 u-text-hover-custom-color-2 u-text-white u-btn-2">
-                                            <span style="font-size: 1rem;"></span>
-                                        </a>
-                                        <span style="font-size: 1rem;"> {{ __('master.social_sites') }} <br>
-                                        </span> <a href="https://www.facebook.com/baitkhayratsoof1881?mibextid=ZbWKwL">
-                                            {{ __('master.facebook') }}</a><br><a
-                                            href="https://instagram.com/beitkhairatsouf1881?igshid=YmMyMTA2M2Y=">
-                                            {{ __('master.instagram') }} </a> <br>{{ __('master.tiktok') }}
-                                        <br>{{ __('master.youtube') }}
-                                    </p>
-                                </div>
-                            </div>
-                            <div
-                                class="u-align-left u-container-style u-layout-cell u-right-cell u-size-20 u-layout-cell-3">
-                                <div class="u-container-layout u-container-layout-3">
-                                    <p
-                                        class="u-align-right u-custom-font u-small-text u-text u-text-default u-text-variant u-text-white u-text-3">
-                                        <a href="/index.php"
-                                            class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-custom-color-2 u-text-hover-custom-color-2 u-text-white u-btn-3" style="padding-top: 0!important;">{{ __('master.home') }}<br>
-                                        </a>
-                                        <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-custom-color-2 u-text-hover-custom-color-2 u-text-white u-btn-3" style="padding-top: 0!important;"
-                                            href="{{ url('/news') }}"> {{ __('master.ourNews') }}
-                                        </a>
-
-                                        <br>
-                                        <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-custom-color-2 u-text-hover-custom-color-2 u-text-white u-btn-3"style="padding-top: 0!important;"
-                                            href="{{ url('/store') }}"> {{ __('master.store') }}
-                                        </a>
-                                        <br>
-                                        <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-custom-color-2 u-text-hover-custom-color-2 u-text-white u-btn-3"style="padding-top: 0!important;"
+                        <div class="container text-center text-md-left footer">
+  
+                            <!-- Grid row -->
+                            <div class="row">
+                        
+                              <!-- Grid column -->
+                              <div class="col-md-4 mx-auto">
+                        
+                                <!-- Links -->
+                                <h5 class="font-weight-bold text-uppercase mt-3 mb-4">{{ __('master.contact') }}</h5>
+                        
+                                <ul class="list-unstyled">
+                               
+                                  <li>
+                                    <a href="tel:0779959058">0779959058</a>
+                                </li>
+                                  <li>
+                                    <a href="mailto:info@beitkhayratsouf.com">info@beitkhayratsouf.com</a>
+                                </li>
+                                  <li>
+                                    <a href="#!">{{ __('contact.places') }}</a>
+                                  </li>
+                                </ul>
+                        
+                              </div>
+                              <!-- Grid column -->
+                        
+                              <hr class="clearfix w-100 d-md-none">
+                        
+                            
+                              <div class="col-md-3 mx-auto">
+                        
+                                <!-- Links -->
+                                <h5 class="font-weight-bold text-uppercase mt-3 mb-4">{{ __('master.social_sites') }}</h5>
+                        
+                                <ul class="list-unstyled">
+                                  <li>
+                                 <a href="https://www.facebook.com/baitkhayratsoof1881?mibextid=ZbWKwL">
+                                      {{ __('master.facebook') }}</a>
+                                  </li>
+                                  <li>
+                                    <a
+                                      href="https://instagram.com/beitkhairatsouf1881?igshid=YmMyMTA2M2Y=">
+                                      {{ __('master.instagram') }} </a>
+                                  </li>
+                                  <li>
+                                    <a href="#!">{{ __('master.tiktok') }}</a>
+                                  </li>
+                                  <li>
+                                    <a href="#!">{{ __('master.youtube') }}</a>
+                                  </li>
+                                </ul>
+                        
+                              </div>
+                              <!-- Grid column -->
+                        
+                              <hr class="clearfix w-100 d-md-none">
+                        
+                              <!-- Grid column -->
+                              <div class="col-md-4 mx-auto">
+                        
+                                <!-- Links -->
+                                <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Menu</h5>
+                        
+                                <ul class="list-unstyled">
+                                  <li>
+                                      <a href="/index.php">{{ __('master.home') }}
+                                  </a>
+                                  </li>
+                                  <li>
+                                      <a 
+                                      href="{{ url('/news') }}"> {{ __('master.ourNews') }}
+                                  </a>
+                                  </li>
+                                  <li>
+                                      <a 
+                                      href="{{ url('/store') }}"> {{ __('master.store') }}
+                                  </a>
+                                  </li>
+                                  <li>
+                                      <a 
                                             href="{{ url('/about') }}"> {{ __('master.about') }}
-                                        </a>
-                                        <br>
-                                        <a class="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-active-custom-color-2 u-text-hover-custom-color-2 u-text-white u-btn-3"style="padding-top: 0!important;"
-                                            href="{{ url('/contact') }}">{{ __('master.contact') }}
-                                        </a>
-                                    </p>
-                                </div>
+                                    </a>
+                                  </li>
+                                  <li>   <a 
+                                      href="{{ url('/contact') }}">{{ __('master.contact') }}
+                                  </a></li>
+                                </ul>
+                        
+                              </div>
+                              <!-- Grid column -->
+                        
                             </div>
-                        </div>
+                            <!-- Grid row -->
+                        
+                          </div>
                     </div>
                 </div>
               
@@ -278,131 +314,7 @@
                 </div>
             </div>
         </div>
-        <!-- Footer -->
-<footer class="page-footer font-small indigo">
 
-    <!-- Footer Links -->
-    <div class="container text-center text-md-left">
-  
-      <!-- Grid row -->
-      <div class="row">
-  
-        <!-- Grid column -->
-        <div class="col-md-3 mx-auto">
-  
-          <!-- Links -->
-          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
-  
-          <ul class="list-unstyled">
-            <li>
-              <a href="#!">Very long link 1</a>
-            </li>
-            <li>
-              <a href="#!">Very long link 2</a>
-            </li>
-            <li>
-              <a href="#!">Very long link 3</a>
-            </li>
-            <li>
-              <a href="#!">Very long link 4</a>
-            </li>
-          </ul>
-  
-        </div>
-        <!-- Grid column -->
-  
-        <hr class="clearfix w-100 d-md-none">
-  
-        <!-- Grid column -->
-        <div class="col-md-3 mx-auto">
-  
-          <!-- Links -->
-          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
-  
-          <ul class="list-unstyled">
-            <li>
-              <a href="#!">Link 1</a>
-            </li>
-            <li>
-              <a href="#!">Link 2</a>
-            </li>
-            <li>
-              <a href="#!">Link 3</a>
-            </li>
-            <li>
-              <a href="#!">Link 4</a>
-            </li>
-          </ul>
-  
-        </div>
-        <!-- Grid column -->
-  
-        <hr class="clearfix w-100 d-md-none">
-  
-        <!-- Grid column -->
-        <div class="col-md-3 mx-auto">
-  
-          <!-- Links -->
-          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
-  
-          <ul class="list-unstyled">
-            <li>
-              <a href="#!">Link 1</a>
-            </li>
-            <li>
-              <a href="#!">Link 2</a>
-            </li>
-            <li>
-              <a href="#!">Link 3</a>
-            </li>
-            <li>
-              <a href="#!">Link 4</a>
-            </li>
-          </ul>
-  
-        </div>
-        <!-- Grid column -->
-  
-        <hr class="clearfix w-100 d-md-none">
-  
-        <!-- Grid column -->
-        <div class="col-md-3 mx-auto">
-  
-          <!-- Links -->
-          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
-  
-          <ul class="list-unstyled">
-            <li>
-              <a href="#!">Link 1</a>
-            </li>
-            <li>
-              <a href="#!">Link 2</a>
-            </li>
-            <li>
-              <a href="#!">Link 3</a>
-            </li>
-            <li>
-              <a href="#!">Link 4</a>
-            </li>
-          </ul>
-  
-        </div>
-        <!-- Grid column -->
-  
-      </div>
-      <!-- Grid row -->
-  
-    </div>
-    <!-- Footer Links -->
-  
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2020 Copyright:
-      <a href="/"> MDBootstrap.com</a>
-    </div>
-    <!-- Copyright -->
-  
-  </footer>
-  <!-- Footer -->
     @endsection
 </body>
 
