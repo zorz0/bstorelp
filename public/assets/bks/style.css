@@ -746,3 +746,6 @@ body {
         font-weight: bold;
         
     }
+.myimg{
+    width: -webkit-fill-available;
+}
