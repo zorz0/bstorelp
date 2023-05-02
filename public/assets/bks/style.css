@@ -241,13 +241,18 @@ body {
     }
 }
 
-.u-khayba {
-    background-position: 50% 50%;
-    height: 520px;
-    background-image: url(./images/khabyaNew.jpeg);
-    background-size: cover;
-}
 
+.u-khayba {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(./images/NewImg.png) no-repeat center center ;
+    background-size: cover;
+    height: 520px;
+}
+.u-khayba p{
+    margin-top: 20%;
+}
 .u-khayba-footer {
     background-position: 50% 50%;
     height: 160px;

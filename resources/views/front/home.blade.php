@@ -98,6 +98,8 @@
 
     <section>
         <div class="u-khayba" style="z-index:5">
+            <p style="color: white; font-size:1.3rem;">{{ __('app.Image_text') }}</p>
+
         </div>
         <div class="container-fluid">
             <div class="row">
