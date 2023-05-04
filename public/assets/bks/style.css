@@ -764,3 +764,42 @@ body {
 .myimg{
     width: -webkit-fill-available;
 }
+
+
+
+@media (max-width: 500px) {
+#ImgText{
+    font-size: 15px;
+    width: 80%;
+}
+#beforeBtn{
+    margin-left: 35%!important;
+}
+.icon-sec-res{
+    display: flex !important;
+    min-height: 545px !important;
+    align-items: end !important;
+}
+
+
+
+.icon-cont-res{
+    margin: 0 !important;
+    top: -5px !important;
+    padding: 0 !important;
+    width: 100% !important;
+    height: fit-content !important;
+    margin-top: 18% !important;
+}
+
+.icon-cont-res a{
+    display: flex !important;
+    justify-content: center !important;
+}
+
+.icon-cont-res a span svg{
+
+width: 50px !important;
+}
+
+}

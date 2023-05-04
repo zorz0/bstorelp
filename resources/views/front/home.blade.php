@@ -29,9 +29,9 @@
           </div>
           <div class="row">
             <div class="col-8 mx-auto">
-              <p class="u-align-center u-custom-font u-text u-text-1">
-                {{ __('master.wsuf_info') }}
-              </p>
+          
+              <p class="text-justify u-custom-font">  {{ __('master.wsuf_info') }}</p>
+
             </div>
           </div>
           <div class="row">
@@ -47,7 +47,7 @@
     <section class="u-clearfix u-section-1">
         <img class="u-image u-image-contain u-image-default lazyload u-image-3" alt=""
             data-src="{{ asset('/assets/bks') }}/images/dots.png">
-        <p class="u-align-center u-custom-font u-text u-text-1">
+        <p class="text-center u-custom-font  ">
             {{ __('master.wsuf_food_quality') }}
         </p>
         <div class="col-md-12 col-sx-4 store">
@@ -64,7 +64,7 @@
 
     <section>
         <div class="u-khayba" style="z-index:5">
-            <p style="color: white; font-size:1.3rem;">{{ __('app.Image_text') }}</p>
+            <p class="text-justify" id="ImgText" style="color: white;">{{ __('app.Image_text') }}</p>
 
         </div>
       <div class="container-fluid">

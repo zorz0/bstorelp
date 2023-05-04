@@ -86,7 +86,7 @@
         <!-- END PAGE LEVEL SCRIPTS -->
         <!-- BEGIN THEME LAYOUT SCRIPTS -->
         <!-- END THEME LAYOUT SCRIPTS -->
-        <script>
+       {{--  <script>
 document.querySelector('.register-form').style.display="block";
 let element = document.querySelector("#app > nav");
 
@@ -100,7 +100,7 @@ document.querySelector("#app > nav > div > a").style.fontSize="20px";
 document.querySelector("#app > nav > div > a").style.marginTop="20px";
 document.querySelector(".login a").style.color="black";
 
-        </script>
+        </script> --}}
 
     </body>
 

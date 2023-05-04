@@ -141,11 +141,13 @@
 
         @yield('content')
         <section class="foter-start u-clearfix u-image lazyload u-section-2 container-fluid my-5">
-            <div class="u-clearfix u-sheet u-sheet-1">
-                <div class="social-icons u-social-icons u-spacing-15 u-social-icons-1" style="    margin-top: 18%;">
+            <div class="u-clearfix u-sheet u-sheet-1 icon-sec-res">
+                <div class="social-icons u-social-icons u-spacing-15 u-social-icons-1 icon-cont-res " style="    margin-top: 18%;
+                width: 137px;
+                margin-left: auto;">
                     <a class="u-social-url" title="facebook" target="_blank" href="https://facebook.com/">
                         <span class="u-icon u-social-facebook u-social-icon u-icon-1">
-                            <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112">
+                            <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" >
                                 <use xlink:href="#svg-078b"></use>
                             </svg>
                             <svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0"
@@ -158,7 +160,7 @@
                         </span>
                     </a>
                     <a class="u-social-url" title="twitter" target="_blank" href="https://twitter.com/">
-                        <span class="u-icon u-social-icon u-social-twitter u-icon-2">
+                        <span class="u-icon u-social-icon u-social-twitter u-icon-2" >
                             <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112">
                                 <use xlink:href="#svg-e826"></use>
                             </svg>
@@ -173,7 +175,7 @@
                         </span>
                     </a>
                     <a class="u-social-url" title="instagram" target="_blank" href="https://instagram.com/">
-                        <span class="u-icon u-social-icon u-social-instagram u-icon-3">
+                        <span class="u-icon u-social-icon u-social-instagram u-icon-3" >
                             <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112">
                                 <use xlink:href="#svg-7d2f"></use>
                             </svg>
@@ -302,7 +304,7 @@
                 <p class="u-align-center text-center u-custom-font u-text u-text-body-alt-color u-text-4"
                     style="color: rgb(107, 114, 101) !important; margin-bottom: -30px !important;">
                     {{ __('master.powered',['name' => 'banana']) }} </p><img
-                    src="http://127.0.0.1:8000/assets/images/banana.png"
+                    src="./assets/images/banana.png"
                     style="text-align: center; width: 100px;">
             </div>
         </div>
