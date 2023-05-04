@@ -37,105 +37,100 @@
 @endif
 
     <!-- Scripts -->
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 <body>
     @include('sweetalert::alert')
 
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{-- {{ config('app.name', 'Laravel') }} --}}
-                    {{ __('app.app_name')  }}
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+     
+        <nav class="navbar navbar-expand-lg navbar-light ">
+            <a class="navbar-brand" href="{{ url('/') }}">
+                {{-- {{ config('app.name', 'Laravel') }} --}}
+                {{ __('app.app_name')  }}
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {{ __('app.'.Config::get('languages')[App::getLocale()]) }}
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    @foreach (Config::get('languages') as $lang => $language)
+                        @if ($lang != App::getLocale())
+                                <a class="dropdown-item" href="{{ route('lang.switch', $lang) }}"> {{ __('app.'.$language)  }}</a>
+                        @endif
+                    @endforeach
+                    </div>
+                </li>
+                @guest
+                    @if (Route::has('login'))
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('login') }}">{{ __('login.login_button') }}</a>
+                        </li>
+                    @endif
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto">
+                    @if (Route::has('register'))
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('register') }}">{{ __('app.register') }}</a>
+                        </li>
+                    @endif
+                @else
+                    <li class="nav-item dropdown">
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle custom-cursor"  id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{ Auth::user()->name }}
+                        </a>
 
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
-                        <!-- Authentication Links -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                {{ __('app.'.Config::get('languages')[App::getLocale()]) }}
+                        <div class="dropdown">
+                         
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                              <a class="dropdown-item" href="{{ route('logout') }}"
+                               onclick="event.preventDefault();
+                                             document.getElementById('logout-form').submit();">
+                                {{ __('app.logout') }}
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            @foreach (Config::get('languages') as $lang => $language)
-                                @if ($lang != App::getLocale())
-                                        <a class="dropdown-item" href="{{ route('lang.switch', $lang) }}"> {{ __('app.'.$language)  }}</a>
-                                @endif
-                            @endforeach
                             </div>
-                        </li>
-                        @guest
-                            @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('login.login_button') }}</a>
-                                </li>
-                            @endif
+                          </div>
+                          
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                          
 
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('app.register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
-
-
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('app.logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
+                        </div>
+                    </li>
 
 
 
-                        @endguest
-                        @isset(Auth::user()->role)
+                @endguest
+                @isset(Auth::user()->role)
 
-                        @if(Auth::user()->role == 'user')
-                        <li>
-                            <a class="nav-icon position-relative text-decoration-none" href="{{ route('totalCards') }}">
-                                <i  class="fa fa-fw fa-cart-arrow-down text-dark mr-1">
-                                 <span  class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">{{count(Auth::user()->cards)}}</span> </i>
-                           </a>
-                        </li>
-                        @endif
-                        @if(Auth::user()->role == 'admin')
-                        <li>
-                            <a class="nav-icon position-relative text-decoration-none" href="{{ url('/dashboard/orders')}}">
-                                <i  class="fa-solid fa-bell text-dark mr-1">
-                                 <span  class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">{{count(Auth::user()->orders)}}</span> </i>
-                           </a>
-                        </li>
-                        @endif
+                @if(Auth::user()->role == 'user')
+                <li>
+                    <a class="nav-icon position-relative text-decoration-none" href="{{ route('totalCards') }}">
+                        <i  class="fa fa-fw fa-cart-arrow-down text-dark mr-1">
+                         <span  class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">{{count(Auth::user()->cards)}}</span> </i>
+                   </a>
+                </li>
+                @endif
+                @if(Auth::user()->role == 'admin')
+                <li>
+                    <a class="nav-icon position-relative text-decoration-none" href="{{ url('/dashboard/orders')}}">
+                        <i  class="fa-solid fa-bell text-dark mr-1">
+                         <span  class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">{{count(Auth::user()->orders)}}</span> </i>
+                   </a>
+                </li>
+                @endif
 
-                        @endisset
+                @endisset
 
 
-                    </ul>
-                </div>
+              </ul>
             </div>
-        </nav>
-
+          </nav>
         <main class="py-4">
             @yield('header')
         </main>
