@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-    <section class="u-clearfix u-section-1">
+    <section class="container-fluid">
         <div class="row ">
             <div class="col-12 w-100" style="height: 70vh;">
               <div id="carouselExampleControls" class="carousel slide h-100" data-ride="carousel">
@@ -62,7 +62,7 @@
         </div>
     </section>
 
-    <section>
+    <section class="container-fluid">
         <div class="u-khayba" style="z-index:5">
             <p class="text-justify" id="ImgText" style="color: white;">{{ __('app.Image_text') }}</p>
 
@@ -94,7 +94,7 @@
         </div>
     </section>
 
-    <section class="u-clearfix u-section-1">
+    <section class="u-clearfix u-section-1" id="NewBtn">
         <div>
             {{-- <img class="u-image u-image-contain u-image-default lazyload u-image-2" alt=""
                 data-src="{{ asset('/assets/bks') }}/images/news.png"> --}}
@@ -106,7 +106,7 @@
             @foreach ($latestBlogs as $record)
                 <div class="ct-blog col-sm-6 col-md-4">
                     <div class="fauxcrop">
-                        <a href="{{ route('news.details', ['id' => $record->id]) }}"><img alt="News Entry" src="{{ asset('/storage/imgs/'.$record->image) }}"></a>
+                      <a href="{{ route('news.details', ['id' => $record->id]) }}"><img alt="News Entry" src="{{ asset('/storage/imgs/' . $record->image) }}"></a>
                     </div>
                 </div>
             @endforeach
@@ -123,7 +123,6 @@
         </div>
     </section>
     <script>
-        console.log("hey")
       setTimeout(() => {
         btn= document.getElementById("beforeBtn");
         const image = document.getElementById('myImage');

@@ -86,7 +86,7 @@
         <!-- END PAGE LEVEL SCRIPTS -->
         <!-- BEGIN THEME LAYOUT SCRIPTS -->
         <!-- END THEME LAYOUT SCRIPTS -->
-       {{--  <script>
+        <script>
 document.querySelector('.register-form').style.display="block";
 let element = document.querySelector("#app > nav");
 
@@ -96,11 +96,10 @@ element.classList.remove("shadow-sm");
 
 
 element.style.fontSize = "15px";
-document.querySelector("#app > nav > div > a").style.fontSize="20px";
-document.querySelector("#app > nav > div > a").style.marginTop="20px";
-document.querySelector(".login a").style.color="black";
+document.querySelector(".customeNav").classList.add("bg-black");
 
-        </script> --}}
+
+        </script>
 
     </body>
 

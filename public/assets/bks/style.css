@@ -767,10 +767,17 @@ body {
 
 
 
-@media (max-width: 500px) {
+@media (max-width:600px) {
 #ImgText{
-    font-size: 15px;
+    font-size: 12px;
     width: 80%;
+}
+#myImage{
+    margin-top: 0!important;
+    margin-left: 2%;
+}
+.container-fluid,#NewBtn{
+    margin-top: 10%;
 }
 #beforeBtn{
     margin-left: 35%!important;
@@ -779,9 +786,17 @@ body {
     display: flex !important;
     min-height: 545px !important;
     align-items: end !important;
+    
+}
+.u-khayba-footer{
+    background-position: unset;
+    margin-top: 50px;
+    margin-left: 10%;
 }
 
-
+.foter-start{
+    margin-top: 0!important;
+}
 
 .icon-cont-res{
     margin: 0 !important;
@@ -803,3 +818,4 @@ width: 50px !important;
 }
 
 }
+
