@@ -414,8 +414,7 @@ element.classList.remove("shadow-sm");
 
 
 element.style.fontSize = "15px";
-document.querySelector("#app > nav > div > a").style.fontSize="20px";
-document.querySelector("#app > nav > div > a").style.marginTop="20px";
+document.querySelector(".customeNav").classList.add("bg-black");
 
         </script>
     </body>

@@ -99,8 +99,8 @@
                                 <td> {{$blog->title}}</td>
 
                                 <td>
-                                    <img src="/storage/imgs/{{$blog->image}}"  width="100px" alt="">
-                                    </td>
+                                    <img src="{{ asset('storage/imgs/' . $blog->image) }}" width="100px" alt="">
+                                </td>
                                 <td>
                                     <div class="btn-group">
                                         <button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"> اجراءات
