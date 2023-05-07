@@ -86,9 +86,10 @@
     <br>
 
 
-    @foreach ($categories as $value)
-    <div class="row">
 
+    @foreach ($categories as $value)
+
+    
         <section class="u-clearfix u-section-1 container-fluid">
             <div class="row store">
                 <div class="col-sm-3">
@@ -304,30 +305,30 @@
         
       
 
-        <section class="container chooseClass0 my-5">
-            <div class="d-flex justify-center">
-                <img src="{{ asset('/assets/images/soufKitchen.jpg') }}" alt="">
-            </div>
-            <div class="chooseClass customfont u-custom-font u-custom-font2">
-                <img src="{{ asset('/assets/images/friends.jpg') }}" alt="">
-                <h2 class="customfont u-custom-font u-custom-font2">
-                    {{ __('store_.messages.who_make_our_food') }}
-                </h2>
-            </div>
-            <div class="chooseClass">
-                <h2 class="customfont u-custom-font u-custom-font2">
-                    {{ __('store_.messages.storing_details') }}
-                </h2>
-                <img src="{{ asset('/assets/images/library.jpg') }}" alt="">
-            </div>
-            <div class="chooseClass">
-                <img src="{{ asset('/assets/images/kais.jpg') }}" alt="">
-                <h2 class="customfont u-custom-font u-custom-font2">
-                    {{ __('store_.messages.packing_details') }}
-                </h2>
-            </div>
-        </section>
-
+    <section class="container chooseClass0 my-5">
+        <div class="d-flex justify-center">
+            <img src="{{ asset('/assets/images/soufKitchen.jpg') }}" alt="" style="max-width: 100%;">
+        </div>
+        <div class="chooseClass customfont u-custom-font u-custom-font2">
+            <img src="{{ asset('/assets/images/friends.jpg') }}" alt="" style="max-width: 100%;">
+            <h2 class="customfont u-custom-font u-custom-font2">
+                {{ __('store_.messages.who_make_our_food') }}
+            </h2>
+        </div>
+        <div class="chooseClass">
+            <h2 class="customfont u-custom-font u-custom-font2">
+                {{ __('store_.messages.storing_details') }}
+            </h2>
+            <img src="{{ asset('/assets/images/library.jpg') }}" alt="" style="max-width: 100%;">
+        </div>
+        <div class="chooseClass">
+            <img src="{{ asset('/assets/images/kais.jpg') }}" alt="" style="max-width: 100%;">
+            <h2 class="customfont u-custom-font u-custom-font2">
+                {{ __('store_.messages.packing_details') }}
+            </h2>
+        </div>
+    </section>
+    
         <section class="container">
             <div class="row mt-2">
                 <div class="col text-center">
@@ -349,13 +350,14 @@
                         </svg>
 
                         <h2 id="NonSugar" class="customfont u-custom-font "
-                            style="color:white; text-shadow: black 0px 0px 2px; position: absolute; margin-top: 50px; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 40px; font-weight: bold;">
+                            style="color:white; text-shadow: black 0px 0px 2px; position: absolute; margin-top: 50px; top: 50%; left: 50%; transform: translate(-50%, -50%); font-weight: bold;">
                              {{ __('store_.messages.sugar_free') }} </h2>
                     </div>
                 </div>
             </div>
         </section>
       
+      <section class="container">
         @foreach ($categories as $value)
         @if (
             $value->id==1
@@ -420,19 +422,31 @@
     @endforeach
    
 
-        <section class="container-fluid">
-            <div class="container-fluid">
-                <img src="/assets/images/stoneCover.jpg" alt="Snow" style="width:100%;">
-
-                <div class="centered">
-                    <h1 class="container2">  {{ __('store_.shop_name') }}<br>  {{ __('store_.messages.story_start') }}   <span>
-                            <a id="btn" href={{ url('/about') }}><button
-                                    class="general-btn border-0 text-white h3 p-3 m-4">{{ __('store_.buttons.know_about') }}
-                                    </button></a></span></h1>
-                </div>
-            </div>
-
-        </section>
+      </section>
+      <section class="container chooseClass0 my-5">
+        <div class="d-flex justify-center">
+          <img src="{{ asset('/assets/images/soufKitchen.jpg') }}" alt="" style="max-width: 100%;">
+        </div>
+        <div class="chooseClass customfont u-custom-font u-custom-font2">
+          <img src="{{ asset('/assets/images/friends.jpg') }}" alt="" style="max-width: 100%;">
+          <h2 class="customfont u-custom-font u-custom-font2">
+            {{ __('store_.messages.who_make_our_food') }}
+          </h2>
+        </div>
+        <div class="chooseClass">
+          <h2 class="customfont u-custom-font u-custom-font2">
+            {{ __('store_.messages.storing_details') }}
+          </h2>
+          <img src="{{ asset('/assets/images/library.jpg') }}" alt="" style="max-width: 100%;">
+        </div>
+        <div class="chooseClass">
+          <img src="{{ asset('/assets/images/kais.jpg') }}" alt="" style="max-width: 100%;">
+          <h2 class="customfont u-custom-font u-custom-font2">
+            {{ __('store_.messages.packing_details') }}
+          </h2>
+        </div>
+      </section>
+      
         
     @endsection
  

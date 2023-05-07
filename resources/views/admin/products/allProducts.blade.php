@@ -116,7 +116,7 @@
                                 <td>{{ $value['discount_price'] }}</td>
 
                                 <td>
-                                    <img width="100px" src="/storage/img/{{ $value->image }}">
+                                    <img src="{{ asset('storage/img/' . $value->image) }}" width="100px">
                                 </td>
 
                                 <td>

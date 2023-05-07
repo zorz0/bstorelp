@@ -1,19 +1,18 @@
 @font-face {
-    font-family: '29L';
-    src: url('../font/29LTAzerTRIAL-RegularTRIAL.woff.ttf') format('woff2'),
-         url('../font/29LTAzerTRIAL-RegularTRIAL.woff') format('woff');
+    font-family: "29L";
+    src: url("../font/29LTAzerTRIAL-RegularTRIAL.woff.ttf") format("woff2"),
+        url("../font/29LTAzerTRIAL-RegularTRIAL.woff") format("woff");
     font-weight: bold;
     font-style: normal;
     font-size: 20px;
-
 }
 body {
-    font-family: '29L', sans-serif;
-  }
-  .customfont{
-    font-family: '29L', sans-serif;
+    font-family: "29L", sans-serif;
+}
+.customfont {
+    font-family: "29L", sans-serif;
     font-size: 1.5rem;
-  }
+}
 .u-section-1 .u-sheet-1 {
     min-height: 605px;
 }
@@ -40,7 +39,11 @@ body {
 }
 
 .u-section-1 .u-over-slide-1 {
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+    );
 }
 
 .u-section-1 .u-carousel-item-2 {
@@ -48,7 +51,11 @@ body {
 }
 
 .u-section-1 .u-over-slide-2 {
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+    );
 }
 
 .u-section-1 .u-carousel-control-1 {
@@ -67,7 +74,7 @@ body {
 
 .u-section-1 .u-text-1 {
     font-size: 1.25rem;
-    font-family: '29L';
+    font-family: "29L";
     font-weight: 600;
     width: 900px;
     margin: 45px auto 0;
@@ -205,12 +212,11 @@ body {
 .u-custom-font {
     font-size: 1rem;
     letter-spacing: 0px;
-    font-family: '29L';
+    font-family: "29L";
     font-weight: 700;
-    color: #6B7265;
+    color: #6b7265;
     text-align: justify;
 }
-
 
 @media (max-width: 390px) {
     .foter-start {
@@ -242,16 +248,15 @@ body {
     }
 }
 
-
 .u-khayba {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url(./images/NewImg.png) no-repeat center center ;
+    background: url(./images/NewImg.png) no-repeat center center;
     background-size: cover;
     height: 520px;
 }
-.u-khayba p{
+.u-khayba p {
     margin-top: 20%;
 }
 .u-khayba-footer {
@@ -262,7 +267,7 @@ body {
     background-size: cover;
     margin-top: -60px;
     padding-top: 60px;
-    font-family: '29L';
+    font-family: "29L";
     font-size: 2rem;
     font-weight: 700;
 }
@@ -279,7 +284,6 @@ body {
     background-image: url(./images/art2.png);
     direction: rtl;
     margin-top: 3%;
-   
 }
 
 .u-section-1 .u-gallery-2 {
@@ -295,7 +299,7 @@ body {
     text-align: right;
     margin-top: 2%;
     margin-left: 3%;
-    font-family: '29L', sans-serif;
+    font-family: "29L", sans-serif;
     padding-top: 20px;
 }
 
@@ -305,7 +309,7 @@ body {
     text-align: right;
     margin-top: 2%;
     margin-left: 3%;
-    font-family: '29L', sans-serif;
+    font-family: "29L", sans-serif;
     padding-top: 20px;
 }
 
@@ -316,7 +320,7 @@ body {
     text-align: right;
     margin-top: 2%;
     margin-left: 3%;
-    font-family: '29L', sans-serif;
+    font-family: "29L", sans-serif;
     padding-top: 20px;
 }
 
@@ -349,16 +353,14 @@ body {
     padding: 5px;
     width: 98%;
     max-width: 300px;
-
 }
 @media screen {
-    
 }
 .image-container {
     position: relative;
-  }
-  
-  .text-container {
+}
+
+.text-container {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -368,9 +370,9 @@ body {
     color: white;
     font-weight: bold;
     text-shadow: 1px 1px 1px black;
-  }
-  
-#description{
+}
+
+#description {
     max-width: 100%;
     word-wrap: break-word;
 }
@@ -381,7 +383,7 @@ body {
     display: inline-block;
     background: #3e3a37;
     width: 90%;
-    float:right;
+    float: right;
     text-align: -webkit-center;
     color: #fff;
     padding-top: 45%;
@@ -390,28 +392,28 @@ body {
 }
 .parallelogram-button {
     position: relative;
-    padding: .6em 1em;
+    padding: 0.6em 1em;
     border: 0;
-    margin: .6em;
+    margin: 0.6em;
     background: transparent;
     font-size: 30px;
     color: white;
-  }
-  
-  .parallelogram-button::before {
+}
+
+.parallelogram-button::before {
     border-radius: 0 30px 22px 0;
 
-    content: '';
+    content: "";
     position: absolute;
-    top: 0; 
-    right: 0; 
-    bottom: 0; 
+    top: 0;
+    right: 0;
+    bottom: 0;
     left: 0;
     z-index: -1;
     background: #bbcf3f;
     transform: skew(-30deg);
-  }
- 
+}
+
 .smore2 {
     display: inline-block;
     border-radius: 20px 0px 0px 20px;
@@ -479,7 +481,7 @@ body {
     background-size: cover;
     margin-top: -60px;
     padding-top: 60px;
-    font-family: '29L';
+    font-family: "29L";
     font-size: 2rem;
     font-weight: 700;
 }
@@ -492,7 +494,7 @@ body {
     background-size: cover;
     margin-top: -60px;
     padding-top: 60px;
-    font-family: '29L';
+    font-family: "29L";
     font-size: 2rem;
     font-weight: 700;
 }
@@ -506,7 +508,7 @@ body {
     margin-top: -60px;
     padding-top: 60px;
     padding-bottom: 60px;
-    font-family: '29L';
+    font-family: "29L";
     font-size: 2rem;
     font-weight: 700;
 }
@@ -519,7 +521,7 @@ body {
     background-size: cover;
     margin-top: -60px;
     padding-top: 60px;
-    font-family: '29L';
+    font-family: "29L";
     font-size: 2rem;
     font-weight: 700;
 }
@@ -532,7 +534,7 @@ body {
 }
 
 .leftcolumn {
-    font-family: '29L';
+    font-family: "29L";
     float: right;
     width: 75%;
     text-align: right;
@@ -540,7 +542,7 @@ body {
 
 /* Right column */
 .rightcolumn {
-    font-family: '29L';
+    font-family: "29L";
     float: left;
     width: 23%;
     text-align: right;
@@ -593,6 +595,9 @@ body {
 }
 
 @media screen and (max-width: 900px) {
+    .store{
+        margin-left: 10px!important;
+    }
     .row {
         display: none;
     }
@@ -617,205 +622,227 @@ body {
 }
 /*confirm order page*/
 
-      
 .center-2 {
-    font-family: "Sansita Swashed", cursive!important;
-      background: linear-gradient(45deg, greenyellow, dodgerblue)!important;
-  text-align: center;
-    position: relative!important;
-    background: #fff!important;
-    border-radius: 10px!important;
+    font-family: "Sansita Swashed", cursive !important;
+    background: linear-gradient(45deg, greenyellow, dodgerblue) !important;
+    text-align: center;
+    position: relative !important;
+    background: #fff !important;
+    border-radius: 10px !important;
     margin-bottom: -10px;
     padding-bottom: 5%;
-  }
-  .center-2 h3 {
-    font-size: 1em!important;
-    padding: 10px!important;
-    color: #000!important;
-    letter-spacing: 5px!important;
-    margin-bottom: 60px!important;
-    font-weight: bold!important;
-    padding-left: 10px!important;
-  }
-  .center-2 .inputbox {
-    position: relative!important;
-    width: 300px!important;
-    height: 50px!important;
-    margin-bottom: 50px!important;
-  }
-  .center-2 .inputbox input {
-    position: absolute!important;
-    top: 0!important;
-    left: 0!important;
-    width: 100%!important;
-    border: 2px solid #000!important;
-    outline: none!important;
-    background: none!important;
-    padding: 10px!important;
-    border-radius: 10px!important;
-    font-size: 1.2em!important;
-  }
-  .center-2 .inputbox:last-child {
-    margin-bottom: 0!important;
-  }
-  .center-2 .inputbox span {
-    position: absolute!important;
-    top: 14px!important;
-    left: 20px!important;
-    font-size: 1em!important;
-    transition: 0.6s!important;
-    font-family: sans-serif!important;
-  }
-  .center-2 .inputbox input:focus ~ span,
-  .center-2 .inputbox input:valid ~ span {
-    transform: translateX(-13px) translateY(-35px)!important;
-    font-size: 1em!important;
-  }
-  .center-2 .inputbox [type="submit"] {
-    width: 50%!important;
-    color: #fff!important;
-    border: #fff!important;
-  }
-  .center-2 .inputbox [type="submit"] {
-    background: linear-gradient(45deg, greenyellow, dodgerblue)!important;
-    margin-left: 25%
-  }
-  .py-4{
-    padding-top: 0!important;
-  }
-  
-   
+}
+.center-2 h3 {
+    font-size: 1em !important;
+    padding: 10px !important;
+    color: #000 !important;
+    letter-spacing: 5px !important;
+    margin-bottom: 60px !important;
+    font-weight: bold !important;
+    padding-left: 10px !important;
+}
+.center-2 .inputbox {
+    position: relative !important;
+    width: 300px !important;
+    height: 50px !important;
+    margin-bottom: 50px !important;
+}
+.center-2 .inputbox input {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    border: 2px solid #000 !important;
+    outline: none !important;
+    background: none !important;
+    padding: 10px !important;
+    border-radius: 10px !important;
+    font-size: 1.2em !important;
+}
+.center-2 .inputbox:last-child {
+    margin-bottom: 0 !important;
+}
+.center-2 .inputbox span {
+    position: absolute !important;
+    top: 14px !important;
+    left: 20px !important;
+    font-size: 1em !important;
+    transition: 0.6s !important;
+    font-family: sans-serif !important;
+}
+.center-2 .inputbox input:focus ~ span,
+.center-2 .inputbox input:valid ~ span {
+    transform: translateX(-13px) translateY(-35px) !important;
+    font-size: 1em !important;
+}
+.center-2 .inputbox [type="submit"] {
+    width: 50% !important;
+    color: #fff !important;
+    border: #fff !important;
+}
+.center-2 .inputbox [type="submit"] {
+    background: linear-gradient(45deg, greenyellow, dodgerblue) !important;
+    margin-left: 25%;
+}
+.py-4 {
+    padding-top: 0 !important;
+}
 
-      .resWatchMore{
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-        width: 7rem;;
-      }
-.ct-blog2{
+.resWatchMore {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 7rem;
+}
+.ct-blog2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.card{
-    padding:5px;
+.card {
+    padding: 5px;
     background: transparent;
-    background-color: unset!important;}
-  
-    @media (max-width: 576px) {
-        #beforeBtn{
-            margin-top: -40px;
-        }
-        /* styles for most phones */
-        #BestSelling{
-            width: 100%;
-            text-align: center;
-            height: inherit;
-        }
-       
-        .F1{
-            text-align: center;
-        }
-        .row > * {
-            
-    padding-left: calc(var(--bs-gutter-x) * 0.8) !important;
-    padding-right: unset!important;
-    margin-right: 20px!important;
-        }
-        #NonSugar{
-            color: #353331!important;
-            width: 50%;
-        }
-     
-        #BestSelling{
-            margin-top: 10px!important;
-            font-size: 25px!important;
-        }
-        .u-custom-font2{
-            text-align: center!important;
-        }
-        .contentVa0{
-            flex-wrap: nowrap!important;
-        }
-      }
-      #sec-350b > div > div > div > div > div{
-        padding-right: 15%;      }
-      .row > * {
-            
-        padding-left: calc(var(--bs-gutter-x) * 1) !important;
-        padding-right: unset!important;
-        
-            }
+    background-color: unset !important;
+}
+#NonSugar{
 
-      .footer  a{
-        text-decoration: none;
-        color: white;
 
+    font-size: 40px;
     }
-    .footer  a:hover{
-        text-decoration: none;
-        color: white;
-        font-size: 1.2rem;
-        font-weight: bold;
-        
+@media (max-width: 576px) {
+    .store{
+        margin-left: 10px!important;
     }
-.myimg{
+    .store  p{
+        text-align: center!important;
+    }
+    #app > main > section.u-clearfix.u-section-1.container > div{
+        margin-left: 10px !important;
+    }
+    #beforeBtn {
+        margin-top: -40px;
+    }
+    /* styles for most phones */
+    #BestSelling {
+        width: 100%;
+        text-align: center;
+        height: inherit;
+    }
+
+    .F1 {
+        text-align: center;
+    }
+    .row > * {
+        padding-left: calc(var(--bs-gutter-x) * 0.8) !important;
+        padding-right: unset !important;
+        margin-right: 20px !important;
+    }
+    #NonSugar {
+        color: #353331 !important;
+        width: 70%;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    #BestSelling {
+        margin-top: 10px !important;
+        font-size: 25px !important;
+    }
+    .u-custom-font2 {
+        text-align: center !important;
+    }
+    .contentVa0 {
+        flex-wrap: nowrap !important;
+    }
+}
+#sec-350b > div > div > div > div > div {
+    padding-right: 15%;
+}
+.row > * {
+    padding-left: calc(var(--bs-gutter-x) * 1) !important;
+    padding-right: unset !important;
+}
+
+.footer a {
+    text-decoration: none;
+    color: white;
+}
+.footer a:hover {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.myimg {
     width: -webkit-fill-available;
 }
 
+@media (max-width: 600px) {
+    .store  p{
+        text-align: center!important;
+    }
+    #app > main > section.u-clearfix.u-section-1.container > div{
+        margin-left: 10px !important;
+    }
+    #ImgText {
+        font-size: 12px;
+        width: 80%;
+    }
+    #myImage {
+        margin-top: 0 !important;
+        margin-left: 2%;
+    }
+    .container-fluid,
+    #NewBtn {
+        margin-top: 10%;
+    }
+    #beforeBtn {
+        margin-left: 29% !important;
+    }
+    .icon-sec-res {
+        display: flex !important;
+        min-height: 545px !important;
+        align-items: end !important;
+    }
+    .u-khayba-footer {
+        background-position: unset;
+        margin-top: 50px;
+        margin-left: 10%;
+    }
 
+    .foter-start {
+        margin-top: 0 !important;
+    }
+    #BestSelling {
+        margin-top: 15px !important;
+    }
+    #NonSugar {
+        color: #353331 !important;
+        width: 80%;
+        text-align: center;
+        font-size: 20px;
+    }
+    chooseClass img{
+        max-width: 100%;
+    }
+    .icon-cont-res {
+        margin: 0 !important;
+        top: -5px !important;
+        padding: 0 !important;
+        width: 100% !important;
+        height: fit-content !important;
+        margin-top: 18% !important;
+    }
 
-@media (max-width:600px) {
-#ImgText{
-    font-size: 12px;
-    width: 80%;
-}
-#myImage{
-    margin-top: 0!important;
-    margin-left: 2%;
-}
-.container-fluid,#NewBtn{
-    margin-top: 10%;
-}
-#beforeBtn{
-    margin-left: 35%!important;
-}
-.icon-sec-res{
-    display: flex !important;
-    min-height: 545px !important;
-    align-items: end !important;
-    
-}
-.u-khayba-footer{
-    background-position: unset;
-    margin-top: 50px;
-    margin-left: 10%;
-}
+    .icon-cont-res a {
+        display: flex !important;
+        justify-content: center !important;
+    }
 
-.foter-start{
-    margin-top: 0!important;
-}
-
-.icon-cont-res{
-    margin: 0 !important;
-    top: -5px !important;
-    padding: 0 !important;
-    width: 100% !important;
-    height: fit-content !important;
-    margin-top: 18% !important;
-}
-
-.icon-cont-res a{
-    display: flex !important;
-    justify-content: center !important;
-}
-
-.icon-cont-res a span svg{
-
-width: 50px !important;
-}
-
+    .icon-cont-res a span svg {
+        width: 50px !important;
+    }
 }
 
