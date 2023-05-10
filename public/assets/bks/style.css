@@ -210,7 +210,6 @@ body {
 }
 
 .u-custom-font {
-    font-size: 1.5rem;
     letter-spacing: 0px;
     font-family: "29L";
     font-weight: 700;
@@ -887,3 +886,32 @@ body {
     }
 }
 
+#PersonImg{
+    width: 29px;
+}
+.footer{
+    max-width: 100%;
+}
+@media (min-width: 600px) {
+    #app > main > section.foter-start.u-clearfix.u-image.u-section-2.container-fluid.my-5.lazyloaded > div > div > a:nth-child(1) > span > svg.u-svg-link{
+        transform: translate(-8px, 9px);
+    }
+    #app > main > section.foter-start.u-clearfix.u-image.u-section-2.container-fluid.my-5.lazyloaded > div > div > a:nth-child(3) > span > svg.u-svg-link{
+        transform: translate(8px, 9px);
+    }
+    #app > main > section.foter-start.u-clearfix.u-image.u-section-2.container-fluid.my-5.lazyloaded > div > div > a:nth-child(2) > span > svg.u-svg-link{
+        transform: translateY(5px);
+    }
+}
+
+@media (max-width:600px) {
+    #app > main > section.foter-start.u-clearfix.u-image.u-section-2.container-fluid.my-5.lazyloaded > div > div{
+        transform: translateX(16px);
+    }
+}
+.img-display{
+    height: -webkit-fill-available;
+}
+.baitKhairatDate h1{
+    margin-top: 153px;
+}

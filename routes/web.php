@@ -43,7 +43,7 @@ Route::get ('/category/{id}',[WebController::class,'allproduct'])->name('allprod
 
 Route::get ('/store/{id}',[WebController::class,'products'])->name('store');
 
-Route::post ('/showProduct/{id}',[WebController::class,'showProduct'])->name('showProduct');
+Route::any ('/showProduct/{id}',[WebController::class,'showProduct'])->name('showProduct');
 Route::post ('/getPriceSize/{id}',[WebController::class,'getPriceSize'])->name('getPriceSize');
 
 

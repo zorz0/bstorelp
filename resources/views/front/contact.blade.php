@@ -10,7 +10,7 @@
     </div>
     <div class="container pt-5">
         <div class="u-khayba-email col-md-12">
-            <p class="pt-5 pl-5 text-left" style="font-size: 14px;">
+            <p class="pt-5 pl-5 text-left" style="font-size: 25px;">
                 <a href="mailto:info@beitkhairatsouf.com">
                     info@beitkhairatsouf.com
                 </a>

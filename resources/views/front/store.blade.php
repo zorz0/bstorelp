@@ -162,7 +162,7 @@
     <section class="container my-5">
         <h2 class="text-center customfont u-custom-font">{{ __('store_.messages.assurance') }}</h2>
         <div class="contentVa0">
-            <img src="{{ asset('/assets/images/person.png') }}" alt="">
+            <img id="PersonImg" src="{{ asset('/assets/images/person.png') }}" alt="">
             <div class="contentVa">
                 <h2 class="customfont u-custom-font">{{ __('store_.messages.login') }} </h2>
                 <p class="customfont u-custom-font"> {{ __('store_.messages.add_information') }}</p>
@@ -307,7 +307,31 @@
 
    
     
-        <section class="container">
+        
+        <section class="container chooseClass0 my-5">
+            <div class="d-flex justify-center">
+              <img src="{{ asset('/assets/images/soufKitchen.jpg') }}" alt="" style="max-width: 100%;">
+            </div>
+            <div class="chooseClass customfont u-custom-font u-custom-font2">
+              <img src="{{ asset('/assets/images/friends.jpg') }}" alt="" style="max-width: 100%;">
+              <h2 class="customfont u-custom-font u-custom-font2">
+                {{ __('store_.messages.who_make_our_food') }}
+              </h2>
+            </div>
+            <div class="chooseClass">
+              <h2 class="customfont u-custom-font u-custom-font2">
+                {{ __('store_.messages.storing_details') }}
+              </h2>
+              <img src="{{ asset('/assets/images/library.jpg') }}" alt="" style="max-width: 100%;">
+            </div>
+            <div class="chooseClass">
+              <img src="{{ asset('/assets/images/kais.jpg') }}" alt="" style="max-width: 100%;">
+              <h2 class="customfont u-custom-font u-custom-font2">
+                {{ __('store_.messages.packing_details') }}
+              </h2>
+            </div>
+          </section>
+          <section class="container">
             <div class="row mt-2">
                 <div class="col text-center">
                     <div class=" mt-2 rounded-circle d-inline-block" style="width: 30px; height: 30px; background-color:black;"></div>
@@ -401,29 +425,17 @@
    
 
       </section>
-      <section class="container chooseClass0 my-5">
-        <div class="d-flex justify-center">
-          <img src="{{ asset('/assets/images/soufKitchen.jpg') }}" alt="" style="max-width: 100%;">
-        </div>
-        <div class="chooseClass customfont u-custom-font u-custom-font2">
-          <img src="{{ asset('/assets/images/friends.jpg') }}" alt="" style="max-width: 100%;">
-          <h2 class="customfont u-custom-font u-custom-font2">
-            {{ __('store_.messages.who_make_our_food') }}
-          </h2>
-        </div>
-        <div class="chooseClass">
-          <h2 class="customfont u-custom-font u-custom-font2">
-            {{ __('store_.messages.storing_details') }}
-          </h2>
-          <img src="{{ asset('/assets/images/library.jpg') }}" alt="" style="max-width: 100%;">
-        </div>
-        <div class="chooseClass">
-          <img src="{{ asset('/assets/images/kais.jpg') }}" alt="" style="max-width: 100%;">
-          <h2 class="customfont u-custom-font u-custom-font2">
-            {{ __('store_.messages.packing_details') }}
-          </h2>
-        </div>
-      </section>
+      <section class="container-fluid ">
+        <div class="bg-image" style="background-image: url('{{asset('assets/images/stoneCover.jpg')}}'); height: 70vh; background-repeat: no-repeat;
+        background-position: center;">
+      <div class="text-container" style="text-align: center;margin-left: 19%;">
+        <h1 class="container">بيت خيرات سوف<br>قصة بدأت من عام ١٨٨١م <span><a href={{ url('/about') }}><button class="general-btn border-0 text-white h4 p-3 m-4">اعرف
+            عنها</button></a></span></h1>
+      </div>    
+    </div>
+
+      
+    </section>
       
         
     @endsection

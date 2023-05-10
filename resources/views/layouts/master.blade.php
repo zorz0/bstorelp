@@ -303,9 +303,9 @@
             <div class="col t-center">
                 <p class="u-align-center text-center u-custom-font u-text u-text-body-alt-color u-text-4"
                     style="color: rgb(107, 114, 101) !important; margin-bottom: -30px !important;">
-                    {{ __('master.powered',['name' => 'banana']) }} </p><img
-                    src="./assets/images/banana.png"
-                    style="text-align: center; width: 100px;">
+                    {{ __('master.powered',['name' => 'banana']) }} </p><img id="Bananalogo";
+                    src="{{asset('assets/images/banana.png')}}"
+                    style="text-align: center!important; width: 100px;">
             </div>
         </div>
     </div>
