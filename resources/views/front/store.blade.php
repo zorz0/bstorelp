@@ -121,7 +121,7 @@
                                 <hr class="myhr">
                                 <img class="myimg mx-auto d-block" width="" alt="product" src="/storage/img/{{ $product->image }}">
                                 <hr class="myhr ">
-                                @auth
+                            
                                     @if ($product->sizes[0] != 'null')
                                         <div class="d-flex justify-content-center">
                                             <button type="submit">{{ __('store_.buttons.show_product') }}</button>
@@ -129,7 +129,7 @@
                                         <p style="font-weight: bold; " class="text-center customfont u-custom-font " style="font-size:1.3rem">{{ $product->price }} د.أ</p>
                                         <h3>
                                     @endif
-                                @endauth
+                                
                             </form>
                         </div>
                     </div>
@@ -203,8 +203,8 @@
             </div>
         </div>
     </section>
-    <section class="container my-5">
-        <div class="chooseEat container text-center py-2 my-5 ">
+    <section class="container-fluid my-5">
+        <div class="chooseEat container text-center py-2 my-5" style="max-width: 95%">
             <h2 class="text-white"> {{ __('store_.messages.choose_delicious_meals') }} </h2>
         </div>
     </section>
@@ -235,7 +235,7 @@
 
             <div class="row">
                 <div class="col">
-                    <div
+                    <div class="customediv"
                         style="padding-right: 40px;margin-bottom: 130px; padding-bottom: 10px; height: 160px;width: 100%;overflow: hidden;position: relative;padding-left: 40px;">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 250" style="transform: scaleY(-1);">
                             <path fill="#bbcf3f" fill-opacity="1"
@@ -244,7 +244,7 @@
                         </svg>
                         <h2 class="customfont u-custom-font" id="BestSelling"
                             style="    text-shadow: 0 0 2px black;
-                       position: absolute;margin-top: 50px;top: 50%;left: 50%;transform: translate(-50%, -50%);font-size: 55px;font-weight: bold;">
+                       position: absolute;margin-top: 50px;top: 43%;left: 50%;transform: translate(-50%, -50%);font-size: 55px;font-weight: bold;">
                         {{ __('store_.messages.Best_selling_products') }}  </h2>
                     </div>
         
@@ -305,29 +305,7 @@
         
       
 
-    <section class="container chooseClass0 my-5">
-        <div class="d-flex justify-center">
-            <img src="{{ asset('/assets/images/soufKitchen.jpg') }}" alt="" style="max-width: 100%;">
-        </div>
-        <div class="chooseClass customfont u-custom-font u-custom-font2">
-            <img src="{{ asset('/assets/images/friends.jpg') }}" alt="" style="max-width: 100%;">
-            <h2 class="customfont u-custom-font u-custom-font2">
-                {{ __('store_.messages.who_make_our_food') }}
-            </h2>
-        </div>
-        <div class="chooseClass">
-            <h2 class="customfont u-custom-font u-custom-font2">
-                {{ __('store_.messages.storing_details') }}
-            </h2>
-            <img src="{{ asset('/assets/images/library.jpg') }}" alt="" style="max-width: 100%;">
-        </div>
-        <div class="chooseClass">
-            <img src="{{ asset('/assets/images/kais.jpg') }}" alt="" style="max-width: 100%;">
-            <h2 class="customfont u-custom-font u-custom-font2">
-                {{ __('store_.messages.packing_details') }}
-            </h2>
-        </div>
-    </section>
+   
     
         <section class="container">
             <div class="row mt-2">
@@ -340,7 +318,7 @@
 
             <div class="row">
                 <div class="col">
-                    <div
+                    <div class="customediv customediv2"
                         style="padding-right: 40px; margin-bottom: 130px; padding-bottom: 10px; height: 160px; width: 100%; overflow: hidden; position: relative; padding-left: 40px;">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 250"
                             style="transform: scaleY(-1);">

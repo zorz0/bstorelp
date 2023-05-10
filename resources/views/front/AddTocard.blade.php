@@ -128,54 +128,27 @@
  --}}
  @extends('layouts.master')
  @section('content')
-     <!DOCTYPE html>
-     <html dir="{{ getDirection() }}">
-
-     <head>
+ <head>
 
 
-         <link rel="stylesheet" href="{{ asset('/assets') }}/apps/css/productDetails.css">
-         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-             integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-             crossorigin="anonymous" />
-     </head>
+  <link rel="stylesheet" href="{{ asset('/assets') }}/apps/css/productDetails.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous" />
+</head>
 
-     <body>
-
+<section class="container"
          <div class="card-wrapper">
              <div class="card">
                  <!-- card left -->
                  <div class="product-imgs">
                      <div class="img-display">
                          <div class="img-showcase">
-                             <img src="{{ asset($data->image) }}" alt="shoe image">
-                             {{-- <img src = "shoes_images/shoe_2.jpg" alt = "shoe image">
-                <img src = "shoes_images/shoe_3.jpg" alt = "shoe image">
-                <img src = "shoes_images/shoe_4.jpg" alt = "shoe image"> --}}
+                             <img src="{{ asset('storage/img/'.$data->image) }}" alt="shoe image">
+                         
                          </div>
                      </div>
-                     {{-- <div class = "img-select">
-              <div class = "img-item">
-                <a href = "#" data-id = "1">
-                  <img src = "{{ asset($data->image) }}"  alt = "shoe image">
-                </a>
-              </div>
-              <div class = "img-item">
-                <a href = "#" data-id = "2">
-                  <img src = "shoes_images/shoe_2.jpg" alt = "shoe image">
-                </a>
-              </div>
-              <div class = "img-item">
-                <a href = "#" data-id = "3">
-                  <img src = "shoes_images/shoe_3.jpg" alt = "shoe image">
-                </a>
-              </div>
-              <div class = "img-item">
-                <a href = "#" data-id = "4">
-                  <img src = "shoes_images/shoe_4.jpg" alt = "shoe image">
-                </a>
-              </div>
-            </div> --}}
+                 
                  </div>
                  <!-- card right -->
                  <div class="product-content">
@@ -216,7 +189,6 @@
 
 
          <link rel="stylesheet" href="{{ asset('/assets') }}/apps/scripts/productDetails.js">
-     </body>
-
-     </html>
+     <section>
+      
  @endsection

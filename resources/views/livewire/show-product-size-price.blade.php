@@ -13,8 +13,9 @@
             <input type="text" name="product_id" value="{{ $data2['id'] }}" hidden>
             <input type="text" name="productSize_id" value="{{ $selectedsizeid }}" hidden>
             <input type="text" name="price" value="{{ $selectedPrice }}" hidden>
-
+@auth
             <input type="text" name="user_id" value="{{ Auth::user()->id }}" hidden>
+            @endauth
             <p>{{ $data2->description }}</p>
             <ul>
                 <li>الصنف: <span>{{ $data2->category_id }}</span></li>
@@ -31,19 +32,30 @@
                         @endforeach
                     </select>
                 </li>
-                <li>الكمية      <span> <input style="width: 100px;margin-right: 48px;" name="quantity" type="number" min="0" wire:model="quantity" wire:change="updatePriceWithQuantity" value="1">
+                <li>الكمية      <span> <input style="width: 100px;margin-right: 40px;" name="quantity" type="number" min="0" wire:model="quantity" wire:change="updatePriceWithQuantity" value="1">
                 </span></li>
 
             </ul>
         </div>
-
+        @auth
         <div class="purchase-info">
             <button type="submit" class="btn">
-                اضف الى السلة
+                {{ __('addToCard.add_to_card') }}
             </button>
             <a style="text-decoration: none; color)" href="{{ route('totalCards') }}" class="btn btn-info">
-                السلة <i class="fas fa-shopping-cart"></i>
+                {{ __('addToCard.card') }} <i class="fas fa-shopping-cart"></i>
             </a>
         </div>
+    
     </form>
+    @endauth
+    @guest
+    <div class="purchase-info">
+       <a class="btn" href="{{route('login')}}">
+        {{ __('addToCard.add_to_card') }}
+       
+       </a>
+       
+    </div>
+    @endguest
 </div>

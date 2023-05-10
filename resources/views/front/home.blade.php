@@ -44,7 +44,7 @@
     
     </section>
 
-    <section class="u-clearfix u-section-1">
+    <section class="container">
         <img class="u-image u-image-contain u-image-default lazyload u-image-3" alt=""
             data-src="{{ asset('/assets/bks') }}/images/dots.png">
         <p class="text-center u-custom-font  ">
@@ -68,7 +68,7 @@
 
         </div>
       <div class="container-fluid">
-    <div class="row">
+    <div class="row" id="cutomeDiv3">
         <a class="u-custom-font" id="beforeBtn" style="text-decoration: none;
         font-size: 1.5rem;
         text-align: center;
@@ -77,10 +77,10 @@
         z-index: 561;
        
         position: absolute;
-        margin-top: 3%;" href="/store">{{ __('master.goShop') }}</a>
+        margin-top: -5px;" href="/store">{{ __('master.goShop') }}</a>
 
         <div class="col-md-12 position-relative p-0">
-            <img id="myImage" style="margin-top:-90px;width: 100%;" src="{{ asset('assets/images/BeforeBtn.png') }}" alt="...">
+            <img id="myImage" style="margin-top:-140px;width: 100%;" src="{{ asset('assets/images/BeforeBtn.png') }}" alt="...">
             <div class="position-absolute top-50 start-50 translate-middle text-center ">
             </div>
         </div>

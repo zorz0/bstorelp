@@ -28,7 +28,8 @@ return [
         'watch_more' => 'watch more',
         'show_product' => 'show product',
         'know_about' => 'know about',
-        'shop_now' => 'shop now'
+        'shop_now' => 'shop now',
+
     ],
 
     'messages' => [
