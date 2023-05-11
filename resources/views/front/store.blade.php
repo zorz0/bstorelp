@@ -36,16 +36,16 @@
         <div class="row store">
             <div class="container">
 
-                <div class="col-md-2 box3 F1">
+                <div class="col-md-2 box3 F1 text-center">
                     <h3>
                      {{ __('store_.security.title') }}
 
                     </h3>
-                    <p class="font-weight-bolder u-custom-font">
+                    <p class="font-weight-bolder u-custom-font ">
                         {{ __('store_.security.content') }}
                     </p>
                 </div>
-                <div class="col-md-2 box F1">
+                <div class="col-md-2 box F1 text-center">
                     <h3>
                         {{ __('store_.health.title') }}
 
@@ -54,7 +54,7 @@
                         {{ __('store_.health.content') }}
                     </p>
                 </div>
-                <div class="col-md-2 box F1">
+                <div class="col-md-2 box F1 text-center">
                     <h3>
                         {{ __('store_.cleanliness.title') }}
                     </h3>
@@ -62,7 +62,7 @@
                         {{ __('store_.cleanliness.content') }}
                     </p>
                 </div>
-                <div class="col-md-2 box F1">
+                <div class="col-md-2 box F1 text-center">
                     <h3>
                         {{ __('store_.quality.title') }}
 
@@ -71,11 +71,11 @@
                         {{ __('store_.security.content') }}
                     </p>
                 </div>
-                <div class="col-md-2 box2 F1" >
+                <div class="col-md-2 box2 F1 text-center" >
                     <h3>
                         {{ __('store_.delivery.title') }}
                     </h3>
-                    <p class="font-weight-bolder u-custom-font">
+                    <p class="font-weight-bolder u-custom-font text-center">
                         {{ __('store_.delivery.content') }}
                     </p>
                 </div>
@@ -96,12 +96,12 @@
                     <div class="card border-0">
                         <div class="card-body">
                             <div class="image-container">
-                                <a href="#">
+                                <a href="{{ route('allproduct', ['id' => $value->id]) }}">
                                     <img class="category img-fluid" style="filter: brightness(0.5);  height: 350px;"
                                          alt="khayba" src="{{ asset('storage/imgs/' . $value->image) }}">
                                 </a>
                                 <div class="text-container customfont u-custom-font">
-                                    <p>{{ $value->name }}</p>
+                                    <p >{{ $value->name }}</p>
                                 </div>
                             </div>
                         </div>
@@ -116,8 +116,8 @@
                         <div class="card-body">
                             <form id="FormCard" action="{{ route('showProduct', ['id' => $product->id]) }}" method="post">
                                 @csrf
-                                <h5 class="card-title text-center  customfont u-custom-font " style="font-size:1.4rem">{{ $product->name }}</h5>
-                                <p class="card-text text-center customfont u-custom-font " style="font-size:1.2rem">{{ $product->description }}</p>
+                                <h5 class="card-title text-center  customfont u-custom-font " style="font-size:1.5rem">{{ $product->name }}</h5>
+                                <p class="card-text text-center customfont u-custom-font " style="font-size:1rem">{{ $product->description }}</p>
                                 <hr class="myhr">
                                 <img class="myimg mx-auto d-block" width="" alt="product" src="/storage/img/{{ $product->image }}">
                                 <hr class="myhr ">
@@ -176,36 +176,36 @@
             </div>
         </div>
         <div class="contentVa0">
-            <img src="{{ asset('/assets/images/rightSign.png') }}" alt="">
+            <img id="rightsign" src="{{ asset('/assets/images/rightSign.png') }}" alt="">
             <div class="contentVa">
                 <h2 class="customfont u-custom-font">{{ __('store_.messages.order_check') }} </h2>
                 <p class="customfont u-custom-font">{{ __('store_.messages.order_check_information') }} </p>
             </div>
         </div>
         <div class="contentVa0">
-            <img src="{{ asset('/assets/images/customer.png') }}" alt="">
+            <img id="cutsomericon" src="{{ asset('/assets/images/customer.png') }}" alt="">
             <div class="contentVa">
                 <h2 class="customfont u-custom-font"> {{ __('store_.messages.delivery_confirm') }}  </h2>
                 <p class="customfont u-custom-font">  {{ __('store_.messages.delivery_confirm_information') }}   </p>
             </div>
         </div>
         <div class="contentVa0">
-            <img src="{{ asset('/assets/images/car.png') }}" alt="">
+            <img id="Caricon" src="{{ asset('/assets/images/car.png') }}" alt="">
             <div class="contentVa">
                 <h2 class="customfont u-custom-font">  {{ __('store_.messages.one_day_shipping') }}</h2>
                 <p class="customfont u-custom-font">  {{ __('store_.messages.one_day_shipping_information') }}   </p>
             </div>
         </div>
-        <div class="contentVa0">
-            <img src="{{ asset('/assets/images/heart.png') }}" alt="">
-            <div class="contentVa">
-                <h2 class="text-danger"> {{ __('store_.messages.enjoy_delicious_meals') }}</h2>
+        <div class="contentVa0 ">
+            <img id="hearticon" src="{{ asset('/assets/images/heart.png') }}" alt="">
+            <div class="contentVa ">
+                <h2 class="text-danger text-center"> {{ __('store_.messages.enjoy_delicious_meals') }}</h2>
             </div>
         </div>
     </section>
     <section class="container-fluid my-5">
         <div class="chooseEat container text-center py-2 my-5" style="max-width: 95%">
-            <h2 class="text-white"> {{ __('store_.messages.choose_delicious_meals') }} </h2>
+            <h2 class="text-white" style="text-shadow: 0 0 22px black;"> {{ __('store_.messages.choose_delicious_meals') }} </h2>
         </div>
     </section>
     <section class="container my-5">
@@ -263,8 +263,8 @@
                                     <form id="FormCard" action="{{ route('showProduct', ['id' => $item->productData[0]->id]) }}" method="post">
         
                                         @csrf
-                                        <h5 class="card-title text-center  customfont u-custom-font " style="font-size:1.4rem">{{ $item->productData[0]->name }}</h5>
-                                        <p class="card-text text-center customfont u-custom-font " style="font-size:1.2rem"> {{ $item->productData[0]->description }}</p></p>
+                                        <h5 class="card-title text-center  customfont u-custom-font " style="font-size:1.5rem">{{ $item->productData[0]->name }}</h5>
+                                        <p class="card-text text-center customfont u-custom-font " style="font-size:1rem"> {{ $item->productData[0]->description }}</p></p>
                                         <hr class="myhr">
                                         <img class="myimg mx-auto d-block" width="" alt="product" src="/storage/img/{{$item->productData[0]->image}}">
                                         <hr class="myhr ">
@@ -334,7 +334,7 @@
           <section class="container">
             <div class="row mt-2">
                 <div class="col text-center">
-                    <div class=" mt-2 rounded-circle d-inline-block" style="width: 30px; height: 30px; background-color:black;"></div>
+                    <div class=" mt-2 rounded-circle d-inline-block" style="width: 30px; height: 30px; background-color:#D2B48C;"></div>
                 </div>
             </div>
         </section>
@@ -346,7 +346,7 @@
                         style="padding-right: 40px; margin-bottom: 130px; padding-bottom: 10px; height: 160px; width: 100%; overflow: hidden; position: relative; padding-left: 40px;">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 250"
                             style="transform: scaleY(-1);">
-                            <path fill="#11111" fill-opacity="1"
+                            <path fill="#D2B48C" fill-opacity="1"
                                 d="M0,224L120,202.7C240,181,480,139,720,144C960,149,1200,181,1320,202.7L1440,224V0H1320C1200,0,960,0,720,0C480,0,240,0,120,0H0V224Z">
                             </path>
                         </svg>
@@ -380,8 +380,8 @@
                         <div class="card-body">
                             <form id="FormCard" action="{{ route('showProduct', ['id' => $product->id]) }}" method="post">
                                 @csrf
-                                <h5 class="card-title text-center  customfont u-custom-font " style="font-size:1.4rem">{{ $product->name }}</h5>
-                                <p class="card-text text-center customfont u-custom-font " style="font-size:1.2rem">{{ $product->description }}</p>
+                                <h5 class="card-title text-center  customfont u-custom-font " style="font-size:1.5rem">{{ $product->name }}</h5>
+                                <p class="card-text text-center customfont u-custom-font " style="font-size:1rem">{{ $product->description }}</p>
                                 <hr class="myhr">
                                 <img class="myimg mx-auto d-block" width="" alt="product" src="/storage/img/{{ $product->image }}">
                                 <hr class="myhr ">
@@ -426,10 +426,11 @@
 
       </section>
       <section class="container-fluid ">
-        <div class="bg-image" style="background-image: url('{{asset('assets/images/stoneCover.jpg')}}'); height: 70vh; background-repeat: no-repeat;
+        <div class="bg-image" style="background-image: url('{{asset('assets/images/stoneCover.jpg')}}'); height: 120vh; background-repeat: no-repeat;
         background-position: center;">
-      <div class="text-container" style="text-align: center;margin-left: 19%;">
-        <h1 class="container">بيت خيرات سوف<br>قصة بدأت من عام ١٨٨١م <span><a href={{ url('/about') }}><button class="general-btn border-0 text-white h4 p-3 m-4">اعرف
+      <div class="text-container" style="text-align: center;margin-left: 19%; margin-top: 15px;
+">
+        <h1 class="container">بيت خيرات سوف<br>قصة بدأت من عام ١٨٨١م <span><a href={{ url('/about') }}><button id="cutomBtn" class="general-btn border-0 text-white h4 p-3 m-4">اعرف
             عنها</button></a></span></h1>
       </div>    
     </div>

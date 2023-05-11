@@ -25,16 +25,9 @@
                  </div>
                  <!-- card right -->
                  <div class="product-content">
-                     <h2 class="product-title">{{ $data->name }}</h2>
+                     <h2 class="">{{ $data->name }}</h2>
                      {{-- <a href = "#" class = "product-link">visit nike store</a> --}}
-                     <div class="product-rating">
-                         <i class="fas fa-star"></i>
-                         <i class="fas fa-star"></i>
-                         <i class="fas fa-star"></i>
-                         <i class="fas fa-star"></i>
-                         <i class="fas fa-star-half-alt"></i>
-                         <span>4.7(21)</span>
-                     </div>
+                  
 
                      <livewire:show-product-size-price :id="$data->id"/>
 

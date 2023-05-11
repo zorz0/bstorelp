@@ -41,6 +41,7 @@ $Category=Category::all();
         $product=Product::create([
             "name"=>$request['name'],
             "description"=>$request['description'],
+            "Alldescription"=>$request['Alldescription'],
             "price"=>$request['price'],
             "discount_price"=>$request['discount_price'],
             "image"=>$imgname,

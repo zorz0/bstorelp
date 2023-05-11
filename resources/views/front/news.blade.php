@@ -5,7 +5,7 @@
         @foreach ($blogs as $blog)
 
         <div class="card">
-            <h2>{{$blog->title}}</h2>
+            <h4>{{$blog->title}}</h2>
             <!-- <h5>Title description, Dec 7, 2017</h5> -->
             <div class="fakeimg">
                 <a href="#"><img class="myimg" alt="product" src="/storage/imgs/{{$blog->image}}"></a>
@@ -24,10 +24,15 @@
         <h2 align="{{ getAlign() }}">{{ __('news_.latest_news') }}</h2>
         @foreach ($latestBlogs as $blog)
 
-
-        <div class="card">
-            <a href="{{route('news.details',['id'=>$blog->id])}}" style="text-decoration: none;"> <h2>{{$blog->title}}</h2> </a>
-        </div>
+        <div class="card" style="width: 18rem;">
+            <img alt="product" style="width:100%" src="{{ asset('/storage/imgs/' . $blog->image) }}" class="card-img-top">
+            <div class="card-body text-center">
+                <a href="{{route('news.details',['id'=>$blog->id])}}" style="text-decoration: none;"> <h4 class="text-center">{{$blog->title}}</h4> </a>
+            </div>
+          </div>
+       
+  
+    
         @endforeach
         {{$latestBlogs->links()}}
      

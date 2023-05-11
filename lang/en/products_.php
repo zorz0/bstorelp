@@ -38,6 +38,7 @@ return [
         'quantity' => 'quantity',
         'category' => 'category',
         'description' => 'product description',
+        'Alldescription'=>'details',
         'product_main_image' => 'main image',
         'product_images' => 'images',
     ]

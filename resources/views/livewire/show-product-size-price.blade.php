@@ -2,9 +2,9 @@
     <form action="{{ route('card.store') }}" method="post">
         @csrf
         <div class="product-price">
-            <p class="last-price">السعر القديم:
+          {{--   <p class="last-price">السعر القديم:
                 <span>{{ $selectedPrice + $discount }}</span>
-            </p>
+            </p> --}}
             <p class="new-price">السعر الجديد: <span>{{ $selectedPrice }}</span></p>
         </div>
 
@@ -16,7 +16,7 @@
 @auth
             <input type="text" name="user_id" value="{{ Auth::user()->id }}" hidden>
             @endauth
-            <p>{{ $data2->description }}</p>
+            <p>{{ $data2->Alldescription }}</p>
             <ul>
                 <li>الصنف: <span>{{ $data2->category_id }}</span></li>
                 <li>قيمة التوصيل: <span>مجاني</span></li>

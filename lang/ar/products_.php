@@ -38,6 +38,7 @@ return [
         'quantity' => 'الكمية',
         'category' => 'النوع',
         'description' => 'وصف المنتج',
+        'Alldescription'=>"التفاصيل",
         'product_main_image' => 'الصورة الرئيسية',
         'product_images' => 'صور المنتج',
     ]

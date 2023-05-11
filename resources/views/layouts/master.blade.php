@@ -141,7 +141,7 @@
 
         @yield('content')
         <section class="foter-start u-clearfix u-image lazyload u-section-2 container-fluid my-5">
-            <div class="u-clearfix u-sheet u-sheet-1 icon-sec-res">
+            <div class="u-clearfix u-sheet u-sheet-1 icon-sec-res" style="max-width: 100%">
                 <div class="social-icons u-social-icons u-spacing-15 u-social-icons-1 icon-cont-res " style="margin-top: 18%;
                 width: 137px;
                 margin-left: auto;">

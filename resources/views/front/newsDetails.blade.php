@@ -8,7 +8,7 @@
 <section class="container-fluid">
     <div class="row" id="NesRow">
       
-      <div class="col-3 mb-3">
+      <div class="col-25 mb-3">
         <div class="blog-single-sidebar bordered blog-container border">
 
             <div class="blog-single-sidebar-recent text-center">
