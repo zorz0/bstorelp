@@ -20,28 +20,28 @@ use App\Http\Controllers\HomeController;
 */
 
 
-// Route::get('/', function () {
+// Route::any('/', function () {
 //     return view('front.home');
 // })->name('index');
 
 
-// Route::get('/news', function () {
+// Route::any('/news', function () {
 //     return view('front.news');
 // });
 
-Route::get('/contact', function () {
+Route::any('/contact', function () {
     return view('front.contact');
 });
-Route::get('/about', function () {
+Route::any('/about', function () {
     return view('front.clean');
 });
 
 
 ///web
-Route::get ('/store',[WebController::class,'products'])->name('store');
-Route::get ('/category/{id}',[WebController::class,'allproduct'])->name('allproduct');
+Route::any ('/store',[WebController::class,'products'])->name('store');
+Route::any ('/category/{id}',[WebController::class,'allproduct'])->name('allproduct');
 
-Route::get ('/store/{id}',[WebController::class,'products'])->name('store');
+Route::any ('/store/{id}',[WebController::class,'products'])->name('store');
 
 Route::any ('/showProduct/{id}',[WebController::class,'showProduct'])->name('showProduct');
 Route::post ('/getPriceSize/{id}',[WebController::class,'getPriceSize'])->name('getPriceSize');
@@ -50,36 +50,36 @@ Route::post ('/getPriceSize/{id}',[WebController::class,'getPriceSize'])->name('
 ///end web
 
 //card
-Route::get ('/card',[Cardcontroller::class,'index'])->name('card');
-Route::get ('/totalCards',[Cardcontroller::class,'totalCards'])->name('totalCards');
+Route::any ('/card',[Cardcontroller::class,'index'])->name('card');
+Route::any ('/totalCards',[Cardcontroller::class,'totalCards'])->name('totalCards');
 
 Route::post ('/card/store',[Cardcontroller::class,'store'])->name('card.store');
 Route::post ('/card/update/{id}',[Cardcontroller::class,'update'])->name('card.update');
 
-Route::get ('/card/destroy/{id}',[Cardcontroller::class,'destroy'])->name('card.destroy');
+Route::any ('/card/destroy/{id}',[Cardcontroller::class,'destroy'])->name('card.destroy');
 
 ///end card
 
 ///save order for web site
 
-Route::post ('/order/createorder',[OrderController::class,'createorder'])->name('createorder');
+Route::any ('/order/createorder',[OrderController::class,'createorder'])->name('createorder');
 Route::post ('/order/store',[OrderController::class,'store'])->name('order.store');
 
-Route::get('/news', [HomeController::class,'blogs'])->name('news');
+Route::any('/news', [HomeController::class,'blogs'])->name('news');
 
 ////end save order
 Auth::routes();
 
 
-//  Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
- Route::get('/', [HomeController::class,'index'])->name('home');
- Route::get('/{category}', [HomeController::class,'showProducts'])->name('products');
- Route::get('/store/{id}', [HomeController::class,'show'])->name('show');
- Route::get('/news/{id}', [HomeController::class,'blogDetails'])->name('news.details');
+//  Route::any('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+ Route::any('/', [HomeController::class,'index'])->name('home');
+ Route::any('/{category}', [HomeController::class,'showProducts'])->name('products');
+ Route::any('/store/{id}', [HomeController::class,'show'])->name('show');
+ Route::any('/news/{id}', [HomeController::class,'blogDetails'])->name('news.details');
 
 
 
 
 
  ////
- Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => '\App\Http\Controllers\LanguageController@switchLang']);
+ Route::any('lang/{lang}', ['as' => 'lang.switch', 'uses' => '\App\Http\Controllers\LanguageController@switchLang']);

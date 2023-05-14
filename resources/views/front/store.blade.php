@@ -41,7 +41,7 @@
                      {{ __('store_.security.title') }}
 
                     </h3>
-                    <p class="font-weight-bolder u-custom-font ">
+                    <p class="font-weight-bolder u-custom-font text-center">
                         {{ __('store_.security.content') }}
                     </p>
                 </div>
@@ -50,7 +50,7 @@
                         {{ __('store_.health.title') }}
 
                     </h3>
-                    <p class="font-weight-bolder u-custom-font">
+                    <p class="font-weight-bolder u-custom-font text-center">
                         {{ __('store_.health.content') }}
                     </p>
                 </div>
@@ -58,7 +58,7 @@
                     <h3>
                         {{ __('store_.cleanliness.title') }}
                     </h3>
-                    <p class="font-weight-bolder u-custom-font">
+                    <p class="font-weight-bolder u-custom-font text-center">
                         {{ __('store_.cleanliness.content') }}
                     </p>
                 </div>
@@ -67,7 +67,7 @@
                         {{ __('store_.quality.title') }}
 
                     </h3>
-                    <p class="font-weight-bolder u-custom-font">
+                    <p class="font-weight-bolder u-custom-font text-center">
                         {{ __('store_.security.content') }}
                     </p>
                 </div>
@@ -97,7 +97,7 @@
                         <div class="card-body">
                             <div class="image-container">
                                 <a href="{{ route('allproduct', ['id' => $value->id]) }}">
-                                    <img class="category img-fluid" style="filter: brightness(0.5);  height: 350px;"
+                                    <img class="category img-fluid" style="filter: brightness(0.5);  height: 400px;"
                                          alt="khayba" src="{{ asset('storage/imgs/' . $value->image) }}">
                                 </a>
                                 <div class="text-container customfont u-custom-font">
@@ -126,7 +126,7 @@
                                         <div class="d-flex justify-content-center">
                                             <button type="submit">{{ __('store_.buttons.show_product') }}</button>
                                         </div>
-                                        <p style="font-weight: bold; " class="text-center customfont u-custom-font " style="font-size:1.3rem">{{ $product->price }} د.أ</p>
+                                        <p style="font-weight: bold; " dir="{{getDirection()}}" class="text-center customfont u-custom-font " style="font-size:1.3rem">{{ $product->price }} <span>{{ __('store_.buttons.currency') }}</span></p>
                                         <h3>
                                     @endif
                                 
@@ -273,7 +273,7 @@
                                             <div class="d-flex justify-content-center">
                                                 <button type="submit">{{ __('store_.buttons.show_product') }}</button>
                                             </div>
-                                            <p style="font-weight: bold; " class="text-center customfont u-custom-font " style="font-size:1.3rem">{{ $product->price }} د.أ</p>
+                                            <p style="font-weight: bold; " dir="{{getDirection()}}" class="text-center customfont u-custom-font " style="font-size:1.3rem">{{ $product->price }} <span>{{ __('store_.buttons.currency') }}</span></p>
                                             <h3>
                                         @endif
                                     @endauth
@@ -362,7 +362,7 @@
       <section class="container">
         @foreach ($categories as $value)
         @if (
-            $value->id==1
+            $value->name=="خابيه"
         )
             
     
@@ -390,7 +390,7 @@
                                         <div class="d-flex justify-content-center">
                                             <button type="submit">{{ __('store_.buttons.show_product') }}</button>
                                         </div>
-                                        <p style="font-weight: bold; " class="text-center customfont u-custom-font " style="font-size:1.3rem">{{ $product->price }} د.أ</p>
+                                        <p style="font-weight: bold; " dir="{{getDirection()}}" class="text-center customfont u-custom-font " style="font-size:1.3rem">{{ $product->price }} <span>{{ __('store_.buttons.currency') }}</span></p>
                                         <h3>
                                     @endif
                                 @endauth
@@ -418,6 +418,7 @@
                
             </div>
         </section>
+        <br>
         <br>
         <br>
         @endif

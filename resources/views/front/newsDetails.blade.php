@@ -9,38 +9,20 @@
     <div class="row" id="NesRow">
       
       <div class="col-25 mb-3">
-        <div class="blog-single-sidebar bordered blog-container border">
+        <h2 align="{{ getAlign() }}">{{ __('news_.latest_news') }}</h2>
+        @foreach ($latestBlogs as $blog)
 
-            <div class="blog-single-sidebar-recent text-center">
-                <h3 class="blog-sidebar-title uppercase" > {{ __('master.LastourNews') }}</h3>
-
-               
+        <div class="card" style="width: 18rem;">
+            <img alt="product" style="width:100%" src="{{ asset('/storage/imgs/' . $blog->image) }}" class="card-img-top">
+            <div class="card-body text-center">
+                <a href="{{route('news.details',['id'=>$blog->id])}}" style="text-decoration: none;"> <h4 class="text-center">{{$blog->title}}</h4> </a>
             </div>
-            <div class="pl-3">
-
-            <ul align="{{ getAlign() }}" class="list-unstyled">
-                @foreach ($latestBlogs as $item)
-           
-           @if (getAlign()=="right")
-           <li>
-            <a href="{{route('news.details', ['id'=>$item->id])}}"> {{ $item->title}} <span class="bullet"  >&#8226;</span></a>
+          </div>
+       
+  
     
-         </li>
-           @else
-           <li>
-            <a href="{{route('news.details', ['id'=>$item->id])}}"><span class="bullet"  align="{{ getAlign() }}">&#8226;</span> {{ $item->title}}</a>
-
-         </li> 
-           @endif
-               
-            @endforeach
-
-
-
-            </ul>
-            </div>
-
-        </div>
+        @endforeach
+        {{$latestBlogs->links()}}
       </div>
       <div class="col-8 border ml-3">
         <div class="blog-single-content bordered blog-container ">

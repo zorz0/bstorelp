@@ -7,10 +7,9 @@
 
     @include('sweetalert::alert')
 
-
-
+  
     <div class="center-2">
-        <h3> {{ __('orders_.messages.shopping_thank',['name' => Auth::user()->name ]) }}!</h3>
+        <h3 class="text-center customfont u-custom-font"> {{ __('orders_.messages.shopping_thank',['name' => Auth::user()->name ]) }}!</h3>
         <br>
 
         <form action="{{ route('order.store') }}" method="post" style="text-align: center;
@@ -35,7 +34,8 @@
           </div>
           <input type="hidden" name="shipping_price" value="3">
           <hr>
-          <div class="row" style=" direction: rtl;">
+          
+          <div class="row" style=" direction: {{getDirection()}};">
              <div class="col text-center-2">
           <span>{{ __('orders_.messages.order_price',['price' => $totalprice]) }}</span>
           <span> {{ __('orders_.messages.currency') }}</span>

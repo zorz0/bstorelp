@@ -28,7 +28,8 @@ return [
         'watch_more' => 'مشاهدة المزيد',
         'show_product' => 'اظهر المنتج',
         'know_about' => 'اعرف عنها',
-        'shop_now' => 'تسوق الان'
+        'shop_now' => 'تسوق الان',
+        'currency'=>'د.أ',
     ],
 
     'messages' => [

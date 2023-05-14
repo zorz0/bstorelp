@@ -29,7 +29,7 @@ return [
         'show_product' => 'show product',
         'know_about' => 'know about',
         'shop_now' => 'shop now',
-
+'currency'=>'JOD',
     ],
 
     'messages' => [

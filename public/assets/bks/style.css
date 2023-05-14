@@ -586,6 +586,10 @@ body {
     direction: rtl;
     margin-left: 5px;
 }
+.card-text{
+height: 70px;
+    overflow: hidden;
+}
 
 /* Clear floats after the columns */
 .row:after {

@@ -30,7 +30,7 @@
           <div class="row">
             <div class="col-8 mx-auto">
           
-              <p class="text-justify u-custom-font">  {{ __('master.wsuf_info') }}</p>
+              <h5 class="text-justify text-center u-custom-font">  {{ __('master.wsuf_info') }}</h5>
 
             </div>
           </div>
@@ -47,9 +47,9 @@
     <section class="container">
         <img class="u-image u-image-contain u-image-default lazyload u-image-3" alt=""
             data-src="{{ asset('/assets/bks') }}/images/dots.png">
-        <p class="text-center u-custom-font  ">
+        <h5 class="text-center u-custom-font  ">
             {{ __('master.wsuf_food_quality') }}
-        </p>
+        </h5>
         <div class="col-md-12 col-sx-4 store">
             @foreach ($latestCategory as $record)
                 <div class="col-md-3 stor-item">
