@@ -109,7 +109,19 @@ $ProductWithoutSugar= DB::table('products')
    public function allproduct(){
     $id = request('id');
 $allProduct = DB::table('products')->where('category_id', $id)->get();
-
+$allProduct ->map(function ($product) {
+    $product->sizes = DB::table('product_size')
+        ->where('product_id', $product->id)
+        ->orderByDesc('id')
+          ->take(3)
+        ->get()
+        
+        ->toArray();
+    if (empty($product->sizes)) {
+        $product->sizes = ['null'];
+    }
+    return $product;
+});
 return view('front.AllProduct', [
     'allProduct'=>$allProduct
 

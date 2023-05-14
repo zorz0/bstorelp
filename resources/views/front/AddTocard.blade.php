@@ -25,31 +25,37 @@
                  </div>
                  <!-- card right -->
                  <div class="product-content" dir="{{getDirection()}}">
-                     <h2 class="">{{ $data->name }}</h2>
+                     <h2 class="customfont u-custom-font text-right">{{ $data->name }}</h2>
                      {{-- <a href = "#" class = "product-link">visit nike store</a> --}}
                   
 
                      <livewire:show-product-size-price :id="$data->id"/>
                         <div id="fb-root"></div>
-                        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v16.0" nonce="NzEvA5qq"></script>
-                    
+                        <script>(function(d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0];
+                        if (d.getElementById(id)) return;
+                        js = d.createElement(s); js.id = id;
+                        js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+                        fjs.parentNode.insertBefore(js, fjs);
+                        }(document, 'script', 'facebook-jssdk'));</script>
+                        
+                        <!-- Your share button code -->
+                       
                         <div class="social-links">
                          <p>{{ __('addToCard.share_with') }} </p>
-                         <a href="#">
-                             <i class="fab fa-facebook-f"></i>
-                         </a>
-                         <a href="#">
-                             <i class="fab fa-twitter"></i>
-                         </a>
-                         <a href="#">
-                             <i class="fab fa-instagram"></i>
-                         </a>
-                         <a href="#">
-                             <i class="fab fa-whatsapp"></i>
-                         </a>
-                         <a href="#">
-                             <i class="fab fa-pinterest"></i>
-                         </a>
+                         <a href="https://www.facebook.com/sharer/sharer.php?u={{ url('showProduct/'.$data->id) }}" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://twitter.com/intent/tweet?url={{ url('showProduct/1') }}" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                         <a href="https://www.instagram.com/sharer.php?u={{  url('showProduct/'.$data->id) }}" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?text={{ urlencode('Check out this product: ' . url('showProduct/1')) }}" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                       
                      </div>
                  </div>
              </div>
@@ -66,5 +72,28 @@
           }
          </style>
      <section>
+        <section class="container">
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="..." class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="..." class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="..." class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </section>
       
  @endsection

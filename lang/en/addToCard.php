@@ -5,11 +5,11 @@ return [
     'add_to_card'=>'Add To Card',
     'card'=>'Card',
     'quantity'=>'quantity',
-    'new-price'=>'new price',
+    'new-price'=>'Price',
     'about-product'=>'product details',
     'product-category'=>'category',
     'shipping-price'=>'shipping price',
-    'free-shipping'=>'free',
+    'shipping'=>'3 JOD',
     'available-size'=>'available size',
     
 ];

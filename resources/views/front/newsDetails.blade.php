@@ -11,11 +11,11 @@
       <div class="col-25 mb-3">
         <h2 align="{{ getAlign() }}">{{ __('news_.latest_news') }}</h2>
         @foreach ($latestBlogs as $blog)
-
+        <a href="{{route('news.details',['id'=>$blog->id])}}" style="text-decoration: none;">
         <div class="card" style="width: 18rem;">
             <img alt="product" style="width:100%" src="{{ asset('/storage/imgs/' . $blog->image) }}" class="card-img-top">
             <div class="card-body text-center">
-                <a href="{{route('news.details',['id'=>$blog->id])}}" style="text-decoration: none;"> <h4 class="text-center">{{$blog->title}}</h4> </a>
+                 <h4 class="text-center">{{$blog->title}}</h4> </a>
             </div>
           </div>
        

@@ -110,11 +110,7 @@ img{
 .new-price span{
     color: #256eff;
 }
-.product-detail h2{
-    text-transform: capitalize;
-    color: #12263a;
-    padding-bottom: 0.6rem;
-}
+
 .product-detail p{
     font-size: 0.9rem;
     padding: 0.3rem;

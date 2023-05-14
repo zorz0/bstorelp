@@ -10,21 +10,27 @@
 
           <div class="row">
         @endif
-        <div class="col-sm-6 col-md-4">
+        <div class="col-sm-6 col-md-4" style="justify-content: center;
+        display: flex;
+        margin-bottom: 5px;">
           <div class="product">
             <form id="FormCard" action="{{ route('showProduct', ['id' => $product->id]) }}" method="post">
               @csrf
-              <h3>{{ $product->name }}</h3>
-              <p id="description">{{ $product->description }}</p>
+              <h5 class="card-title text-center  customfont u-custom-font " style="font-size:1.5rem">{{ $product->name }}</h5>
+              <p class="card-text text-center customfont u-custom-font " style="font-size:1rem">{{ $product->description }}</p>
               <hr class="myhr">
-              <img class="myimg" width="" alt="product" src="/storage/img/{{ $product->image }}">
-              <hr class="myhr">
-              <button type="submit">{{ __('products_.actions.show_product') }}</button>
-              <p style="font-weight: bold">{{$product->price}} د.أ</p>
-              <h3>
-
-              </h3>
-            </form>
+              <img class="myimg mx-auto d-block" width="" alt="product" src="/storage/img/{{ $product->image }}">
+              <hr class="myhr ">
+          
+                  @if ($product->sizes[0] != 'null')
+                      <div class="d-flex justify-content-center">
+                          <button type="submit">{{ __('store_.buttons.show_product') }}</button>
+                      </div>
+                      <p style="font-weight: bold; " dir="{{getDirection()}}" class="text-center customfont u-custom-font " style="font-size:1.3rem">{{ $product->price }} <span>{{ __('store_.buttons.currency') }}</span></p>
+                      <h3>
+                  @endif
+              
+          </form>
           </div>
         </div>
       @endforeach

@@ -205,7 +205,7 @@
     </section>
     <section class="container-fluid my-5">
         <div class="chooseEat container text-center py-2 my-5" style="max-width: 95%">
-            <h2 class="text-white" style="text-shadow: 0 0 22px black;"> {{ __('store_.messages.choose_delicious_meals') }} </h2>
+            <h2 class="text-white" > {{ __('store_.messages.choose_delicious_meals') }} </h2>
         </div>
     </section>
     <section class="container my-5">
@@ -217,7 +217,7 @@
             alt="">
 
             <button type="button" class="btn btn-success " style="  margin-left: 18px; background-color: #bfdd1d;  color:#6B7265; font-size: 25px;
-            font-weight: bold;  border-radius: 0 30px 22px 0; text-shadow: 0 0 2px black; padding: 20px;margin-top: 18px; border:0; transform: skew(-30deg);"> {{ __('store_.buttons.shop_now') }}</button>
+            font-weight: bold;  border-radius: 0 30px 22px 0;  padding: 20px;margin-top: 18px; border:0; transform: skew(-30deg);"> {{ __('store_.buttons.shop_now') }}</button>
 
     </div>
     </section>
@@ -243,7 +243,7 @@
                             </path>
                         </svg>
                         <h2 class="customfont u-custom-font" id="BestSelling"
-                            style="    text-shadow: 0 0 2px black;
+                            style="   
                        position: absolute;margin-top: 50px;top: 43%;left: 50%;transform: translate(-50%, -50%);font-size: 55px;font-weight: bold;">
                         {{ __('store_.messages.Best_selling_products') }}  </h2>
                     </div>

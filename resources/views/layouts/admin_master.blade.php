@@ -806,7 +806,7 @@
     <!-- BEGIN FOOTER -->
     <div class="page-footer">
         <div class="page-footer-inner"> 2023 &copy; All rights reserved to
-            <a href="#" title="Swift and Smart" target="_blank">Swift and Smart</a>
+            <a href="#" title="Swift and Smart" target="_blank">2023 ©  Beit Khairat souf</a>
         </div>
         <div class="scroll-to-top">
             <i class="icon-arrow-up"></i>
