@@ -9,19 +9,34 @@
       integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
       crossorigin="anonymous" /> 
 </head>
-
 <section class="container"
          <div class="card-wrapper">
              <div class="card">
                  <!-- card left -->
-                 <div class="product-imgs">
-                     <div class="img-display">
-                         <div class="img-showcase">
-                             <img style="max-height: 500px;" src="{{ asset('storage/img/'.$data->image) }}" >
-                         
-                         </div>
-                     </div>
-                 
+                 <div class="product-imgs" >
+                
+                  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img class="class=d-block w-100" style="background-size: cover;
+                        max-height: 700px;" src="{{ asset('storage/img/'.$data->image) }}" >                      </div>
+                    @foreach($dataImages as $images)
+                    <div class="carousel-item">
+                      <img src="{{ asset('storage/img/'.$images->image) }}" class="d-block w-100" alt="..." style="background-size: cover;
+                      max-height: 700px;">
+                    </div>
+                
+                   @endforeach
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
                  </div>
                  <!-- card right -->
                  <div class="product-content" dir="{{getDirection()}}">
@@ -71,29 +86,33 @@
             transform: translateX(-10px);
           }
          </style>
-     <section>
-        <section class="container">
-            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="..." class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="..." class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="..." class="d-block w-100" alt="...">
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-        </section>
-      
- @endsection
+   @foreach ($categories as $value)
+   <div class="row">
+       @foreach ($value->products as $product)
+           <div class="col">
+               <div class="card">
+                   <div class="card-body">
+                       <form id="FormCard" action="{{ route('showProduct', ['id' => $product->id]) }}" method="post">
+                           @csrf
+                           <h5 class="card-title text-center customfont u-custom-font" style="font-size: 1.5rem">{{ $product->name }}</h5>
+                           <p class="card-text text-center customfont u-custom-font" style="font-size: 1rem">{{ $product->description }}</p>
+                           <hr class="myhr">
+                           <img class="myimg mx-auto d-block" width="" alt="product" src="/storage/img/{{ $product->image }}">
+                           <hr class="myhr">
+                           @if ($product->sizes[0] != '')
+                               <div class="d-flex justify-content-center">
+                                   <button type="submit">{{ __('store_.buttons.show_product') }}</button>
+                               </div>
+                               <p style="font-weight: bold;" dir="{{ getDirection() }}" class="text-center customfont u-custom-font" style="font-size: 1.3rem">{{ $product->price }} <span>{{ __('store_.buttons.currency') }}</span></p>
+                           @endif
+                       </form>
+                   </div>
+               </div>
+           </div>
+       @endforeach
+   </div>
+@endforeach
+
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+       @endsection

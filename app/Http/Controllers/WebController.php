@@ -85,15 +85,38 @@ $ProductWithoutSugar= DB::table('products')
 
    public function showProduct(Request $request, $id)
    {
+    $id = rand(1, 3);
+    $categories = DB::table('categories')->where('id', $id)->get();
+
+
+    $categories->map(function ($category) {
+        $category->products = DB::table('products')
+            ->where('category_id', $category->id)
+            ->get()->take(3)
+            ->map(function ($product) {
+                $product->sizes = DB::table('product_size')
+                    ->where('product_id', $product->id)
+                    ->orderByDesc('id')
+                      ->take(3)
+                    ->get()
+                    
+                    ->toArray();
+                if (empty($product->sizes)) {
+                    $product->sizes = ['null'];
+                }
+                return $product;
+            });
+        return $category;
+    });
+    $id = request('id');
 
     $data=Product::find($id);
 
     $dataImages=ProductImage::where('product_id',$data->id)->get();
-    $id = request('id');
 
      $productSize=ProductSize::find($id);
     
-   return view('front.AddTocard',compact("data","dataImages","productSize"));
+   return view('front.AddTocard',compact("data","dataImages","productSize","categories"));
 
    }
 
@@ -109,19 +132,7 @@ $ProductWithoutSugar= DB::table('products')
    public function allproduct(){
     $id = request('id');
 $allProduct = DB::table('products')->where('category_id', $id)->get();
-$allProduct ->map(function ($product) {
-    $product->sizes = DB::table('product_size')
-        ->where('product_id', $product->id)
-        ->orderByDesc('id')
-          ->take(3)
-        ->get()
-        
-        ->toArray();
-    if (empty($product->sizes)) {
-        $product->sizes = ['null'];
-    }
-    return $product;
-});
+
 return view('front.AllProduct', [
     'allProduct'=>$allProduct
 

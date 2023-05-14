@@ -122,7 +122,7 @@
                                 <img class="myimg mx-auto d-block" width="" alt="product" src="/storage/img/{{ $product->image }}">
                                 <hr class="myhr ">
                             
-                                    @if ($product->sizes[0] != 'null')
+                                    @if ($product->sizes[0] != '')
                                         <div class="d-flex justify-content-center">
                                             <button type="submit">{{ __('store_.buttons.show_product') }}</button>
                                         </div>
@@ -268,7 +268,6 @@
                                         <hr class="myhr">
                                         <img class="myimg mx-auto d-block" width="" alt="product" src="/storage/img/{{$item->productData[0]->image}}">
                                         <hr class="myhr ">
-                                        @auth
                                         @if ($item->sizes[0]->id != '')
                                             <div class="d-flex justify-content-center">
                                                 <button type="submit">{{ __('store_.buttons.show_product') }}</button>
@@ -276,7 +275,6 @@
                                             <p style="font-weight: bold; " dir="{{getDirection()}}" class="text-center customfont u-custom-font " style="font-size:1.3rem">{{ $product->price }} <span>{{ __('store_.buttons.currency') }}</span></p>
                                             <h3>
                                         @endif
-                                    @endauth
                                             </form>
                                    
                                 </div>
