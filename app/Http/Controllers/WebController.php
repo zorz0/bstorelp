@@ -112,7 +112,7 @@ $ProductWithoutSugar= DB::table('products')
 
     $data=Product::find($id);
 
-    $dataImages=ProductImage::where('product_id',$data->id)->get();
+    $dataImages=ProductImage::where('product_id',$data->id)->get()->take(4);
 
      $productSize=ProductSize::find($id);
     
