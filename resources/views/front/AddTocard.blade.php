@@ -40,7 +40,7 @@
                   <div class="container">
         
                     <div class="master " style="max-height: 400px!important;">
-                        <img src="{{ asset('storage/img/'.$data->image) }}">
+                        <img src="{{ asset('storage/img/'.$data->image) }}" >
                         <i class="fas fa-chevron-left"></i>
                         <i class="fas fa-chevron-right"></i>
                     </div>
@@ -48,7 +48,7 @@
                     <div class="thumbnails">
                       @foreach($dataImages as $images)
 
-                        <img src="{{asset('storage/img/'.$images->image) }}">
+                        <img src="{{asset('storage/img/'.$images->image) }}" style="max-width: 24%;">
 @endforeach                      
                     </div>
             
