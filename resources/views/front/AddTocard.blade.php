@@ -86,10 +86,12 @@
             transform: translateX(-10px);
           }
          </style>
-   @foreach ($categories as $value)
+  {{--  @foreach ($categories as $value)
    <div class="row">
+    <div class="col-sm-1">
+    </div>
        @foreach ($value->products as $product)
-           <div class="col">
+           <div class="col-sm-2">
                <div class="card">
                    <div class="card-body">
                        <form id="FormCard" action="{{ route('showProduct', ['id' => $product->id]) }}" method="post">
@@ -110,8 +112,10 @@
                </div>
            </div>
        @endforeach
+       <div class="col-sm-1">
+       </div>
    </div>
-@endforeach
+@endforeach --}}
 
 
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
