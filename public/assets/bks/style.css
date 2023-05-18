@@ -913,6 +913,10 @@ height: 70px;
 
 width: 28px;
 }
+#Caricon,#cutsomericon{
+    width: 35px;
+
+}
 @media (min-width: 600px) {
   
     .footer {
