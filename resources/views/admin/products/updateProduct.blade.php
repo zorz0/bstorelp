@@ -42,6 +42,15 @@
                                 <span class="help-block">{{ __('products_.messages.name_insertion') }} </span>
                             </div>
                         </div>
+                        <div class="form-group">
+                            <label
+                                class="control-label col-md-3">{{ __('products_.productFields.product_name_english') }}</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control" name="name_english"
+                                    value="{{$data["name_english"]}}">
+                                <span class="help-block">{{ __('products_.messages.name_insertion') }} in english </span>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
@@ -88,7 +97,34 @@
                             <label class="col-md-3 pb-15">{{ __('products_.productFields.description') }}</label>
                             <div class="form-group">
                                 <div class="col-md-12">
-                                    <textarea id="description"  class="form-control" name="description" rows="6">{{ $data['description'] }}</textarea>
+                                    <textarea id="description"  class="form-control" name="description" rows="2">{{ $data['description'] }}</textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <label class="col-md-3 pb-15">{{ __('products_.productFields.description_english') }} </label>
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <textarea id="description_english" class="form-control" name="description_english"  rows="2">{{$data["description_english"]}}</textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/row-->
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label class="col-md-3 pb-15">{{ __('products_.productFields.Alldescription') }}</label>
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <textarea id="Alldescription2" class="form-control" name="Alldescription"  rows="4">{{$data["Alldescription"]}}</textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <label class="col-md-3 pb-15">{{ __('products_.productFields.Alldescription_english') }}</label>
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <textarea id="Alldescription2"  class="form-control" name="Alldescription_english" rows="4">{{$data["Alldescription_english"]}}</textarea>
                                 </div>
                             </div>
                         </div>
@@ -127,13 +163,14 @@
                             <div class="col-md-6">
                                 <div class="row">
                                     <div class="col-md-offset-3 col-md-9">
-                                        <button type="submit" class="btn green">{{ __('products_.actions.add') }}</button>
+                                        <button type="submit" class="btn green">{{ __('products_.actions.edit_product') }}</button>
                                         {{-- <button type="button" class="btn default">Cancel</button> --}}
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-6"> </div>
                         </div>
+
                     </div>
                 </div>
             </div>

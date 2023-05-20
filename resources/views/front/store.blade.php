@@ -101,7 +101,7 @@
                                          alt="khayba" src="{{ asset('storage/imgs/' . $value->image) }}">
                                 </a>
                                 <div class="text-container customfont u-custom-font">
-                                    <p >{{ $value->name }}</p>
+                                    <p >{{ getDirection() == 'rtl' ? $value->name : $value->name_english }}</p>
                                 </div>
                             </div>
                         </div>
@@ -116,8 +116,8 @@
                         <div class="card-body">
                             <form id="FormCard" action="{{ route('showProduct', ['id' => $product->id]) }}" method="post">
                                 @csrf
-                                <h5 class="card-title text-center  customfont u-custom-font " style="font-size:1.5rem">{{ $product->name }}</h5>
-                                <p class="card-text text-center customfont u-custom-font " style="font-size:1rem">{{ $product->description }}</p>
+                                <h5 class="card-title text-center  customfont u-custom-font " style="font-size:1.5rem">{{ getDirection() == 'rtl' ? $product->name : $product->name_english }}</h5>
+                                <p class="card-text text-center customfont u-custom-font " style="font-size:1rem">{{ getDirection() == 'rtl' ? $product->description : $product->description_english }}</p>
                                 <hr class="myhr">
                                 <img class="myimg mx-auto d-block" width="" alt="product" src="/storage/img/{{ $product->image }}">
                                 <hr class="myhr ">
@@ -263,8 +263,8 @@
                                     <form id="FormCard" action="{{ route('showProduct', ['id' => $item->productData[0]->id]) }}" method="post">
         
                                         @csrf
-                                        <h5 class="card-title text-center  customfont u-custom-font " style="font-size:1.5rem">{{ $item->productData[0]->name }}</h5>
-                                        <p class="card-text text-center customfont u-custom-font " style="font-size:1rem"> {{ $item->productData[0]->description }}</p></p>
+                                        <h5 class="card-title text-center  customfont u-custom-font " style="font-size:1.5rem">{{ getDirection() == 'rtl' ? $item->productData[0]->name : $item->productData[0]->name_english }}</h5>
+                                        <p class="card-text text-center customfont u-custom-font " style="font-size:1rem"> {{ getDirection() == 'rtl' ? $item->productData[0]->description:$item->productData[0]->description_english  }}</p></p>
                                         <hr class="myhr">
                                         <img class="myimg mx-auto d-block" width="" alt="product" src="/storage/img/{{$item->productData[0]->image}}">
                                         <hr class="myhr ">
@@ -360,7 +360,7 @@
       <section class="container">
         @foreach ($categories as $value)
         @if (
-            $value->name=="خابيه"
+            $value->name=="خابية"
         )
             
     
@@ -378,8 +378,8 @@
                         <div class="card-body">
                             <form id="FormCard" action="{{ route('showProduct', ['id' => $product->id]) }}" method="post">
                                 @csrf
-                                <h5 class="card-title text-center  customfont u-custom-font " style="font-size:1.5rem">{{ $product->name }}</h5>
-                                <p class="card-text text-center customfont u-custom-font " style="font-size:1rem">{{ $product->description }}</p>
+                                <h5 class="card-title text-center  customfont u-custom-font " style="font-size:1.5rem">{{ getDirection() == 'rtl' ?  $product->name :  $product->name_english }} </h5>
+                                <p class="card-text text-center customfont u-custom-font " style="font-size:1rem">{{ getDirection() == 'rtl' ? $product->description : $value->description_english }}</p>
                                 <hr class="myhr">
                                 <img class="myimg mx-auto d-block" width="" alt="product" src="/storage/img/{{ $product->image }}">
                                 <hr class="myhr ">

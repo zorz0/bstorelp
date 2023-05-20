@@ -43,6 +43,15 @@
                                     <span class="help-block">{{ __('products_.messages.name_insertion') }} </span>
                                 </div>
                             </div>
+                            <div class="form-group">
+                                <label
+                                    class="control-label col-md-3">{{ __('products_.productFields.product_name_english') }}</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" name="name_english"
+                                        placeholder="{{ __('products_.messages.name_insertion_example') }}">
+                                    <span class="help-block">{{ __('products_.messages.name_insertion') }} </span>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
@@ -94,6 +103,14 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-md-12">
+                                <label class="col-md-3 pb-15">{{ __('products_.productFields.description_english') }} </label>
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <textarea id="description_english" class="form-control" name="description_english" rows="2"></textarea>
+                                    </div>
+                                </div>
+                            </div>
                             <!--/row-->
                         </div>
                         <div class="row">
@@ -102,6 +119,14 @@
                                 <div class="form-group">
                                     <div class="col-md-12">
                                         <textarea id="Alldescription2" class="form-control" name="Alldescription" rows="6"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <label class="col-md-3 pb-15">{{ __('products_.productFields.Alldescription_english') }}</label>
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <textarea id="Alldescription2" class="form-control" name="Alldescription_english" rows="6"></textarea>
                                     </div>
                                 </div>
                             </div>

@@ -56,7 +56,7 @@
                     {{-- <img class="u-image u-image-contain u-image-default lazyload u-image-3" alt=""
                     data-src="{{ asset('/assets/bks') }}/images/Artboard 18.png"> --}}
                     <a href="{{ route('allproduct', $record->id) }}"> <button
-                            class=" col-sm-10 general-btn category-btn text-white border-0 h2 p-xl-4 p-md-2">{{ $record->name }}</button></a>
+                            class=" col-sm-10 general-btn category-btn text-white border-0 h2 p-xl-4 p-md-2">{{ getDirection() == 'rtl' ? $record->name : $record->name_english }}</button></a>
                 </div>
             @endforeach
         </div>

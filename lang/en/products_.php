@@ -27,6 +27,7 @@ return [
 
     'productFields' => [
         'product_name' => 'product name',
+        'product_name_english'=>'product name in english',
         'product_category' => 'product category',
         'product_price' => 'product price',
         'product_discount_amount' => 'discount amount',
@@ -38,7 +39,11 @@ return [
         'quantity' => 'quantity',
         'category' => 'category',
         'description' => 'product description',
+        'description_english' => 'product description in english',
+
         'Alldescription'=>'details',
+        'Alldescription_english'=>'details in english',
+
         'product_main_image' => 'main image',
         'product_images' => 'images',
     ]

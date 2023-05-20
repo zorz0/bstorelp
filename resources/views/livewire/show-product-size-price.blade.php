@@ -17,7 +17,7 @@
 @auth
             <input type="text" name="user_id" value="{{ Auth::user()->id }}" hidden>
             @endauth
-            <p class="customfont u-custom-font text-right">{{ $data2->Alldescription }}</p>
+            <p class="customfont u-custom-font text-right" style="max-width: 500px"> {{ getDirection() == 'rtl' ? $data2->Alldescription : $data2->Alldescription_english }}</p>
             <ul>
                 <li class="customfont u-custom-font text-right">{{ __('addToCard.product-category') }}: <span class="customfont u-custom-font text-right">{{ $data2->category_id }}</span></li>
                 <li class="customfont u-custom-font text-right">{{ __('addToCard.shipping-price') }}: <span class="customfont u-custom-font text-right">{{ __('addToCard.shipping') }}</span></li>

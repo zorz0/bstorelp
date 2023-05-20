@@ -27,6 +27,7 @@ return [
 
     'productFields' => [
         'product_name' => 'اسم المنتج',
+        'product_name_english'=>'اسم المنتج باللغة الأنجليزية',
         'product_category' => 'نوع المنتج',
         'product_price' => 'سعر المنتج',
         'product_discount_amount' => 'كمية الخصم',
@@ -38,7 +39,10 @@ return [
         'quantity' => 'الكمية',
         'category' => 'النوع',
         'description' => 'وصف المنتج',
+        'description_english'=>'وصف المنتج باللغة الأنجليزية ',
         'Alldescription'=>"التفاصيل",
+        'Alldescription_english'=>"  التفاصيل باللغة الأنجليزية",
+
         'product_main_image' => 'الصورة الرئيسية',
         'product_images' => 'صور المنتج',
     ]

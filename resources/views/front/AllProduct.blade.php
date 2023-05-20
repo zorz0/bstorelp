@@ -16,8 +16,8 @@
           <div class="product">
             <form id="FormCard" action="{{ route('showProduct', ['id' => $product->id]) }}" method="post">
               @csrf
-              <h5 class="card-title text-center  customfont u-custom-font " style="font-size:1.5rem">{{ $product->name }}</h5>
-              <p class="card-text text-center customfont u-custom-font " style="font-size:1rem">{{ $product->description }}</p>
+              <h5 class="card-title text-center  customfont u-custom-font " style="font-size:1.5rem">{{ getDirection() == 'rtl' ?  $product->name : $product->name_english }}</h5>
+              <p class="card-text text-center customfont u-custom-font " style="font-size:1rem">{{ getDirection() == 'rtl' ?   $product->description :  $product->description_english }}</p>
               <hr class="myhr">
               <img class="myimg mx-auto d-block" width="" alt="product" src="/storage/img/{{ $product->image }}">
               <hr class="myhr ">

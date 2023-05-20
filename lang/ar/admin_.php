@@ -6,6 +6,7 @@ return [
     'home' => 'الرئيسية',
     'add_category' => 'اضافة فئة جديدة',
     'category_name' => 'اسم الفئة',
+    'category_name_english'=>'اسم الفئة باللغة الأنجليزية',
     'insert_category_name' => 'ادخل اسم الفئة هنا',
     'category_image' => 'صورة الفئة',
     'insert_category_image' => 'قم برفع صورة الفئة هنا',

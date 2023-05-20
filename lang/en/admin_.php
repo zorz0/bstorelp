@@ -6,6 +6,7 @@ return [
     'home' => 'Home',
     'add_category' => 'add new category',
     'category_name' => 'category name',
+    'category_name_english'=>'category name in english',
     'insert_category_name' => 'insert category name here',
     'category_image' => 'category image',
     'insert_category_image' => 'upload an image for category here',

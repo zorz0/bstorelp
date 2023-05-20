@@ -61,7 +61,7 @@
                  </div>
                  <!-- card right -->
                  <div class="product-content" dir="{{getDirection()}}">
-                     <h2 class="customfont u-custom-font text-right">{{ $data->name }}</h2>
+                     <h2 class="customfont u-custom-font text-right"></h2>{{ getDirection() == 'rtl' ? $data->name : $data->name_english }}
                      {{-- <a href = "#" class = "product-link">visit nike store</a> --}}
                   
 
