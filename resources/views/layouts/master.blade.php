@@ -107,6 +107,17 @@
                                 {{ __('master.ourNews') }}
                             </a>
                         </li>
+                        @auth
+                        <li class="u-nav-item">
+                            <a class="mt-2 u-active-custom-color-2 u-bottom-left-radius-50 u-bottom-right-radius-50 u-button-style u-hover-custom-color-2 u-nav-link u-text-active-white u-text-hover-white"
+                                href="{{ url('/totalCards') }}">
+                               
+                                {{ __('addToCard.card') }}
+                            </a>
+                        </li>
+                        @endauth
+
+                     
                     </ul>
                 </div>
                 <div class="u-custom-menu u-nav-container-collapse">

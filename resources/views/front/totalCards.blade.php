@@ -21,7 +21,7 @@
                       <?php $balance += $cart["totalprice"]; ?>
                       <tr>
                           <td style="border-width: 0; margin-top: 20px;" class="fw-bold d-flex align-items-center">
-                              {{$cart->product["name"]}}
+                              {{ getDirection() == 'rtl' ? $cart->product["name"] :  $cart->product["name_english"] }}
                           </td>
                           <td  style="border-width: 0;" class="text-success">
                               <div class="d-flex align-items-center">
@@ -83,7 +83,7 @@
            <div class="row text-center">
             <div class="col">{{$balance}}</div>
            </div>
-            <button style="background-color: #bbcf3f !important; border:0"   type="submit" style="width: 100px; margin-left:4px;margin-top: 22px;" class="btn btn-primary"> Confirm </button>
+            <button style="background-color: #bbcf3f !important; border:0"   type="submit" style="width: 100px; margin-left:4px;margin-top: 22px;" class="btn btn-primary"> {{ __('total_cards.actions.confirm') }}  </button>
                     <input name="totalprice" type="text"   value="{{ $total }}" hidden>
 
                   </form>

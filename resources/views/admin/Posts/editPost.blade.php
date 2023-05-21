@@ -41,17 +41,34 @@
                         <div class="form-group">
                             <label class="control-label col-md-2">{{ __('admin_.post_title') }}</label>
                             <div class="col-md-10">
-                                <input type="text" class="form-control" value="{{$blog->title}}" name="title">
+                                <input type="text" class="form-control" required value="{{$blog->title}}" name="title">
+                                <span class="help-block"> {{ __('admin_.post_title_place') }} </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label class="control-label col-md-2">{{ __('admin_.post_title_english') }}</label>
+                            <div class="col-md-10">
+                                <input type="text" class="form-control" required value="{{$blog->title_english}}" name="title_english">
                                 <span class="help-block"> {{ __('admin_.post_title_place') }} </span>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <label class="col-md-3 pb-15">{{ __('admin_.post_') }}</label>
+                            <label class="col-md-3 pb-15">{{ __('admin_.post_content') }}</label>
                             <div class="form-group">
                                 <div class="col-md-12">
-                                    <textarea class="form-control"  rows="6" name="description">{{$blog->description}}</textarea>
+                                    <textarea class="form-control" required rows="6" name="description">{{$blog->description}}</textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <label class="col-md-3 pb-15">{{ __('admin_.post_content_english') }}</label>
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <textarea class=" form-control" required  rows="4" name="description_english">{{$blog->description_english}}</textarea>
                                 </div>
                             </div>
                         </div>
@@ -62,7 +79,7 @@
                             <label class="col-md-3 pb-15">{{ __('admin_.main_post_image') }}</label>
                             <div class="form-group">
                                 <div class="col-md-12">
-                                    <input type="file" accept="image/*" class="dropify" name="image" required/>
+                                    <input type="file" accept="image/*" class="dropify" name="image" />
 
                                 </div>
                             </div>
@@ -74,7 +91,7 @@
                             <div class="col-md-6">
                                 <div class="row">
                                     <div class="col-md-offset-3 col-md-9">
-                                        <button type="submit" class="btn green">{{ __('admin_.post_add_button') }}</button>
+                                        <button type="submit" class="btn green">{{ __('admin_.edit_post') }}</button>
                                         {{-- <button type="button" class="btn default">Cancel</button> --}}
                                     </div>
                                 </div>

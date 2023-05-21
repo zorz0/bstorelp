@@ -49,6 +49,7 @@ return [
     'all_posts' => 'all posts',
     'add_post' => 'add post',
     'post_title' => 'post title',
+    'post_title_english'=>'post title english',
     'post_image' => 'post image',
     'delete_post_confirm' => 'are you sure you want to delete this post?',
     'delete' => 'delete',
@@ -61,6 +62,7 @@ return [
     'post_title_example' => 'new post for example',
     'post_title_place' => 'write post title here',
     'post_content' => 'content',
+    'post_content_english'=>'content in english',
     'main_post_image' => 'main image',
     'post_add_button' => 'add',
 

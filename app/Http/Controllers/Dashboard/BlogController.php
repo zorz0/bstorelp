@@ -36,8 +36,11 @@ $request->image->storeAs("public/imgs",$imageName);
 Blog::create([
     'user_id'=>auth()->user()->id,
     'title' => $request->title,
+    'title_english' => $request->title_english,
+
     'image' => $imageName,
     'description'=>$request->description,
+    'description_english'=>$request->description_english,
 
 ]);
 $blogs=Blog::paginate(5);
@@ -54,17 +57,24 @@ $blogs=Blog::paginate(5);
         $blogs= Blog::paginate(5);
 
         if($request->image ){
-
+            
             $imageName=md5(microtime()).$request->image->getClientOriginalName();
             $request->image->storeAs("public/imgs",$imageName);
             Blog::where('id',$id->id)->update(
-                [ 'title'=> $request->title,
+                [ 
+                'title'=> $request->title,
+                'title_english'=> $request->title_english,
+                'description'=>$request->description,
+                'description_english'=>$request->description_english,
                 'image'=> $imageName,
 
             ]);
         }else{
             Blog::where('id',$id->id)->update(
                 [ 'title'=> $request->title,
+                'title_english'=> $request->title_english,
+                'description'=>$request->description,
+                'description_english'=>$request->description_english,
 
             ]);
         }

@@ -554,7 +554,6 @@ body {
     width: 25%;
     padding: 5px;
     display: flex;
-    direction: rtl;
 }
 
 .fakeimg .myimg {
@@ -955,4 +954,7 @@ width: 28px;
 #hearticon{
     transform: translateY(64px);
 
+}
+.u-header {
+    min-height: 400px!important;
 }

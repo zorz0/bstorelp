@@ -48,12 +48,15 @@ class HomeController extends Controller
         // return view('front.home',compact('latestBlogs'));
         return view('front.news', ['latestBlogs' => $latestBlogs, 'blogs' => $Blogs]);
     }
-    public function blogDetails(Blog $id)
+    public function blogDetails($id)
     {
-        $blog = $id;
-        // dd($blog);
+        $blog=Blog::find($id);
+
+
         $latestBlogs = Blog::orderBy('id', 'desc')->paginate(3);
 
+
+        
         return view('front.newsDetails', ['blog' => $blog,'latestBlogs' => $latestBlogs]);
     }
 }

@@ -40,8 +40,14 @@
                         <div class="form-group">
                             <label class="control-label col-md-2">{{ __('admin_.post_title') }}</label>
                             <div class="col-md-10">
-                                <input type="text" class="form-control" placeholder="{{ __('admin_.post_title_example') }}" name="title">
+                                <input type="text" class="form-control" required placeholder="{{ __('admin_.post_title_example') }}" name="title">
                                 <span class="help-block">{{ __('admin_.post_title_place') }}</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-2">{{ __('admin_.post_title_english') }}</label>
+                            <div class="col-md-10">
+                                <input type="text" class="form-control" placeholder="{{ __('admin_.post_title_example') }}" required name="title_english">
                             </div>
                         </div>
                     </div>
@@ -50,7 +56,15 @@
                             <label class="col-md-3 pb-15">{{ __('admin_.post_content') }}</label>
                             <div class="form-group">
                                 <div class="col-md-12">
-                                    <textarea class=" form-control"  rows="6" name="description"></textarea>
+                                    <textarea class=" form-control" required  rows="4" name="description"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <label class="col-md-3 pb-15">{{ __('admin_.post_content_english') }}</label>
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <textarea class=" form-control" required  rows="4" name="description_english"></textarea>
                                 </div>
                             </div>
                         </div>

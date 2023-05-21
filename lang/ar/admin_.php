@@ -46,6 +46,7 @@ return [
     'all_posts' => 'جميع المقالات',
     'add_post' => 'اضافة مقال',
     'post_title' => 'عنوان المقال',
+    'post_title_english'=>'عنوان المقال باللغة الأنجليزية',
     'post_image' => 'صورة المقال',
     'delete_post_confirm' => 'هل انت متأكد انك تريد حذف هذا المقال ؟',
     'delete' => 'حذف',
@@ -58,6 +59,7 @@ return [
     'post_title_example' => 'خبر جديد مثلا',
     'post_title_place' => 'عنوان المقال يكتب هنا',
     'post_content' => 'المحتوي',
+    'post_content_english'=>'المحتوى باللغة الأنجليزية ',
     'main_post_image' => 'الصورة الرئيسية',
     'post_add_button' => 'اضافة',
 
