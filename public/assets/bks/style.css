@@ -913,7 +913,8 @@ height: 70px;
 width: 28px;
 }
 #Caricon,#cutsomericon{
-    width: 35px;
+    width: 37px;
+    margin-right: 3px;
 
 }
 @media (min-width: 600px) {
@@ -951,10 +952,10 @@ width: 28px;
 .baitKhairatDate h1{
     margin-top: 153px;
 }
-#hearticon{
+/* #hearticon{
     transform: translateY(64px);
 
-}
+} */
 .u-header {
     min-height: 400px!important;
 }
