@@ -58,7 +58,7 @@
                                     <div class="form-group">
                                         <label class="col-md-2 control-label">{{ __('admin_.category_name_english') }}</label>
                                         <div class="col-md-6">
-                                            <input type="text" name="name_Engilsh" class="form-control" value="{{$category->name_Engilsh}}"  required>
+                                            <input type="text" name="name_english" class="form-control" value="{{$category->name_english}}"  required>
                                         </div>
                                     </div>
 

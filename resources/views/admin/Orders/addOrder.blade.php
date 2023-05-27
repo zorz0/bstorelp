@@ -125,15 +125,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6" style="padding-top: 20px;">
-                        <div class="form-group">
-                            <label class="control-label col-md-3">{{ __('admin_.postal_number') }}</label>
-                            <div class="col-md-9">
-                                <input type="text" class="form-control" placeholder="430" name="postal_code">
-                                <span class="help-block">{{ __('admin_.postal_number_place') }}</span>
-                            </div>
-                        </div>
-                    </div>
+             
                     <div class="col-md-6" style="padding-top: 20px;">
                         <div class="form-group">
                             <label class="control-label col-md-3">{{ __('admin_.order_price') }}</label>

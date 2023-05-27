@@ -119,8 +119,7 @@
                                     {{ $order->phone }}
                                 </td>
                                 <td>
-                                    {{ $order->total_price }} ج
-                                </td>
+                                    {{ $order->total_price }} د.أ                                </td>
 
                                 <td>
                                     <div class="btn-group">

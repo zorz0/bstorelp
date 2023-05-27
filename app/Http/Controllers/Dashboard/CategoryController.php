@@ -26,15 +26,14 @@ class CategoryController extends Controller
 
         $request->validate([
             'name' => 'required',
-            'name_engilsh' => 'required',
-
-            'image' => 'required'
+            'name_english' => 'required',
+         'image' => 'required'
         ]);
         $imageName = md5(microtime()) . $request->image->getClientOriginalName();
         $request->image->storeAs("public/imgs", $imageName);
         Category::create([
             'name' => $request->name,
-'name_engilsh'=>$request->name_engilsh,
+        'name_english'=>$request->name_english,
             'image' => $imageName,
 
 ]);
@@ -62,7 +61,7 @@ return redirect(route('categories.index' ));
             Category::where('id', $id->id)->update(
                 [
                     'name' => $request->name,
-                    'name_engilsh'=>$request->name_engilsh,
+                    'name_english'=>$request->name_english,
                     'image' => $imageName,
 
                 ]
@@ -71,7 +70,7 @@ return redirect(route('categories.index' ));
             Category::where('id', $id->id)->update(
                 [
                     'name' => $request->name,
-                    'name_engilsh'=>$request->name_engilsh,
+                    'name_english'=>$request->name_english,
                 ]
             );
         }

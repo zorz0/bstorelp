@@ -56,7 +56,7 @@
                                     <div class="form-group">
                                         <label class="col-md-2 control-label">{{ __('admin_.category_name_english') }}</label>
                                         <div class="col-md-6">
-                                            <input type="text" name="name_engilsh" class="form-control" placeholder="{{ __('admin_.category_name_english') }}" required>
+                                            <input type="text" name="name_english" class="form-control" placeholder="{{ __('admin_.category_name_english') }}" required>
                                         </div>
                                     </div>
                                     <div class="form-group">

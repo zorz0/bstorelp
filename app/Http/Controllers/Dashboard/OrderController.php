@@ -16,7 +16,7 @@ use RealRashid\SweetAlert\Facades\Alert;
 class OrderController extends Controller
 {
 public function index(){
-    $orders=Order::paginate(3);
+    $orders=Order::paginate(6);
     return view('admin.Orders.allOrders',['orders'=>$orders]);
 }
 public function create(){
@@ -46,7 +46,7 @@ $data=Order::create([
     "address"=>$request["address"],
     "phone"=>$request["phone"],
     "name"=>$request["name"],
-    "postal_code"=>$request["postal_code"],
+    "postal_code"=>"00",
     "shipping_price"=>$request["shipping_price"],
 
 

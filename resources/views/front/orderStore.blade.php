@@ -9,7 +9,7 @@
 
   
     <div class="center-2">
-        <h3 class="text-center customfont u-custom-font"> {{ __('orders_.messages.shopping_thank',['name' => Auth::user()->name ]) }}!</h3>
+        <h4 class="text-center customfont u-custom-font"> {{ __('orders_.messages.shopping_thank',['name' => Auth::user()->name ]) }}!</h4>
         <br>
 
         <form action="{{ route('order.store') }}" method="post" style="text-align: center;
@@ -29,8 +29,7 @@
             <span>{{ __('orders_.finish_shopping_items.address') }}</span>
           </div>
           <div class="inputbox">
-            <input type="text" name="postal_code"  required="required">
-            <span>{{ __('orders_.finish_shopping_items.postal_code') }}</span>
+            <input type="text" name="postal_code" value="00" hidden required="required">
           </div>
           <input type="hidden" name="shipping_price" value="3">
           <hr>

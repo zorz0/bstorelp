@@ -122,7 +122,7 @@
                                 <img class="myimg mx-auto d-block" width="" alt="product" src="/storage/img/{{ $product->image }}">
                                 <hr class="myhr ">
                             
-                                    @if ($product->sizes[0] != '')
+                                    @if ($product->sizes[0] !== "null")
                                         <div class="d-flex justify-content-center">
                                             <button type="submit">{{ __('store_.buttons.show_product') }}</button>
                                         </div>
@@ -268,7 +268,7 @@
                                         <hr class="myhr">
                                         <img class="myimg mx-auto d-block" width="" alt="product" src="/storage/img/{{$item->productData[0]->image}}">
                                         <hr class="myhr ">
-                                        @if ($item->sizes[0]->id != '')
+                                        @if ($item->sizes[0] !== "null")
                                             <div class="d-flex justify-content-center">
                                                 <button type="submit">{{ __('store_.buttons.show_product') }}</button>
                                             </div>
@@ -384,7 +384,7 @@
                                 <img class="myimg mx-auto d-block" width="" alt="product" src="/storage/img/{{ $product->image }}">
                                 <hr class="myhr ">
                                 @auth
-                                    @if ($product->sizes[0] != 'null')
+                                    @if ($product->sizes[0] !== "null")
                                         <div class="d-flex justify-content-center">
                                             <button type="submit">{{ __('store_.buttons.show_product') }}</button>
                                         </div>

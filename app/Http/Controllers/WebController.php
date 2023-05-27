@@ -52,23 +52,26 @@ class WebController extends Controller
     ->take(4)
     ->get();
 
-$allMostProduct->each(function ($mostProduct) {
-    // Get the product data for this most popular product
-    $productData = DB::table('products')
-        ->where('id', $mostProduct->product_id)
-        ->get();
-        $sizes=DB::table('product_size')
-        ->where('id', $mostProduct->product_id)
-        ->get();
+    $allMostProduct->each(function ($mostProduct) {
+        // Get the product data for this most popular product
+        $productData = DB::table('products')
+            ->where('id', $mostProduct->product_id)
+            ->get();
         
-     
-
-        
+        $sizes = DB::table('product_size')
+            ->where('id', $mostProduct->product_id)
+            ->get();
     
-  
-    $mostProduct->productData = $productData;
-    $mostProduct->sizes=$sizes;
-});
+        if ($sizes->isEmpty()) {
+            $mostProduct->sizes = [['null']];
+        } else {
+            $mostProduct->sizes = $sizes;
+        }
+    
+        $mostProduct->productData = $productData;
+    });
+    
+    
 
 $ProductWithoutSugar= DB::table('products')
 ->where('id', "1")->take(4)
@@ -102,7 +105,7 @@ $ProductWithoutSugar= DB::table('products')
                     
                     ->toArray();
                 if (empty($product->sizes)) {
-                    $product->sizes = ['null'];
+                    $product->sizes[0] = "null";
                 }
                 return $product;
             });
@@ -115,8 +118,20 @@ $ProductWithoutSugar= DB::table('products')
     $dataImages=ProductImage::where('product_id',$data->id)->get()->take(4);
 
      $productSize=ProductSize::find($id);
-    
-   return view('front.AddTocard',compact("data","dataImages","productSize","categories"));
+     $allProduct = DB::table('products')->take(3)->get();
+     $allProduct->map(function ($product) {
+         $product->sizes = DB::table('product_size')
+             ->where('product_id', $product->id)
+             ->orderByDesc('id')
+             ->take(3)
+             ->get();
+     
+             if ($product->sizes->isEmpty()) {
+                 $product->sizes[0] ="null";
+             }
+         return $product;
+            });
+   return view('front.AddTocard',compact("data","dataImages","productSize","categories","allProduct"));
 
    }
 
@@ -140,7 +155,7 @@ $ProductWithoutSugar= DB::table('products')
             ->get();
     
             if ($product->sizes->isEmpty()) {
-                $product->sizes[0] = null;
+                $product->sizes[0] ="null";
             }
         return $product; // Add this line to return the modified $product object
     });
