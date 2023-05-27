@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Blog;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
+use App\Models\BlogImage;
 
 
 class BlogController extends Controller
@@ -33,6 +34,23 @@ $request->validate([
 ]);
 $imageName=md5(microtime()).$request->image->getClientOriginalName();
 $request->image->storeAs("public/imgs",$imageName);
+if ($request->hasFile('all_image')) {
+    $uploadedImages = [];
+    
+    foreach ($request->file('all_image') as $file) {
+        // Store the uploaded file
+        $path = $file->store('public/imgs'); // Adjust the storage path as needed
+
+        // Create a new BlogImage model and save the file path
+        $image = new BlogImage();
+        $image->image = $path;
+        $image->save();
+
+        // Add the file path to the uploadedImages array
+        $uploadedImages[] = $path;
+    }
+    
+}
 Blog::create([
     'user_id'=>auth()->user()->id,
     'title' => $request->title,

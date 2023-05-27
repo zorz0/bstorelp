@@ -61,6 +61,7 @@ return [
     'post_content' => 'المحتوي',
     'post_content_english'=>'المحتوى باللغة الأنجليزية ',
     'main_post_image' => 'الصورة الرئيسية',
+    'all_post_image'=>'الصور الفرعية ',
     'post_add_button' => 'اضافة',
 
     'add_order' => 'اضافة طلب',

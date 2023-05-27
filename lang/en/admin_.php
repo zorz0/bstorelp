@@ -64,6 +64,7 @@ return [
     'post_content' => 'content',
     'post_content_english'=>'content in english',
     'main_post_image' => 'main image',
+    'all_post_image'=>'all Post image',
     'post_add_button' => 'add',
 
     'add_order' => 'add order',
