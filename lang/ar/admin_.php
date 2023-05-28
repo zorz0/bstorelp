@@ -38,6 +38,7 @@ return [
 
     'members' => 'الاعضاء',
     'products' => 'المنتجات',
+    'slider'=>'معرض الصور',
     'all_products' => 'حميع المنتجات',
     'add_product' => 'اضافة منتج',
     'orders' => 'الطلبات',

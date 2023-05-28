@@ -6,6 +6,8 @@ use App\Http\Controllers\Dashboard\ProductController;
 use App\Http\Controllers\Dashboard\CategoryController;
 use App\Http\Controllers\Dashboard\ProductSizeController;
 use App\Http\Controllers\Dashboard\OrderController;
+use App\Http\Controllers\Slider;
+
 use App\Http\Controllers\Dashboard\OrderdetailsController;
 
 use App\Http\Controllers\Dashboard\BlogController;
@@ -72,9 +74,12 @@ Route::post('/dashboard/posts', [BlogController::class, 'store'])->name('posts.s
 Route::get('/dashboard/posts/edit/{id}', [BlogController::class, 'edit'])->name('posts.edit');
 Route::post('/dashboard/posts/update/{id}', [BlogController::class, 'update'])->name('posts.update');
 Route::get('/dashboard/poposts/{id}', [BlogController::class, 'destroy'])->name('posts.destroy');
+//slider 
+Route::get('slider',[Slider::class,'index'])->name('slider');
 
 //product
 Route::get('product',[ProductController::class,'index'])->name('product');
+
 Route::get('product/create',[ProductController::class,'create'])->name('product.create');
 Route::post('product/store',[ProductController::class,'store'])->name('product.store');
 Route::get('product/edit/{id}',[ProductController::class,'edit'])->name('product.edit');

@@ -41,6 +41,7 @@ return [
 
     'members' => 'members',
     'products' => 'products',
+    'slider'=>'slider image',
     'all_products' => 'all products',
     'add_product' => 'add product',
     'orders' => 'orders',

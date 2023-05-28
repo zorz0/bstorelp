@@ -106,7 +106,7 @@
             @foreach ($latestBlogs as $record)
                 <div class="ct-blog col-sm-6 col-md-4">
                     <div class="fauxcrop">
-                      <a href="{{ route('news.details', ['id' => $record->id]) }}"><img alt="News Entry" src="{{ asset('/storage/imgs/' . $record->image) }}"></a>
+                      <a href="{{ route('news.details', ['id' => $record->id]) }}"><img alt="News Entry" src="{{ asset('/storage/imgs/' . $record->image) }}" style="max-height: 70vh;"></a>
                     </div>
                 </div>
             @endforeach
