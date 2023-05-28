@@ -85,11 +85,22 @@
             <h3 class="uppercase">{{  __('admin_.slider') }}</h3>
         </li>
         <li class="nav-item  ">
-            <a  href="{{route('slider')}}" class="nav-link nav-toggle">
+            <a  href="javascript:;" class="nav-link nav-toggle">
                 <i class="icon-image"></i>
                 <span class="title">{{  __('admin_.slider') }}</span>
                 <span class="arrow"></span>
             </a>
+            <ul class="sub-menu">
+                <li class="nav-item  ">
+                    <a href="{{route('slider')}}" class="nav-link ">
+                        <i class="icon-home"></i>
+                        <span class="title">{{  __('admin_.slider_add') }}</span>
+                    </a>
+                </li>
+                <li class="nav-item  ">
+                
+                </li>
+            </ul>
           
         </li>
         <li class="heading">

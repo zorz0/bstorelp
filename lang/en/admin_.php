@@ -6,7 +6,7 @@ return [
     'home' => 'Home',
     'add_category' => 'add new category',
     'category_name' => 'category name',
-    'category_name_english'=>'category name in english',
+    'category_name_english' => 'category name in english',
     'insert_category_name' => 'insert category name here',
     'category_image' => 'category image',
     'insert_category_image' => 'upload an image for category here',
@@ -41,7 +41,7 @@ return [
 
     'members' => 'members',
     'products' => 'products',
-    'slider'=>'slider image',
+    'slider' => 'slider image',
     'all_products' => 'all products',
     'add_product' => 'add product',
     'orders' => 'orders',
@@ -50,22 +50,24 @@ return [
     'all_posts' => 'all posts',
     'add_post' => 'add post',
     'post_title' => 'post title',
-    'post_title_english'=>'post title english',
+    'post_title_english' => 'post title english',
     'post_image' => 'post image',
     'delete_post_confirm' => 'are you sure you want to delete this post?',
     'delete' => 'delete',
     'edit' => 'edit',
     'edit_post' => 'edit post',
+    'slider_add_message' => ' images add successfully',
 
+    'slider_add' => "add image",
     'search' => 'search',
 
     'admin-site-title' => 'Beit Khairat Souf | Control Panel',
     'post_title_example' => 'new post for example',
     'post_title_place' => 'write post title here',
     'post_content' => 'content',
-    'post_content_english'=>'content in english',
+    'post_content_english' => 'content in english',
     'main_post_image' => 'main image',
-    'all_post_image'=>'all Post image',
+    'all_post_image' => 'all Post image',
     'post_add_button' => 'add',
 
     'add_order' => 'add order',
@@ -121,6 +123,8 @@ return [
     'add_to_cart' => 'add to cart',
     'cart_total' => 'total',
     'cart_added_date' => 'added to cart at',
+
+
 
 
     'successfully_change_settings_message' => "The data has been modified successfully', 'You can see the modification on the site",

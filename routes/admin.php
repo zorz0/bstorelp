@@ -76,6 +76,8 @@ Route::post('/dashboard/posts/update/{id}', [BlogController::class, 'update'])->
 Route::get('/dashboard/poposts/{id}', [BlogController::class, 'destroy'])->name('posts.destroy');
 //slider 
 Route::get('slider',[Slider::class,'index'])->name('slider');
+Route::post('slider',[Slider::class,'add'])->name('slider.add');
+
 
 //product
 Route::get('product',[ProductController::class,'index'])->name('product');
