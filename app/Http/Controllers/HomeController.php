@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use App\Models\BlogImage;
+
+
 use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
@@ -49,14 +52,13 @@ class HomeController extends Controller
         return view('front.news', ['latestBlogs' => $latestBlogs, 'blogs' => $Blogs]);
     }
     public function blogDetails($id)
-    {
-        $blog=Blog::find($id);
+{
+    $blog = Blog::find($id);
+    $images = BlogImage::where('blog_id', $id)->get();
 
+    $latestBlogs = Blog::orderBy('id', 'desc')->paginate(3);
 
-        $latestBlogs = Blog::orderBy('id', 'desc')->paginate(3);
+    return view('front.newsDetails', ['blog' => $blog, 'images' => $images, 'latestBlogs' => $latestBlogs]);
+}
 
-
-        
-        return view('front.newsDetails', ['blog' => $blog,'latestBlogs' => $latestBlogs]);
-    }
 }

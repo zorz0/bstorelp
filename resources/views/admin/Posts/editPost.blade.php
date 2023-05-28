@@ -86,6 +86,18 @@
                         </div>
                         <!--/row-->
                     </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label class="col-md-3 pb-15">{{ __('admin_.all_post_image') }}</label>
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <input type="file" accept="image/*" class="dropify" name="all_image[]" multiple  />
+
+                                </div>
+                            </div>
+                        </div>
+                        <!--/row-->
+                    </div>
                     <div class="form-actions">
                         <div class="row">
                             <div class="col-md-6">
