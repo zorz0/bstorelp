@@ -11,12 +11,11 @@
                   <div class="carousel-item active h-100">
                     <img class="d-block w-100 h-100" src="{{ asset('/assets/bks') }}/images/iStock-1081560570-1591947820.jpg" alt="First slide" style="object-fit: cover;">
                   </div>
+                  @foreach ($SliderImage as $image )
                   <div class="carousel-item h-100">
-                    <img class="d-block w-100 h-100" src="{{ asset('/assets/bks') }}/images/iStock-1081560570-1591947820.jpg" alt="Second slide" style="object-fit: cover;">
+                    <img class="d-block w-100 h-100" src="{{ asset('storage/slider_images/'.$image->image) }}" alt="Second slide">
                   </div>
-                  <div class="carousel-item h-100">
-                    <img class="d-block w-100 h-100" src="{{ asset('/assets/bks') }}/images/iStock-1081560570-1591947820.jpg" alt="Third slide" style="object-fit: cover;">
-                  </div>
+                  @endforeach
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -288,8 +287,8 @@
                         <div class="card border-0">
                             <div class="card-body" >
                               
-                        <a href="http://127.0.0.1:8000/category/2">
-                            <button type="button" class="btn btn-success" style=" color: green;
+                                <a href="{{ route('allproduct', ['id' => $categories[0]->id]) }}">
+                                    <button type="button" class="btn btn-success" style=" color: green;
                             font-weight: bold; background-color: #bfdd1d;    border-radius: 20px 0px 0px 20px; padding: 25px; border:0;">{{ __('store_.buttons.watch_more') }}</button>
                             </a>
                             </div>

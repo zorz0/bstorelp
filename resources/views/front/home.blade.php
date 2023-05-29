@@ -7,15 +7,13 @@
               <div id="carouselExampleControls" class="carousel slide h-100" data-ride="carousel">
                 <div class="carousel-inner h-100 " style="border-radius: 3rem">
                   <div class="carousel-item active h-100">
-                    <img class="d-block w-100 h-100" src="{{ asset('/assets/bks') }}/images/iStock-1081560570-1591947820.jpg" alt="First slide" style="object-fit: cover;">
+                    <img class="d-block w-100 h-100" src="{{ asset('/assets/bks') }}/images/iStock-1081560570-1591947820.jpg" alt="First slide">
                   </div>
+                  @foreach ($SliderImage as $image )
                   <div class="carousel-item h-100">
-                    <img class="d-block w-100 h-100" src="{{ asset('/assets/bks') }}/images/iStock-1081560570-1591947820.jpg" alt="Second slide" style="object-fit: cover;">
+                    <img class="d-block w-100 h-100" src="{{ asset('storage/slider_images/'.$image->image) }}" alt="Second slide">
                   </div>
-                  <div class="carousel-item h-100">
-                    <img class="d-block w-100 h-100" src="{{ asset('/assets/bks') }}/images/iStock-1081560570-1591947820.jpg" alt="Third slide" style="object-fit: cover;">
-                  </div>
-                </div>
+                  @endforeach
                 <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                   <span class="sr-only">Previous</span>
@@ -34,14 +32,15 @@
 
             </div>
           </div>
-          <div class="row">
-            <div class="col-8 mx-auto text-center">
-                <a href={{ url('/about') }}><button
-                    class="general-btn border-0 text-white h4 p-3 m-3"> {{ __('master.continue_reading') }}
-                </button>
-            </div>
+         
+        </div>
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-12 mx-auto text-center">
+              <a href={{ url('/about') }}><button
+                  class="general-btn border-0 text-white h4 p-3 m-3"> {{ __('master.continue_reading') }}
+              </button>
           </div>
-    
+        </div>
     </section>
 
     <section class="container">

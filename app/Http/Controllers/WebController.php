@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use App\Models\Card;
+use App\Models\SliderImage;
+
+
 use App\Models\ProductImage;
 use App\Models\ProductSize;
 use Illuminate\Http\Request;
@@ -76,8 +79,10 @@ class WebController extends Controller
 $ProductWithoutSugar= DB::table('products')
 ->where('id', "1")->take(4)
 ->get();
+$SliderImage = SliderImage::orderBy('id', 'desc')->take(5)->get();
 
     return view('front.store', [
+        'SliderImage'=>$SliderImage,
       'categories'=>$categories,
       'allMostProduct'=>$allMostProduct,
     'ProductWithoutSugar'=>$ProductWithoutSugar

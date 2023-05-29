@@ -57,7 +57,7 @@ return [
     'edit' => 'edit',
     'edit_post' => 'edit post',
     'slider_add_message' => ' images add successfully',
-
+'slider_delete'=>'Delete image',
     'slider_add' => "add image",
     'search' => 'search',
 

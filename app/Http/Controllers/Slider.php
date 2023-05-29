@@ -30,5 +30,24 @@ class slider extends Controller
 
 
     }
+    public function delete(Request $request){
+
+        $SliderImage = SliderImage::orderBy('id', 'desc')->take(5)->get();
+        return view('admin.deletSlider', [
+            'SliderImage'=>$SliderImage,
+        
+      ]);
+
+
+    }
+    public function deleteImage($id){
+
+        $item = SliderImage::find($id);
+        $item->delete();
+        return back();
+
+
+
+    }
     }
 

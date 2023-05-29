@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Blog;
 use App\Models\BlogImage;
+use App\Models\SliderImage;
+
 
 
 use App\Models\Category;
@@ -34,9 +36,13 @@ class HomeController extends Controller
         $latestCategory = Category::orderBy('id', 'desc')->take(4)->get();
         // dd($latestBlogs);
         // return view('front.home',compact('latestBlogs'));
+        $SliderImage = SliderImage::orderBy('id', 'desc')->take(5)->get();
 
-        return view('front.home', ['latestBlogs' => $latestBlogs], ['latestCategory' => $latestCategory]);
-    }
+        return view('front.home', [
+            'latestBlogs' => $latestBlogs,
+            'latestCategory' => $latestCategory,
+            'SliderImage' => $SliderImage
+        ]);    }
     public function showProducts($category)
     {
         $products = Product::where('category_id', $category)->get();

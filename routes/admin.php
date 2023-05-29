@@ -77,6 +77,8 @@ Route::get('/dashboard/poposts/{id}', [BlogController::class, 'destroy'])->name(
 //slider 
 Route::get('slider',[Slider::class,'index'])->name('slider');
 Route::post('slider',[Slider::class,'add'])->name('slider.add');
+Route::get('slider/delete',[Slider::class,'delete'])->name('slider.delete');
+Route::any('slider/deleteImage/{id}',[Slider::class,'deleteImage'])->name('slider.deleteImage');
 
 
 //product

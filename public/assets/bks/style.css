@@ -918,7 +918,10 @@ width: 28px;
 
 }
 @media (min-width: 600px) {
-  
+    #hearticon{
+        transform: translateY(64px);
+    
+    } 
     .footer {
         margin-left: 0!important;
     }
@@ -952,10 +955,7 @@ width: 28px;
 .baitKhairatDate h1{
     margin-top: 153px;
 }
-/* #hearticon{
-    transform: translateY(64px);
 
-} */
 .u-header {
     min-height: 400px!important;
 }

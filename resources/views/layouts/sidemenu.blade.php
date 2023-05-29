@@ -98,7 +98,10 @@
                     </a>
                 </li>
                 <li class="nav-item  ">
-                
+                    <a href="{{route('slider.delete')}}" class="nav-link ">
+                        <i class="icon-home"></i>
+                        <span class="title">{{  __('admin_.slider_delete') }}</span>
+                    </a>
                 </li>
             </ul>
           
