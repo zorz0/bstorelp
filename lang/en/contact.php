@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'places' => 'Jerash / Souf / Tower Area'
+    'places' => 'Jerash / Souf / alburj Area'
 ];

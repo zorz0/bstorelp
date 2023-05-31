@@ -959,3 +959,7 @@ width: 28px;
 .u-header {
     min-height: 400px!important;
 }
+.card{
+    border: solid 2px #000!important;
+    border-radius: 20px!important;
+}
