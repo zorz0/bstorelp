@@ -7,23 +7,23 @@
     <!-- BEGIN PAGE HEADER-->
     <!-- BEGIN PAGE BAR -->
     <div class="page-bar">
-        <ul class="page-breadcrumb">
+        <ul class="page-breadcrumb" dir="{{ getDirection() }}">
             <li>
-                <a href="index.html">الرئيسية</a>
+                <a href="index.html">{{ __('products_.home') }}</a>
                 <i class="fa fa-circle"></i>
             </li>
             <li>
-                <a href="#">المنتجات</a>
+                <a href="#">{{ __('products_.products') }}</a>
                 <i class="fa fa-circle"></i>
             </li>
             <li>
-                <span>تعديل منتج</span>
+                <span>{{ __('products_.actions.edit_product') }}</span>
             </li>
         </ul>
     </div>
     <!-- END PAGE BAR -->
     <!-- BEGIN PAGE TITLE-->
-    <h3 class="page-title"> تعديل منتج
+    <h3 class="page-title" align="{{ getAlign() }}">{{ __('products_.actions.edit_product') }}
     </h3>
     <!-- END PAGE TITLE-->
     <div class="portlet-body form">
@@ -36,28 +36,28 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label class="control-label col-md-3">نموذج الاسم</label>
+                            <label class="control-label col-md-3">{{ __('products_.productFields.product_name') }}</label>
                             <div class="col-md-9">
                                 <input type="text" class="form-control" value="{{ $data['name'] }}" name="name" placeholder="قهوة مثلا">
-                                <span class="help-block"> اسم المنتج يكتب هنا </span>
+                                <span class="help-block">{{ __('products_.messages.name_insertion') }} </span>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label class="control-label col-md-3">الخصم</label>
+                            <label class="control-label col-md-3">{{ __('products_.productFields.discount') }}</label>
                             <div class="col-md-9">
                                 <input type="number" value="{{ $data['discount_price'] }}" name="discount_price" class="form-control" placeholder="100">
-                                <span class="help-block"> الخصم علي المنتج يكتب هنا </span>
+                                <span class="help-block">{{ __('products_.messages.discount_insertion') }} </span>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label class="control-label col-md-3">السعر</label>
+                            <label class="control-label col-md-3">{{ __('products_.productFields.price') }}</label>
                             <div class="col-md-9">
                                 <input type="number" value="{{ $data['price'] }}" name="price" class="form-control" placeholder="100">
-                                <span class="help-block">سعر المنتج يكتب هنا </span>
+                                <span class="help-block">{{ __('products_.messages.price_insertion') }} </span>
                             </div>
                         </div>
                     </div>
@@ -66,7 +66,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label class="control-label col-md-3">الفئة</label>
+                                <label class="control-label col-md-3">{{ __('products_.productFields.category') }}</label>
                                 <div class="col-md-9">
 
 
@@ -85,7 +85,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <label class="col-md-3 pb-15">وصف المنتج</label>
+                            <label class="col-md-3 pb-15">{{ __('products_.productFields.description') }}</label>
                             <div class="form-group">
                                 <div class="col-md-12">
                                     <textarea id="description"  class="form-control" name="description" rows="6">{{ $data['description'] }}</textarea>
@@ -99,7 +99,7 @@
 
                     <div class="row">
                         <div class="col-md-12">
-                            <label class="col-md-3 pb-15">الصورة الرئيسية</label>
+                            <label class="col-md-3 pb-15">{{ __('products_.productFields.product_main_image') }}</label>
                             <div class="form-group">
                                 <div class="col-md-12">
                                     <input type="file" accept="image/*" name="image" value="{{ $data['image'] }}" class="dropify" />
@@ -112,7 +112,7 @@
                     <!--/row-->
                     <div class="row">
                         <div class="col-md-12">
-                            <label class="col-md-3 pb-15">الصور</label>
+                            <label class="col-md-3 pb-15">{{ __('products_.productFields.product_images') }}</label>
                             <div class="form-group">
                                 <div class="col-md-12">
                                     <input type="file" accept="image/*" name="files[]" class="dropify" multiple/>
@@ -127,7 +127,7 @@
                             <div class="col-md-6">
                                 <div class="row">
                                     <div class="col-md-offset-3 col-md-9">
-                                        <button type="submit" class="btn green">اضافة</button>
+                                        <button type="submit" class="btn green">{{ __('products_.actions.add') }}</button>
                                         {{-- <button type="button" class="btn default">Cancel</button> --}}
                                     </div>
                                 </div>
@@ -135,6 +135,8 @@
                             <div class="col-md-6"> </div>
                         </div>
                     </div>
+                </div>
+            </div>
         </form>
 
         <!-- END FORM-->

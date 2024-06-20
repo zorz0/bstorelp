@@ -7,12 +7,12 @@
             <table class="table table-centered table-nowrap mb-0 rounded">
               <thead class="thead-light">
                   <tr>
-                      <th class="border-0"> Name</th>
-                      <th class="border-0"> Image</th>
-                      <th class="border-0 " style="text-align: center"> Edit Quantity</th>
-                      <th class="border-0"> Remove Product</th>
-                      <th class="border-0"> Total Price</th>
-                      <th class="border-0" colspan="4"> Sub Total</th>
+                      <th class="border-0"> {{ __('total_cards.messages.name') }}</th>
+                      <th class="border-0"> {{ __('total_cards.messages.image') }}</th>
+                      <th class="border-0 " style="text-align: center"> {{ __('total_cards.actions.edit_quantity') }}</th>
+                      <th class="border-0"> {{ __('total_cards.actions.remove_product') }}</th>
+                      <th class="border-0"> {{ __('total_cards.messages.total_price') }}</th>
+                      <th class="border-0" colspan="4"> {{ __('total_cards.messages.sub_total') }}</th>
                   </tr>
               </thead>
               <tbody>
@@ -25,21 +25,21 @@
                           </td>
                           <td  style="border-width: 0;" class="text-success">
                               <div class="d-flex align-items-center">
-                                  <img style="width:100px;heigh:100px" src="storage/img/{{$cart->product->image}}">
+                                  <img src="storage/img/{{$cart->product->image}}">
                               </div>
                           </td>
                           <td  style="width: 25%;border-width: 0px;" class="text-success">
                               <form  action="{{ route('card.update',$cart->id) }}" method="post">
                                   @csrf
-                                  <p class="product-quantity">Quantity:  <input style="width: 50px;" type="number" value="{{$cart["quantity"]}}" name="quantity">
-                                  <button type="submit" style="width: 100px; margin-left:4px" class="btn btn-primary"> Edit </button>
+                                  <p class="product-quantity">{{ __('total_cards.messages.quantity') }}:  <input style="width: 50px;" type="number" value="{{$cart["quantity"]}}" name="quantity">
+                                  <button type="submit" style="width: 100px; margin-left:4px" class="btn btn-primary"> {{ __('total_cards.actions.edit') }} </button>
                               </form>
                           </td>
                           <td  style="border-width: 0;" class="text-success">
                               <div class="d-flex align-items-center">
                                   <form action="{{ route('card.destroy',$cart->id) }}" method="get">
                                       @csrf
-                                      <button type="submit" style="width: 100px; margin-left:4px;margin-top: 22px;" class="btn btn-danger"> Remove </button>
+                                      <button type="submit" style="width: 100px; margin-left:4px;margin-top: 22px;" class="btn btn-danger"> {{ __('total_cards.actions.remove') }} </button>
                                   </form>
                               </div>
                           </td>
@@ -61,16 +61,16 @@
                   @endforeach
               </tbody>
           </table>
-          
 
-         
 
-        
-          
+
+
+
+
           </div>
       </div>
       <div class="row">
-        <div class="col" style="display: flex; justify-content: center">  
+        <div class="col" style="display: flex; justify-content: center">
           <form id="FormTotal" action="{{ route('createorder') }}" method="post" >
             @csrf
             <input value="{{ $data }}" type="text" name="cards_id" hidden>
@@ -78,7 +78,7 @@
             <div class="col text-center" >
               Total Price
             </div>
-            
+
            </div>
            <div class="row text-center">
             <div class="col">{{$balance}}</div>

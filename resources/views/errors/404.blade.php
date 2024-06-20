@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="rtl">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" dir="{{ getDirection() }}">
 <!--<![endif]-->
 <!-- BEGIN HEAD -->
 
@@ -42,10 +42,10 @@
         <img src="{{asset('/assets')}}/pages/media/pages/earth-rtl.jpg" class="img-responsive" alt=""> </div>
     <div class="container error-404">
         <h1>404</h1>
-        <h2>هناك خطأ ما.</h2>
-        <p> الصفحة التي تبحث عنها غير موجودة بالنظام. </p>
+        <h2>{{ __('routingError.404_title') }}</h2>
+        <p>{{ __('routingError.404_content') }} </p>
         <p>
-            <a href="{{url('/')}}" class="btn red btn-outline"> عودة للرئيسية </a>
+            <a href="{{url('/')}}" class="btn red btn-outline"> {{ __('routingError.error_handle_button') }} </a>
             <br> </p>
     </div>
     <!--[if lt IE 9]>

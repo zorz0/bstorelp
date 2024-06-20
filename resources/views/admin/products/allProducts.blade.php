@@ -7,23 +7,23 @@
     <!-- BEGIN PAGE HEADER-->
     <!-- BEGIN PAGE BAR -->
     <div class="page-bar">
-        <ul class="page-breadcrumb">
+        <ul class="page-breadcrumb" dir="{{ getDirection() }}">
             <li>
-                <a href="index.html">الرئيسية</a>
+                <a href="index.html">{{ __('products_.home') }}</a>
                 <i class="fa fa-circle"></i>
             </li>
             <li>
-                <a href="#">المنتجات</a>
+                <a href="#">{{ __('products_.products') }}</a>
                 <i class="fa fa-circle"></i>
             </li>
             <li>
-                <span>جميع المنتجات</span>
+                <span>{{ __('products_.all_products') }}</span>
             </li>
         </ul>
     </div>
     <!-- END PAGE BAR -->
     <!-- BEGIN PAGE TITLE-->
-    <h3 class="page-title"> جميع المنتجات
+    <h3 class="page-title" align="{{ getAlign() }}">{{ __('products_.all_products') }}
         {{-- <small>managed datatable samples</small> --}}
     </h3>
     <!-- END PAGE TITLE-->
@@ -34,7 +34,7 @@
                 <div class="portlet-title">
                     <div class="caption font-dark">
                         <i class="icon-settings font-dark"></i>
-                        <span class="caption-subject bold uppercase"> المنتجات</span>
+                        <span class="caption-subject bold uppercase"> {{ __('products_.products') }}</span>
                     </div>
                 </div>
 
@@ -43,7 +43,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="btn-group">
-                                 <a href="{{ route('product.create') }}"> <button id="sample_editable_1_new" class="btn sbold green"> أضافة منتج
+                                 <a href="{{ route('product.create') }}"> <button id="sample_editable_1_new" class="btn sbold green"> {{ __('products_.actions.add_product') }}
                                         <i class="fa fa-plus"></i>
                                     </button>
 
@@ -86,13 +86,13 @@
                                 <th>#</th>
 
 
-                                <th> اسم المنتج </th>
-                                <th> نوع المنتج </th>
+                                <th> {{ __('products_.productFields.product_name') }} </th>
+                                <th>{{ __('products_.productFields.product_category') }} </th>
 
-                                <th> سعر المنتج</th>
-                                <th> نسبة الخصم </th>
-                                <th> صورة المنتج </th>
-                                <th> اجراءات </th>
+                                <th>{{ __('products_.productFields.product_price') }}</th>
+                                <th>{{ __('products_.productFields.product_discount_amount') }}</th>
+                                <th>{{ __('products_.productFields.product_image') }}</th>
+                                <th>{{ __('products_.productFields.procedures') }} </th>
                             </tr>
                         </thead>
                      @foreach($data as $value)
@@ -121,23 +121,23 @@
 
                                 <td>
                                     <div class="btn-group">
-                                        <button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"> اجراءات
+                                        <button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"> {{ __('products_.productFields.procedures') }}
                                             <i class="fa fa-angle-down"></i>
                                         </button>
                                         <ul class="dropdown-menu" role="menu">
                                             <li>
                                                 <a href="{{route('product.edit',$value["id"])}}">
 
-                                                    <i class="icon-docs"></i> تعديل المنتج </a>
+                                                    <i class="icon-docs"></i> {{ __('products_.actions.edit_product') }} </a>
                                             </li>
                                             <li>
                                                 <a href="{{route('productSize.create',$value["id"])}}">
 
-                                                    <i class="icon-docs"></i> اضافة وزن المنتج </a>
+                                                    <i class="icon-docs"></i> {{ __('products_.actions.add_product_weight') }} </a>
                                             </li>
                                             <li>
 
-                                                   <a href="{{ route('product.destroy', $value->id) }}" onclick="return confirm('هل انت متأكد انك تريد حذف هذا المنتج ؟')"> <i class="icon-trash"></i> حذف </a>
+                                                   <a href="{{ route('product.destroy', $value->id) }}" onclick="return confirm({{ __('products_.actions.delete_product_confirmation') }})"> <i class="icon-trash"></i> {{ __('products_.actions.delete') }} </a>
 
                                                 {{--  <a href="{{route('product.destroy',$value["id"])}}">
                                                     </a>  --}}

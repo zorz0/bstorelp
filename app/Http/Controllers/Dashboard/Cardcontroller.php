@@ -39,7 +39,8 @@ class Cardcontroller extends Controller
             "totalprice"=>$totalPrice
 
         ]);
-        Alert::success('تم اضافة الطلب بنجاح', 'شكرا لأختياركم منتجاتنا ');
+        $message = trans('orders_.messages.choose_products_message');
+        Alert::success($message);
 
         return redirect(route('store'));
     }

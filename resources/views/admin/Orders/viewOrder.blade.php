@@ -7,13 +7,13 @@
     <!-- BEGIN PAGE HEADER-->
     <!-- BEGIN PAGE BAR -->
     <div class="page-bar">
-        <ul class="page-breadcrumb">
+        <ul class="page-breadcrumb" dir="{{ getDirection() }}">
             <li>
-                <a href="index.html">الرئيسية</a>
+                <a href="index.html">{{ __('admin_.home') }}</a>
                 <i class="fa fa-circle"></i>
             </li>
             <li>
-                <a href="{{url('orders')}}">الطلبات</a>
+                <a href="{{url('orders')}}">{{ __('admin_.orders') }}</a>
                 <i class="fa fa-circle"></i>
             </li>
             <li>
